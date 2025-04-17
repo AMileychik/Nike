@@ -1,0 +1,1047 @@
+{
+    "topPicksHeader": {
+        "title": "Top Picks for You",
+        "subtitleLabel": "Recommended products",
+        "buttonTitle": "View All"
+    },
+    "topPicks": [
+        {
+            "image": "AIR+JORDAN+1+MID_0",
+            "description": "Air Jordan 1 Mid",
+            "type": "Air Jordan",
+            "price": 125,
+            "categories": [
+                {
+                    "categoryImage": "AIR+JORDAN+1+MID_0",
+                    "subCategories": [
+                        {
+                            "id": 1,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_0",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 2,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_1",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 3,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_2",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 4,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_3",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 5,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_4",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        }
+                    ]
+                },
+                {
+                    "categoryImage": "AIR+JORDAN+1+MID_5",
+                    "subCategories": [
+                        {
+                            "id": 6,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_5",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 7,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_6",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 8,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_7",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 9,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_8",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        }
+                    ]
+                }
+            ],
+            "categoryName": "Men's Shoes",
+            "detailButtonsName": {
+                "firstButtonTitle": "Add to Bag",
+                "secondButtonTitle": "Favorite"
+            },
+            "promo": [
+                {
+                    "image": "shipping",
+                    "title": "Shopping As It Should Be",
+                    "description": "Get free shipping on orders $50+."
+                },
+                {
+                    "image": "JordanLogo",
+                    "title": "Get Ready to Win",
+                    "description": "Use code WINNING for an extra 25% off select styles."
+                }
+            ],
+            "header": {
+                "title": "Size",
+                "buttonTitle": "Size Guide"
+            },
+            "productSizeHeader": {
+                "title": "Size",
+                "buttonTitle": "Size Guide"
+            },
+            "productSize": [
+                {
+                    "size": "7"
+                },
+                {
+                    "size": "7.5"
+                },
+                {
+                    "size": "8"
+                },
+                {
+                    "size": "8.5"
+                },
+                {
+                    "size": "9"
+                },
+                {
+                    "size": "9.5"
+                },
+                {
+                    "size": "10"
+                },
+                {
+                    "size": "10.5"
+                },
+                {
+                    "size": "11"
+                },
+                {
+                    "size": "11.5"
+                },
+                {
+                    "size": "12"
+                }
+            ],
+            "productDescription": [
+                {
+                    "description": "Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colors and crisp leather give it a distinct identity."
+                }
+            ],
+            "youMightAlsoLikeHeader": {
+                "title": "You Might Also Like"
+            },
+            "youMightAlsoLike": [
+                {
+                    "image": "AIR+JORDAN+1+HIGH+G"
+                },
+                {
+                    "image": "AIR+JORDAN+1+HIGH+G.png"
+                }
+            ],
+            "completeTheLookHeader": {
+                "title": "Complete The Look"
+            },
+            "completeTheLook": [
+                {
+                    "image": "look_0"
+                },
+                {
+                    "image": "look_1"
+                },
+            ],
+        },
+        {
+            "image": "Nike Zenvy_5",
+            "description": "Women's Leggings",
+            "type": "Nike Zenvy",
+            "price": 83,
+            "categories": [
+                {
+                    "categoryImage": "Nike Zenvy_5_bag",
+                    "subCategories": [
+                        {
+                            "id": 10,
+                            "subCategoryImage": "Nike Zenvy_5_bag",
+                            "title": "Nike Zenvy",
+                            "category": "Women's Leggings",
+                            "count": 1,
+                            "price": 83
+                        },
+                        {
+                            "id": 11,
+                            "subCategoryImage": "Nike Zenvy_6",
+                            "title": "Nike Zenvy",
+                            "category": "Women's Leggings",
+                            "count": 1,
+                            "price": 83
+                        },
+                        {
+                            "id": 12,
+                            "subCategoryImage": "Nike Zenvy_4",
+                            "title": "Nike Zenvy",
+                            "category": "Women's Leggings",
+                            "count": 1,
+                            "price": 83
+                        }
+                    ]
+                },
+                {
+                    "categoryImage": "Nike Zenvy_2_bag",
+                    "subCategories": [
+                        {
+                            "id": 13,
+                            "subCategoryImage": "Nike Zenvy_2_bag",
+                            "title": "Nike Zenvy",
+                            "category": "Women's Leggings",
+                            "count": 1,
+                            "price": 83
+                        },
+                        {
+                            "id": 14,
+                            "subCategoryImage": "Nike Zenvy_1",
+                            "title": "Nike Zenvy",
+                            "category": "Women's Leggings",
+                            "count": 1,
+                            "price": 83
+                        },
+                        {
+                            "id": 15,
+                            "subCategoryImage": "Nike Zenvy_3",
+                            "title": "Nike Zenvy",
+                            "category": "Women's Leggings",
+                            "count": 1,
+                            "price": 83
+                        }
+                    ]
+                }
+            ],
+            "categoryName": "Women's Leggings",
+            "detailButtonsName": {
+                "firstButtonTitle": "Add to Bag",
+                "secondButtonTitle": "Favorite"
+            },
+            "promo": [
+                {
+                    "image": "shipping",
+                    "title": "Shopping As It Should Be",
+                    "description": "Get free shipping on orders $50+."
+                },
+                {
+                    "image": "Logo",
+                    "title": "Get Ready to Win",
+                    "description": "Use code WINNING for an extra 25% off select styles."
+                }
+            ],
+            "header": {
+                "title": "Size",
+                "buttonTitle": "Size Guide"
+            },
+            "productSizeHeader": {
+                "title": "Size",
+                "buttonTitle": "Size Guide"
+            },
+            "productSize": [
+                {
+                    "size": "XS"
+                },
+                {
+                    "size": "S"
+                },
+                {
+                    "size": "M"
+                },
+                {
+                    "size": "L"
+                },
+                {
+                    "size": "XL"
+                },
+                {
+                    "size": "XXL"
+                }
+            ],
+            "productDescription": [
+                {
+                    "description": "Holding your poses or taking a walk in the park, you can move freely in our unbelievably soft Nike Zenvy flared leggings. Their InfinaSoft fabric is lightweight—but still squat-proof!—with softness that you can feel with every bend, stretch and shift. Fewer pockets give you a streamlined look, but the drop-in pocket at the center back is still big enough to hold your phone."
+                }
+            ],
+            "youMightAlsoLikeHeader": {
+                "title": "You Might Also Like"
+            },
+            "youMightAlsoLike": [
+                {
+                    "image": "Nike Zenvy_12"
+                },
+                {
+                    "image": "Nike Zenvy_11"
+                }
+            ],
+            "completeTheLookHeader": {
+                "title": "Complete The Look"
+            },
+            "completeTheLook": [
+                {
+                    "image": "Nike Zenvy_9"
+                },
+                {
+                    "image": "Nike Zenvy_10"
+                },
+            ],
+        },
+        {
+            "image": "Nike Club_5",
+            "description": "Men's Shirt",
+            "type": "Nike Club",
+            "price": 75,
+            "categories": [
+                {
+                    "categoryImage": "Nike Club_5_bag",
+                    "subCategories": [
+                        {
+                            "id": 16,
+                            "subCategoryImage": "Nike Club_5_bag",
+                            "title": "Nike Club",
+                            "category": "Men's Short-Sleeve Shirt",
+                            "count": 1,
+                            "price": 75
+                        },
+                        {
+                            "id": 17,
+                            "subCategoryImage": "Nike Club_6",
+                            "title": "Nike Club",
+                            "category": "Men's Short-Sleeve Shirt",
+                            "count": 1,
+                            "price": 75
+                        },
+                        {
+                            "id": 18,
+                            "subCategoryImage": "Nike Club_7",
+                            "title": "Nike Club",
+                            "category": "Men's Short-Sleeve Shirt",
+                            "count": 1,
+                            "price": 75
+                        },
+                        {
+                            "id": 19,
+                            "subCategoryImage": "Nike Club_8",
+                            "title": "Nike Club",
+                            "category": "Men's Short-Sleeve Shirt",
+                            "count": 1,
+                            "price": 75
+                        }
+                    ]
+                },
+                {
+                    "categoryImage": "Nike Club_1_bag",
+                    "subCategories": [
+                        {
+                            "id": 20,
+                            "subCategoryImage": "Nike Club_1_bag",
+                            "title": "Nike Club",
+                            "category": "Men's Short-Sleeve Shirt",
+                            "count": 1,
+                            "price": 75
+                        },
+                        {
+                            "id": 21,
+                            "subCategoryImage": "Nike Club_2",
+                            "title": "Nike Club",
+                            "category": "Men's Short-Sleeve Shirt",
+                            "count": 1,
+                            "price": 75
+                        },
+                        {
+                            "id": 22,
+                            "subCategoryImage": "Nike Club_3",
+                            "title": "Nike Club",
+                            "category": "Men's Short-Sleeve Shirt",
+                            "count": 1,
+                            "price": 75
+                        },
+                        {
+                            "id": 23,
+                            "subCategoryImage": "Nike Club_4",
+                            "title": "Nike Club",
+                            "category": "Men's Short-Sleeve Shirt",
+                            "count": 1,
+                            "price": 75
+                        }
+                    ]
+                }
+            ],
+            "categoryName": "Women's Leggings",
+            "detailButtonsName": {
+                "firstButtonTitle": "Add to Bag",
+                "secondButtonTitle": "Favorite"
+            },
+            "promo": [
+                {
+                    "image": "shipping",
+                    "title": "Shopping As It Should Be",
+                    "description": "Get free shipping on orders $50+."
+                },
+                {
+                    "image": "Logo",
+                    "title": "Get Ready to Win",
+                    "description": "Use code WINNING for an extra 25% off select styles."
+                }
+            ],
+            "header": {
+                "title": "Size",
+                "buttonTitle": "Size Guide"
+            },
+            "productSizeHeader": {
+                "title": "Size",
+                "buttonTitle": "Size Guide"
+            },
+            "productSize": [
+                {
+                    "size": "XS"
+                },
+                {
+                    "size": "S"
+                },
+                {
+                    "size": "M"
+                },
+                {
+                    "size": "L"
+                },
+                {
+                    "size": "XL"
+                },
+                {
+                    "size": "XXL"
+                }
+            ],
+            "productDescription": [
+                {
+                    "description": "Elevate your essentials with this button-down top. It pairs the comfort of Club with a clean, confident look."
+                }
+            ],
+            "youMightAlsoLikeHeader": {
+                "title": "You Might Also Like"
+            },
+            "youMightAlsoLike": [
+                {
+                    "image": "Nike Club_12"
+                },
+                {
+                    "image": "Nike Club_13"
+                }
+            ],
+            "completeTheLookHeader": {
+                "title": "Complete The Look"
+            },
+            "completeTheLook": [
+                {
+                    "image": "Nike Club_10"
+                },
+                {
+                    "image": "Nike Club_11"
+                },
+            ],
+        },
+    ],
+    "promo": [
+        {
+            "image": "shipping",
+            "title": "Shopping As It Should Be",
+            "type": "Shopping As It Should Be",
+            "description": "Get free shipping on orders $50+.",
+            "fullDescription": "Although strap and band fit tend to provide the most clear signs that a bra correctly fits, a few other indicators can signal the wrong size, said Sweeney. \n\nA bra that is too small will often:\n- Have a neckline and/or underarm area that causes the breast to spill or cut out of the sides of the bra.\n\nA bra that is too big will often: \n- Show excess fabric bunching or gathering throughout the cup area."
+        },
+        {
+            "image": "JordanLogo",
+            "title": "Get Ready to Win",
+            "type": "Get Ready to Win",
+            "description": "Use code WINNING for an extra 25% off select styles.",
+            "fullDescription": "Although strap and band fit tend to provide the most clear signs that a bra correctly fits, a few other indicators can signal the wrong size, said Sweeney. \n\nA bra that is too small will often:\n- Have a neckline and/or underarm area that causes the breast to spill or cut out of the sides of the bra.\n\nA bra that is too big will often: \n- Show excess fabric bunching or gathering throughout the cup area."
+        }
+    ],
+    "newFromNikeHeader": {
+        "title": "New From Nike",
+        "buttonTitle": "View All"
+    },
+    "newFromNike": [
+        {
+            "image": "Nike_indy_bra",
+            "logoTitle": "nike indy bra",
+            "detailImage": "Nike_indy_bra",
+            "title": "How to Measure Your Nike Sports Bra",
+            "description": "A Nike sports bra technical designer weighs in on how to measure your sports bra size and determine best fit.\n\nFor many athletes, sports bras are a crucial part of every workout outfit. This is because a sports bra is one of the most technical clothing items athletes can own, explained Tara Sweeney, a Nike sports bra technical designer.\n\nBut the ideal fit comes down to more than just measurements. “Finding the right sports bra comes down to striking a balance between comfort and support for your breast size and firmness, body type and intended activities,” said Sweeney.",
+            "productData": [
+                {
+                    "image": "Nike_indy_bra",
+                    "type": "How to Measure Your Nike Sports Bra",
+                    "description": "A Nike sports bra technical designer weighs in on how to measure your sports bra size and determine best fit.\n\nFor many athletes, sports bras are a crucial part of every workout outfit. This is because a sports bra is one of the most technical clothing items athletes can own, explained Tara Sweeney, a Nike sports bra technical designer.",
+                },
+                {
+                    "image": "Nike_alate_bra",
+                    "type": "How to Measure Your Nike Sports Bra Size",
+                    "description": "According to Sweeney, in order to correctly measure yourself for a Nike sports bra, try to wear an unlined, lingerie-style bra that allows for some separation between the breasts.\n\nFind your bra size with this two-step quiz. Before you start, wear an unlined bra that supports your natural shape — no bralette or padded bra.",
+                },
+                {
+                    "image": "Nike_swoosh_bra",
+                    "type": "Finding the Best Bra Size: Additional Fit Factors to Consider",
+                    "description": "Although strap and band fit tend to provide the most clear signs that a bra correctly fits, a few other indicators can signal the wrong size, said Sweeney. \n\nA bra that is too small will often:\n- Have a neckline and/or underarm area that causes the breast to spill or cut out of the sides of the bra.\n\nA bra that is too big will often: \n- Show excess fabric bunching or gathering throughout the cup area.",
+                }
+            ],
+            "completeTheLookHeader":
+            {
+                "title": "You Might Also Like"
+            },
+            "completeTheLookModel": [
+                {
+                    "image": "bra_23"
+                },
+                {
+                    "image": "bra_21"
+                }
+            ],
+        },
+        {
+            "image": "Nike_alate_bra",
+            "logoTitle": "nike alate bra",
+            "detailImage": "Nike_alate_bra",
+            "title": "How to Measure Your Nike Sports Bra Size",
+            "description": "According to Sweeney, in order to correctly measure yourself for a Nike sports bra, try to wear an unlined, lingerie-style bra that allows for some separation between the breasts.\n\nFind your bra size with this two-step quiz. Before you start, wear an unlined bra that supports your natural shape — no bralette or padded bra.",
+            "productData": [
+                {
+                    "image": "Nike_indy_bra",
+                    "type": "How to Measure Your Nike Sports Bra",
+                    "description": "A Nike sports bra technical designer weighs in on how to measure your sports bra size and determine best fit.\n\nFor many athletes, sports bras are a crucial part of every workout outfit. This is because a sports bra is one of the most technical clothing items athletes can own, explained Tara Sweeney, a Nike sports bra technical designer.\n\nBut the ideal fit comes down to more than just measurements. “Finding the right sports bra comes down to striking a balance between comfort and support for your breast size and firmness, body type and intended activities,” said Sweeney.",
+                },
+                {
+                    "image": "Nike_alate_bra",
+                    "type": "How to Measure Your Nike Sports Bra Size",
+                    "description": "According to Sweeney, in order to correctly measure yourself for a Nike sports bra, try to wear an unlined, lingerie-style bra that allows for some separation between the breasts.\n\nFind your bra size with this two-step quiz. Before you start, wear an unlined bra that supports your natural shape — no bralette or padded bra.",
+                },
+                {
+                    "image": "Nike_swoosh_bra",
+                    "type": "Finding the Best Bra Size: Additional Fit Factors to Consider",
+                    "description": "Although strap and band fit tend to provide the most clear signs that a bra correctly fits, a few other indicators can signal the wrong size, said Sweeney. \n\nA bra that is too small will often:\n\n- Have a neckline and/or underarm area that causes the breast to spill or cut out of the sides of the bra\n- Feature a neckline and/or underarm area that sits too low on the body\n- Contain a cup area that is too short, which can cause the bottom band to ride up and sit on the bottom of the breast rather than just below the breast tissue \n\nA bra that is too big will often: \n\n- Show excess fabric bunching or gathering throughout the cup area \n- Have a neckline and/or underarm area that sits too high, potentially rubbing the neck or underarm and causing chafing \n- Not provide any compression or support, or allow for too much breast movement",
+                }
+            ],
+            "completeTheLookHeader":
+            {
+                "title": "You Might Also Like"
+            },
+            "completeTheLookModel": [
+                {
+                    "image": "bra_23"
+                },
+                {
+                    "image": "bra_21"
+                }
+            ],
+        },
+        {
+            "image": "Nike_swoosh_bra",
+            "logoTitle": "nike swoosh bra",
+            "detailImage": "Nike_swoosh_bra",
+            "title": "Finding the Best Bra Size: Additional Fit Factors to Consider",
+            "description": "Although strap and band fit tend to provide the most clear signs that a bra correctly fits, a few other indicators can signal the wrong size, said Sweeney. \n\nA bra that is too small will often:\n\n- Have a neckline and/or underarm area that causes the breast to spill or cut out of the sides of the bra\n- Feature a neckline and/or underarm area that sits too low on the body\n- Contain a cup area that is too short, which can cause the bottom band to ride up and sit on the bottom of the breast rather than just below the breast tissue \n\nA bra that is too big will often: \n\n- Show excess fabric bunching or gathering throughout the cup area \n- Have a neckline and/or underarm area that sits too high, potentially rubbing the neck or underarm and causing chafing \n- Not provide any compression or support, or allow for too much breast movement",
+            "productData": [
+                {
+                    "image": "Nike_indy_bra",
+                    "type": "How to Measure Your Nike Sports Bra",
+                    "description": "A Nike sports bra technical designer weighs in on how to measure your sports bra size and determine best fit.\n\nFor many athletes, sports bras are a crucial part of every workout outfit. This is because a sports bra is one of the most technical clothing items athletes can own, explained Tara Sweeney, a Nike sports bra technical designer.\n\nBut the ideal fit comes down to more than just measurements. “Finding the right sports bra comes down to striking a balance between comfort and support for your breast size and firmness, body type and intended activities,” said Sweeney.",
+                },
+                {
+                    "image": "Nike_alate_bra",
+                    "type": "How to Measure Your Nike Sports Bra Size",
+                    "description": "According to Sweeney, in order to correctly measure yourself for a Nike sports bra, try to wear an unlined, lingerie-style bra that allows for some separation between the breasts.\n\nFind your bra size with this two-step quiz. Before you start, wear an unlined bra that supports your natural shape — no bralette or padded bra.",
+                },
+                {
+                    "image": "Nike_swoosh_bra",
+                    "type": "Finding the Best Bra Size: Additional Fit Factors to Consider",
+                    "description": "Although strap and band fit tend to provide the most clear signs that a bra correctly fits, a few other indicators can signal the wrong size, said Sweeney. \n\nA bra that is too small will often:\n\n- Have a neckline and/or underarm area that causes the breast to spill or cut out of the sides of the bra\n- Feature a neckline and/or underarm area that sits too low on the body\n- Contain a cup area that is too short, which can cause the bottom band to ride up and sit on the bottom of the breast rather than just below the breast tissue \n\nA bra that is too big will often: \n\n- Show excess fabric bunching or gathering throughout the cup area \n- Have a neckline and/or underarm area that sits too high, potentially rubbing the neck or underarm and causing chafing \n- Not provide any compression or support, or allow for too much breast movement",
+                }
+            ],
+            "completeTheLookHeader":
+            {
+                "title": "You Might Also Like"
+            },
+            "completeTheLookModel": [
+                {
+                    "image": "bra_23"
+                },
+                {
+                    "image": "bra_21"
+                }
+            ],
+        },
+        {
+            "videoURL": "Get_Comfortable_with_Winning",
+            "title": "Find Your the Best Bra",
+            "description": "The Nike Bra is designed for active women, offering comfortable support and freedom of movement. Breathable fabric wicks away sweat to keep you dry, while the stretchy design hugs your shape. Perfect for workouts, yoga, or everyday wear.",
+            "image": "Nike_bra_0",
+            "completeTheLookHeader":
+            {
+                "title": "You Might Also Like"
+            },
+            "completeTheLookModel": [
+                {
+                    "image": "bra_23"
+                },
+                {
+                    "image": "bra_21"
+                }
+            ],
+        },
+    ],
+    "nikeTrainingHeader": {
+        "title": "Because you like",
+        "subtitleLabel": "Training"
+    },
+    "nikeTraining": [
+        {
+            "image": "NIKE+PRO+DF+365+CROP+LS",
+            "description": "Air Jordan 1 Mid",
+            "type": "Air Jordan",
+            "price": 125,
+            "categories": [
+                {
+                    "categoryImage": "NIKE+PRO+DF+365+CROP+LS",
+                    "subCategories": [
+                        {
+                            "id": 1,
+                            "subCategoryImage": "NIKE+PRO+DF+365+CROP+LS",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 2,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_1",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 3,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_2",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 4,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_3",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 5,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_4",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        }
+                    ]
+                },
+                {
+                    "categoryImage": "AIR+JORDAN+1+MID_5",
+                    "subCategories": [
+                        {
+                            "id": 6,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_5",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 7,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_6",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 8,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_7",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        },
+                        {
+                            "id": 9,
+                            "subCategoryImage": "AIR+JORDAN+1+MID_8",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 125
+                        }
+                    ]
+                }
+            ],
+            "categoryName": "Men's Shoes",
+            "detailButtonsName": {
+                "firstButtonTitle": "Add to Bag",
+                "secondButtonTitle": "Favorite"
+            },
+            "promo": [
+                {
+                    "image": "shipping",
+                    "title": "Shopping As It Should Be",
+                    "description": "Get free shipping on orders $50+."
+                },
+                {
+                    "image": "JordanLogo",
+                    "title": "Get Ready to Win",
+                    "description": "Use code WINNING for an extra 25% off select styles."
+                }
+            ],
+            "header": {
+                "title": "Size",
+                "buttonTitle": "Size Guide"
+            },
+            "productDescription": [
+                {
+                    "description": "Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colors and crisp leather give it a distinct identity."
+                }
+            ],
+            "youMightAlsoLikeHeader": {
+                "title": "You Might Also Like"
+            },
+            "youMightAlsoLike": [
+                {
+                    "image": "AIR+JORDAN+1+HIGH+G"
+                },
+                {
+                    "image": "AIR+JORDAN+1+HIGH+G.png"
+                },
+                {
+                    "image": "AIR+JORDAN+1+HIGH+G+NRG"
+                }
+            ],
+            "completeTheLookHeader": {
+                "title": "Complete The Look"
+            },
+            "completeTheLook": [
+                {
+                    "image": "look_0"
+                },
+                {
+                    "image": "look_1"
+                },
+            ],
+        },
+        {
+            "id": 2,
+            "count": 1,
+            "image": "W+NK+DF+ALATE+TRACE+BRA",
+            "description": "Air Jordan I High G",
+            "type": "Air Jordan",
+            "price": 140,
+            "categories": [
+                {
+                    "categoryImage": "W+NK+DF+ALATE+TRACE+BRA",
+                    "subCategories": [
+                        {
+                            "id": 988,
+                            "subCategoryImage": "W+NK+DF+ALATE+TRACE+BRA",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 10
+                        },
+                        {
+                            "id": 987,
+                            "subCategoryImage": "552528-03",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 15
+                        }
+                    ]
+                },
+                {
+                    "categoryImage": "CleaningEquipmentType1",
+                    "subCategories": [
+                        {
+                            "id": 986,
+                            "subCategoryImage": "CleaningEquipmentType1",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 30
+                        },
+                        {
+                            "id": 985,
+                            "subCategoryImage": "CleaningEquipmentType3",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 20
+                        },
+                        {
+                            "id": 984,
+                            "subCategoryImage": "CleaningEquipmentType1",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 50
+                        }
+                    ]
+                }
+            ],
+            "categoryName": "Shoes",
+            "detailButtonsName": {
+                "firstButtonTitle": "Add to Bag",
+                "secondButtonTitle": "Favorite"
+            },
+            "promo": [
+                {
+                    "image": "CleaningEquipmentType2",
+                    "title": "Special Offer",
+                    "description": "Get 20% off"
+                },
+                {
+                    "image": "CleaningEquipmentType3",
+                    "title": "Summer Sale",
+                    "description": "Save big on new arrivals"
+                }
+            ],
+            "header": {
+                "title": "Size",
+                "buttonTitle": "Size Guide"
+            },
+            "productDescription": [
+                {
+                    "description": "Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colors and crisp leather give it a distinct identity."
+                }
+            ],
+            "completeTheLookHeader": {
+                "title": "Complete The Look"
+            },
+            "youMightAlsoLikeHeader": {
+                "title": "You Might Also Like"
+            },
+            "completeTheLook": [
+                {
+                    "image": "nike-swift-stride-4"
+                },
+                {
+                    "image": "nike-swift-stride-6"
+                },
+            ],
+        },
+        {
+            "id": 3,
+            "count": 1,
+            "image": "W+NP+SCULPT+DF+HR+3IN+SHORT",
+            "description": "Air Jordan I High G",
+            "type": "Air Jordan",
+            "price": 145,
+            "categories": [
+                {
+                    "categoryImage": "W+NP+SCULPT+DF+HR+3IN+SHORT",
+                    "subCategories": [
+                        {
+                            "id": 982,
+                            "subCategoryImage": "W+NP+SCULPT+DF+HR+3IN+SHORT",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 100
+                        },
+                        {
+                            "id": 981,
+                            "subCategoryImage": "d0-1",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 300
+                        }
+                    ]
+                },
+                {
+                    "categoryImage": "CleaningEquipmentType1",
+                    "subCategories": [
+                        {
+                            "id": 980,
+                            "subCategoryImage": "CleaningEquipmentType2",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 100
+                        },
+                        {
+                            "id": 979,
+                            "subCategoryImage§§": "CleaningEquipmentType3",
+                            "title": "Air Jordan 1 Mid",
+                            "category": "Men's Shoes",
+                            "count": 1,
+                            "price": 200
+                        }
+                    ]
+                }
+            ],
+            "categoryName": "S",
+            "detailButtonsName": {
+                "firstButtonTitle": "Add to Bag",
+                "secondButtonTitle": "Favorite"
+            },
+            "promo": [
+                {
+                    "image": "CleaningEquipmentType2",
+                    "title": "Special Offer",
+                    "description": "Get 20% off"
+                },
+                {
+                    "image": "CleaningEquipmentType3",
+                    "title": "Summer Sale",
+                    "description": "Save big on new arrivals"
+                }
+            ],
+            "header": {
+                "title": "Size",
+                "buttonTitle": "Size Guide"
+            },
+            "productDescription": [
+                {
+                    "description": "Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colors and crisp leather give it a distinct identity."
+                }
+            ],
+            "completeTheLookHeader": {
+                "title": "Complete The Look"
+            },
+            "youMightAlsoLikeHeader": {
+                "title": "You Might Also Like"
+            },
+            "completeTheLook": [
+                {
+                    "image": "W+NK+DF+SWSH+HGH+SPT+BRA"
+                },
+                {
+                    "image": "W+NP+SCULPT+DF+HR+3IN+SHORT"
+                },
+            ],
+        }
+    ],
+    "storiesForYou": [
+        {
+            "largeImage": "jordan-brand-zion-4-1",
+            "smallImage1": "jordan-brand-launches-the-air-jordan-xxxviii",
+            "smallImage2": "jordan-brand-launches-luka-2-basketball-shoe",
+            "title": "Stories For You",
+            "rightButtonTitle": "View All",
+            "bottomButtonTitle": "View All",
+            "largeImageLabel1": "Nike NBA City Edition",
+            "largeImageLabel2": "Jordan Brand Welcomes",
+            "smallImage1Label1": "Court-ready tech",
+            "smallImage1Label2": "Next Generation",
+            "smallImage2Label1": "Lightweight design",
+            "smallImage2Label2": "Meet the Innovation",
+            "fullDescription": "Nike’s new Swift and Stride collections of elevated running essentials are the go-to apparel for the runner’s kit."
+        }
+    ],
+    "nikeSwiftAndStrideHeader": {
+        "title": "Because you like",
+        "subtitleLabel": "Nike Swift And Stride"
+    },
+    "nikeSwiftAndStride": [
+        {
+            "image": "nike-swift-stride-4",
+            "description": "Swift and Stride collections",
+            "type": "Nike’s new",
+            "productInfo": [
+                {
+                    "image3": "nike-swift-stride-4",
+                    "title": "Introducing Elevated Essentials for Every Runner’s Kit: Nike Swift and Stride",
+                    "description": "Nike’s new Swift and Stride collections of elevated running essentials are the go-to apparel for the runner’s kit."
+                }
+            ],
+        },
+        {
+            "image": "nike-swift-stride-5",
+            "description": "Swift and Stride collections",
+            "type": "Nike’s new",
+            "productInfo": [
+                {
+                    "image3": "nike-swift-stride-5",
+                    "title": "Introducing Elevated Essentials for Every Runner’s Kit: Nike Swift and Stride",
+                    "description": "The collections combine existing running favorites and Nike innovations that work together to meet runners’ needs."
+                }
+            ],
+        },
+        {
+            "image": "nike-swift-stride-3",
+            "description": "Swift and Stride collections",
+            "type": "Nike’s new",
+            "productInfo": [
+                {
+                    "image3": "nike-swift-stride-3",
+                    "title": "Introducing Elevated Essentials for Every Runner’s Kit: Nike Swift and Stride",
+                    "description": "The collections take the guesswork out of gear and feature evolved, more flattering fits and finishes to help runners look good, feel good and perform at their best."
+                },
+            ],
+        },
+        {
+            "image": "nike-swift-stride-6",
+            "description": "Swift and Stride collections",
+            "type": "Nike’s new",
+            "productInfo": [
+                {
+                    "image3": "nike-swift-stride-6",
+                    "title": "Introducing Elevated Essentials for Every Runner’s Kit: Nike Swift and Stride",
+                    "description": "The collections will be available globally at nike.com and select retailers January 1, 2025."
+                },
+            ],
+        },
+    ],
+    "thankYou": [
+        {
+            "image": "ThankYou"
+        }
+    ]
+}
+
+
+
+
+
+

@@ -1,0 +1,488 @@
+{
+    "buttonsSection": {
+        "firstButtonTitle": "Men",
+        "secondButtonTitle": "Women",
+        "thirdButtonTitle": "Kids"
+    },
+    "men": {
+        "titleHeaderModel": {
+            "title": "New This Week",
+            "buttonTitle": "View All"
+        },
+        "newThisWeekSection": [
+            {
+                "image": "mercurial-vapor-1-rgn-1",
+                "description": "Reintroducing a Football Icon",
+                "type": "The Chrome Mercurial Vapor",
+                "fullDescription": "A Nike sports bra technical designer weighs in on how to measure your sports bra size and determine best fit.\n\nFor many athletes, sports bras are a crucial part of every workout outfit. This is because a sports bra is one of the most technical clothing items athletes can own, explained Tara Sweeney, a Nike sports bra technical designer.\n\nBut the ideal fit comes down to more than just measurements. “Finding the right sports bra comes down to striking a balance between comfort and support for your breast size and firmness, body type and intended activities,” said Sweeney."
+            },
+            {
+                "image": "fa24-jd-aj39-comms-product-stills-sol-sg-2688x1400",
+                "description": "Our values with the Air Jordan",
+                "type": "Air Jordan XXXIX",
+                "fullDescription": "A Nike sports bra technical designer weighs in on how to measure your sports bra size and determine best fit.\n\nFor many athletes, sports bras are a crucial part of every workout outfit. This is because a sports bra is one of the most technical clothing items athletes can own, explained Tara Sweeney, a Nike sports bra technical designer.\n\nBut the ideal fit comes down to more than just measurements. “Finding the right sports bra comes down to striking a balance between comfort and support for your breast size and firmness, body type and intended activities,” said Sweeney."
+            },
+            {
+                "image": "swooshdesktop1",
+                "description": "Nike Launches .SWOOSH",
+                "type": "Digital Community",
+                "fullDescription": "A Nike sports bra technical designer weighs in on how to measure your sports bra size and determine best fit.\n\nFor many athletes, sports bras are a crucial part of every workout outfit. This is because a sports bra is one of the most technical clothing items athletes can own, explained Tara Sweeney, a Nike sports bra technical designer.\n\nBut the ideal fit comes down to more than just measurements. “Finding the right sports bra comes down to striking a balance between comfort and support for your breast size and firmness, body type and intended activities,” said Sweeney."
+            }
+        ],
+        "shopListSection": [
+            {
+                "image": "Frame 1",
+                "type": "Jordan Brand’s",
+                "productInfo": [
+                    {
+                        "image3": "nike-swift-stride-6",
+                        "title": "T",
+                        "description": "Sweeney."
+                    }
+                ],
+            },
+            {
+                "image": "Frame 2",
+                "type": "Basketball",
+                "productInfo": [
+                    {
+                        "image3": "nike-swift-stride-6",
+                        "title": "T",
+                        "description": "Sweeney."
+                    }
+                ],
+            },
+            {
+                "image": "Frame 3",
+                "type": "Legacy",
+                "productInfo": [
+                    {
+                        "image3": "nike-swift-stride-6",
+                        "title": "T",
+                        "description": "Sweeney."
+                    }
+                ],
+            },
+            {
+                "image": "Frame 4",
+                "type": "",
+                "logoImage": "logoApha",
+                "productInfo": [
+                    {
+                        "image3": "nike-swift-stride-6",
+                        "title": "T",
+                        "description": "Sweeney."
+                    }
+                ],
+            }
+        ],
+        "clothingHeader": {
+            "title": "Closhing"
+        },
+        "clothing": [
+            {
+                "image": "NikeSportswearMetro",
+                "description": "Nike Metro",
+            },
+            {
+                "image": "SwimParka",
+                "description": "Swim Parka"
+            },
+            {
+                "image": "Nike SportswearStorm-FITADVGORE-TEX",
+                "description": "Nike Storm"
+            }
+        ],
+        "rafaelNadalHeader": {
+            "title": "Rafael Nadal"
+        },
+        "rafaelNadal": [
+            {
+                "image": "RafaelNadal_1",
+                "description": "Rafael Nadal",
+                "type": "Rafic",
+                "fullDescription": "A Nike sports bra technical designer weighs in on how to measure your sports bra size and determine best fit.\n\nFor many athletes, sports bras are a crucial part of every workout outfit. This is because a sports bra is one of the most technical clothing items athletes can own, explained Tara Sweeney, a Nike sports bra technical designer.\n\nBut the ideal fit comes down to more than just measurements. “Finding the right sports bra comes down to striking a balance between comfort and support for your breast size and firmness, body type and intended activities,” said Sweeney."
+            },
+            {
+                "image": "RafaelNadal_2",
+                "description": "Rafael Nadal"
+            },
+            {
+                "image": "RafaelNadal_3",
+                "description": "Rafael Nadal"
+            },
+            {
+                "image": "RafaelNadal_4",
+                "description": "Rafael Nadal"
+            }
+        ],
+        "nikeZoomFly6Header": {
+            "title": "Nike ZoomFly6"
+        },
+        "nikeZoomFly6": [
+            {
+                "image": "NikeZoomFly6_5",
+                "description": "Nike ZoomFly6"
+            },
+            {
+                "image": "NikeZoomFly6_1",
+                "description": "Nike ZoomFly6"
+            },
+            {
+                "image": "NikeZoomFly6_2",
+                "description": "Nike ZoomFly6"
+            },
+            {
+                "image": "NikeZoomFly6_3",
+                "description": "Nike ZoomFly6"
+            },
+            {
+                "image": "NikeZoomFly6_4",
+                "description": "Nike ZoomFly6"
+            }
+        ],
+        "jacketsHeader": {
+            "title": "Jackets"
+        },
+        "jackets": [
+            {
+                "image": "AirJordanWordmark",
+                "description": "Jordan Wordmark",
+            },
+            {
+                "image": "AirJordan_men",
+                "description": "Air Jordan",
+            },
+            {
+                "image": "TatumChicago",
+                "description": "Tatum Chicago"
+            }
+        ],
+        "shoesSectionHeader": {
+            "title": "Shoes"
+        },
+        "shoesSection": [
+            {
+                "image": "NikeAirMax90Drift",
+                "description": "Nike AirMax 90",
+                "price": 150
+            },
+            {
+                "image": "NikeAirMaxScorpionFlyknitSE",
+                "description": "Nike Scorpion",
+                "price": 175
+                
+            },
+            {
+                "image": "NikeAlphafly3",
+                "description": "Nike Alpha",
+                "price": 135
+            },
+            {
+                "image": "NikeZegama2",
+                "description": "Nike Zegama",
+                "price": 275
+            }
+        ],
+        "nearbyStoresHeader": {
+            "title": "Nearby Stores",
+            "buttonTitle": "Find a Store"
+        },
+        "nearbyStores": [
+            {
+                "image": "NikeStore_1",
+                "description": "Nike Sawgrass",
+                "type": "4.8 mi",
+                "storeHours": "10:00 AM - 9:00 PM"
+            },
+            {
+                "image": "NikeStore_2",
+                "description": "Nike Sawgrass",
+                "type": "4.8 mi",
+                "storeHours": "10:00 AM - 9:00 PM"
+            },
+            {
+                "image": "NikeStore_3",
+                "description": "Nike Sawgrass",
+                "type": "4.8 mi",
+                "storeHours": "10:00 AM - 9:00 PM"
+            },
+            {
+                "image": "NikeStore_4",
+                "description": "Nike Sawgrass",
+                "type": "4.8 mi",
+                "storeHours": "10:00 AM - 9:00 PM"
+            },
+            {
+                "image": "NikeStore_5",
+                "description": "Nike Sawgrass",
+                "type": "4.8 mi",
+                "storeHours": "10:00 AM - 9:00 PM"
+            }
+        ]
+    },
+    "women": {
+        "titleHeaderModel": {
+            "title": "New This Week",
+            "buttonTitle": "View All"
+        },
+        "newThisWeekSection": [
+            {
+                "image": "W+NK+DF+SWSH+HGH+SPT+BRA 1",
+                "description": "Nike Launches Training Club",
+                "type": "World-class trainers"
+            },
+            {
+                "image": "W+NK+DF+SWSH+HGH+SPT+BRA2",
+                "description": "Workouts on Netflix",
+                "type": "More than 90 NTC workouts"
+            }
+        ],
+        "shopListSection": [
+            {
+                "image": "Frame 9"
+            },
+            {
+                "image": "Frame 10"
+            },
+            {
+                "image": "Frame 11"
+            },
+            {
+                "image": "Frame 12"
+            }
+        ],
+        "trends": [
+            {
+                "image": "jordan-wings-x-paris-saint-germain-10",
+                "description": "Jordan Wings"
+            },
+            {
+                "image": "keely-hodgkinson-great-britain-track-field-nike-1",
+                "description": "Keely Hodgkinson"
+            },
+            {
+                "image": "Marshawn Lynch",
+                "description": "Marshawn Lynch"
+            },
+            {
+                "image": "Allison Hueman",
+                "description": "Allison Hueman"
+            }
+        ],
+        "recentlyViewedSection": [
+            {
+                "image": "fa24-jd-aj39-comms-product-stills-sol-sg-2688x1400",
+                "description": "Nike AirMax 90",
+                "price": 150
+            },
+            {
+                "image": "W+NK+DF+SWSH+HGH+SPT+BRA",
+                "description": "Nike Scorpion",
+                "price": 175
+                
+            },
+            {
+                "image": "jordan-brand-launches-luka-2-basketball-shoe",
+                "description": "Nike Alpha",
+                "price": 135
+            },
+            {
+                "image": "NIKE+PRO+DF+365+CROP+LS",
+                "description": "Nike Alpha",
+                "price": 135
+            },
+            {
+                "image": "nike-swift-stride-4",
+                "description": "Nike Zegama",
+                "price": 275
+            }
+        ],
+        "jordanSneakersHeader": {
+            "title": "Jordan",
+            "buttonTitle": "Find a Store"
+        },
+        "jordanSneakersSection": [
+            {
+                "image": "AIR+JORDAN+1+HIGH+G",
+                "description": "AIR JORDAN",
+                "price": 180
+            },
+            {
+                "image": "AIR+JORDAN+1+HIGH+G + Green",
+                "description": "AIR JORDAN",
+                "price": 175
+            },
+            {
+                "image": "AIR+JORDAN+1+HIGH+G.png",
+                "description": "AIR JORDAN",
+                "price": 190
+            },
+            {
+                "image": "AIR+JORDAN+1+HIGH+G+NRG",
+                "description": "AIR JORDAN",
+                "price": 220
+            }
+        ],
+        "classicsSpotlightHeader": {
+            "title": "Classics Spotlight"
+        },
+        "classicsSpotlight": [
+            {
+                "image": "NikeSportswear",
+                "description": "Nike Sportswear"
+            },
+            {
+                "image": "NikeSportswearPhoenix",
+                "description": "Nike Phoenix"
+            },
+            {
+                "image": "NikePro",
+                "description": "Nike Pro"
+            },
+            {
+                "image": "NikeSportswearPhoenixFleece",
+                "description": "Nike Fleece"
+            }
+        ],
+        "nearbyStoresHeader": {
+            "title": "Nearby Stores",
+            "buttonTitle": "Find a Store"
+        },
+        "nearbyStores": [
+            {
+                "image": "NikeStore_1",
+                "description": "Nike Sawgrass",
+                "type": "4.8 mi",
+                "storeHours": "10:00 AM - 9:00 PM"
+            },
+            {
+                "image": "NikeStore_2",
+                "description": "Nike Sawgrass",
+                "type": "4.8 mi",
+                "storeHours": "10:00 AM - 9:00 PM"
+            },
+            {
+                "image": "NikeStore_3",
+                "description": "Nike Sawgrass",
+                "type": "4.8 mi",
+                "storeHours": "10:00 AM - 9:00 PM"
+            },
+            {
+                "image": "NikeStore_4",
+                "description": "Nike Sawgrass",
+                "type": "4.8 mi",
+                "storeHours": "10:00 AM - 9:00 PM"
+            },
+            {
+                "image": "NikeStore_5",
+                "description": "Nike Sawgrass",
+                "type": "4.8 mi",
+                "storeHours": "10:00 AM - 9:00 PM"
+            }
+        ]
+    },
+    "kids": {
+        "titleHeaderModel": {
+            "title": "New This Week"
+        },
+        "newThisWeekSection": [
+            {
+                "image": "newsroom-spsu24-converse-kids-a06664c-look-03-00268",
+                "description": "Converse Introduces",
+                "type": "Chuck Taylor All Star"
+            },
+            {
+                "image": "cosmic-runner",
+                "description": "Nike Redefines Running",
+                "type": "Kids’ Cosmic Runner"
+            },
+            {
+                "image": "mds-mercurial-superfly-1",
+                "description": "Nike Lights up the Pitch",
+                "type": "New Mercurial Dream"
+            }
+        ],
+        "shopListSection": [
+            {
+                "image": "Frame 13"
+            },
+            {
+                "image": "Frame 14"
+            },
+            {
+                "image": "Frame 15"
+            },
+            {
+                "image": "Frame 16"
+            }
+        ],
+        "pinkNikeHeader": {
+            "title": "Shop by Age"
+        },
+        "pinkNike": [
+            {
+                "image": "NikeFull-ZipClubSet",
+                "description": "Zip Club Set"
+            },
+            {
+                "image": "NikeDri-FITKids",
+                "description": "Dri-FIT Kids"
+            },
+            {
+                "image": "NikeSportswearK",
+                "description": "Nike Sport"
+            },
+            {
+                "image": "NikeSportswearClubFleece",
+                "description": "Club Fleece"
+            }
+        ],
+        "jordanKidsHeaderModel": {
+            "title": "Jordan Kids"
+        },
+        "jordanKids": [
+            {
+                "image": "JordanBrooklynFleece",
+                "description": "Jordan Brooklyn"
+                
+            },
+            {
+                "image": "JordanMJBrooklyn",
+                "description": "Jordan MJ Brooklyn"
+            },
+            {
+                "image": "JordanElevatedJersey",
+                "description": "Jordan Jersey"
+            },
+            {
+                "image": "JordanMVP",
+                "description": "Jordan MVP"
+            },
+            {
+                "image": "JordanSeeMeShine",
+                "description": "See Me Shine"
+            }
+        ],
+        "nikeNewsHeader": {
+            "title": "Playground"
+        },
+        "nikeNews": [
+            {
+                "image": "playground-for-all-1"
+            },
+            {
+                "image": "playground-for-all-8"
+            },
+            {
+                "image": "playground-for-all-6"
+            },
+            {
+                "image": "playground-for-all-13"
+            }
+        ]
+    }
+}
+
+
+
