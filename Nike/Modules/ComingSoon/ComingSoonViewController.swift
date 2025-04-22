@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class ComingSoonViewController: UIViewController {
     
@@ -50,33 +51,33 @@ extension ComingSoonViewController {
 extension ComingSoonViewController {
     
     private func setupView() {
+        [messageLabel, closeButton, progressView].forEach { view.addSubview($0) }
+        
         messageLabel.textAlignment = .center
         messageLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         messageLabel.text = Text.ComingSoonViewController.greatThingsTakeTime
-        
-        view.addSubview(messageLabel)
-        view.addSubview(closeButton)
-        view.addSubview(progressView)
     }
     
     private func setupConstraints() {
-        messageLabel.translatesAutoresizingMaskIntoConstraints = false
-        closeButton.translatesAutoresizingMaskIntoConstraints = false
-        progressView.translatesAutoresizingMaskIntoConstraints = false
+        [messageLabel, closeButton, progressView].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+
+        messageLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().inset(60)
+        }
+                
+        progressView.snp.makeConstraints { make in
+            make.top.equalTo(messageLabel.snp.bottom).offset(36)
+            make.leading.equalToSuperview().offset(40)
+            make.trailing.equalToSuperview().inset(40)
+            make.height.equalTo(20)
+        }
         
-        NSLayoutConstraint.activate([
-            messageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            messageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -60),
-            
-            progressView.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 36),
-            progressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            progressView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            progressView.heightAnchor.constraint(equalToConstant: 20),
-            
-            closeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            closeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
-            closeButton.heightAnchor.constraint(equalToConstant: 50),
-            closeButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 180)
-        ])
+        closeButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(30)
+            make.height.equalTo(50)
+            make.width.greaterThanOrEqualTo(180)
+        }
     }
 }

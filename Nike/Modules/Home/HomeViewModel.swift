@@ -43,7 +43,7 @@ class HomeViewModel {
     var stateChanged: ((State) -> Void)?
     var sectionsChanged: (([HomeSection]) -> Void)?
     var navigateFromPromo: (([Product]) -> Void)?
-    var navigateFromTopPicks: (([Product], Categories?, Header?, String, SubCategoryModel?) -> Void)?
+    var navigateFromBecauseYouLike: (([Product], Categories?, Header?, String, SubCategoryModel?) -> Void)?
     var navigateFromNewFromNike: (([NewFromNikeModel]) -> Void)?
     var navigateFromExploreButton: (([NewFromNikeModel]) -> Void)?
     var navigateFromStoriesForYou: (([StoriesForYou]) -> Void)?
@@ -95,7 +95,7 @@ class HomeViewModel {
                                  let category,
                                  let subcategory):
             
-            navigateFromTopPicks?(model, categories, header, category, subcategory)
+            navigateFromBecauseYouLike?(model, categories, header, category, subcategory)
             
         case .promoDidTap(let model):
             navigateFromPromo?(model)

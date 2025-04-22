@@ -60,9 +60,8 @@ class BagService: BagServiceProtocol {
         
         do {
             let array = try decoder.decode([SubCategoryModel].self, from: data)
-            array.forEach { print("Fetched SubCategory ID: \($0.id ?? 0)") } // Логируем загруженные ID
-            print("Saved successfully for key: \(bagKey)")
             return array
+            
         } catch {
             print(error)
         }
@@ -78,7 +77,6 @@ class BagService: BagServiceProtocol {
         }
         do {
             let topPicks = try JSONDecoder().decode([SubCategoryModel].self, from: data)
-            print("Saved successfully for key: \(bagKey)")
             return topPicks
             
         } catch {
@@ -90,14 +88,9 @@ class BagService: BagServiceProtocol {
 //     MARK: - Delete
     @discardableResult
     func delete(_ product: SubCategoryModel) -> [SubCategoryModel] {
-        
         var products = fetch()
-        print(products.count)
         products.removeAll(where: { $0.id == product.id })
-        
-        print(products.count)
         save(products)
-        
         return products
     }
     

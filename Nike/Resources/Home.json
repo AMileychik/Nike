@@ -18,7 +18,7 @@
                             "id": 1,
                             "subCategoryImage": "AIR+JORDAN+1+MID_0",
                             "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "category": "Shoes",
                             "count": 1,
                             "price": 125
                         },
@@ -26,7 +26,7 @@
                             "id": 2,
                             "subCategoryImage": "AIR+JORDAN+1+MID_1",
                             "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "category": "Shoes",
                             "count": 1,
                             "price": 125
                         },
@@ -34,7 +34,7 @@
                             "id": 3,
                             "subCategoryImage": "AIR+JORDAN+1+MID_2",
                             "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "category": "Shoes",
                             "count": 1,
                             "price": 125
                         },
@@ -42,7 +42,7 @@
                             "id": 4,
                             "subCategoryImage": "AIR+JORDAN+1+MID_3",
                             "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "category": "Shoes",
                             "count": 1,
                             "price": 125
                         },
@@ -50,7 +50,7 @@
                             "id": 5,
                             "subCategoryImage": "AIR+JORDAN+1+MID_4",
                             "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "category": "Shoes",
                             "count": 1,
                             "price": 125
                         }
@@ -63,7 +63,7 @@
                             "id": 6,
                             "subCategoryImage": "AIR+JORDAN+1+MID_5",
                             "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "category": "Shoes",
                             "count": 1,
                             "price": 125
                         },
@@ -71,7 +71,7 @@
                             "id": 7,
                             "subCategoryImage": "AIR+JORDAN+1+MID_6",
                             "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "category": "Shoes",
                             "count": 1,
                             "price": 125
                         },
@@ -79,7 +79,7 @@
                             "id": 8,
                             "subCategoryImage": "AIR+JORDAN+1+MID_7",
                             "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "category": "Shoes",
                             "count": 1,
                             "price": 125
                         },
@@ -87,7 +87,7 @@
                             "id": 9,
                             "subCategoryImage": "AIR+JORDAN+1+MID_8",
                             "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "category": "Shoes",
                             "count": 1,
                             "price": 125
                         }
@@ -333,7 +333,7 @@
                             "id": 16,
                             "subCategoryImage": "Nike Club_5_bag",
                             "title": "Nike Club",
-                            "category": "Men's Short-Sleeve Shirt",
+                            "category": "Men's Shirt",
                             "count": 1,
                             "price": 75
                         },
@@ -341,7 +341,7 @@
                             "id": 17,
                             "subCategoryImage": "Nike Club_6",
                             "title": "Nike Club",
-                            "category": "Men's Short-Sleeve Shirt",
+                            "category": "Men's Shirt",
                             "count": 1,
                             "price": 75
                         },
@@ -349,7 +349,7 @@
                             "id": 18,
                             "subCategoryImage": "Nike Club_7",
                             "title": "Nike Club",
-                            "category": "Men's Short-Sleeve Shirt",
+                            "category": "Men's Shirt",
                             "count": 1,
                             "price": 75
                         },
@@ -357,7 +357,7 @@
                             "id": 19,
                             "subCategoryImage": "Nike Club_8",
                             "title": "Nike Club",
-                            "category": "Men's Short-Sleeve Shirt",
+                            "category": "Men's Shirt",
                             "count": 1,
                             "price": 75
                         }
@@ -370,7 +370,7 @@
                             "id": 20,
                             "subCategoryImage": "Nike Club_1_bag",
                             "title": "Nike Club",
-                            "category": "Men's Short-Sleeve Shirt",
+                            "category": "Men's Shirt",
                             "count": 1,
                             "price": 75
                         },
@@ -378,7 +378,7 @@
                             "id": 21,
                             "subCategoryImage": "Nike Club_2",
                             "title": "Nike Club",
-                            "category": "Men's Short-Sleeve Shirt",
+                            "category": "Men's Shirt",
                             "count": 1,
                             "price": 75
                         },
@@ -386,7 +386,7 @@
                             "id": 22,
                             "subCategoryImage": "Nike Club_3",
                             "title": "Nike Club",
-                            "category": "Men's Short-Sleeve Shirt",
+                            "category": "Men's Shirt",
                             "count": 1,
                             "price": 75
                         },
@@ -394,7 +394,7 @@
                             "id": 23,
                             "subCategoryImage": "Nike Club_4",
                             "title": "Nike Club",
-                            "category": "Men's Short-Sleeve Shirt",
+                            "category": "Men's Shirt",
                             "count": 1,
                             "price": 75
                         }
@@ -456,10 +456,10 @@
             },
             "youMightAlsoLike": [
                 {
-                    "image": "Nike Club_12"
+                    "image": "Nike Club_21"
                 },
                 {
-                    "image": "Nike Club_13"
+                    "image": "Nike Club_22"
                 }
             ],
             "completeTheLookHeader": {
@@ -481,14 +481,14 @@
             "title": "Shopping As It Should Be",
             "type": "Shopping As It Should Be",
             "description": "Get free shipping on orders $50+.",
-            "fullDescription": "Although strap and band fit tend to provide the most clear signs that a bra correctly fits, a few other indicators can signal the wrong size, said Sweeney. \n\nA bra that is too small will often:\n- Have a neckline and/or underarm area that causes the breast to spill or cut out of the sides of the bra.\n\nA bra that is too big will often: \n- Show excess fabric bunching or gathering throughout the cup area."
+            "fullDescription": "Get free shipping on all Nike orders over $50. It’s a great way to save on delivery and enjoy your favorite gear without extra costs. This offer applies to all standard shipping orders. \n\nSimply add $50 or more worth of items to your cart, and free shipping will be applied automatically. Shop smarter and enjoy the convenience with Nike!"
         },
         {
             "image": "JordanLogo",
             "title": "Get Ready to Win",
             "type": "Get Ready to Win",
             "description": "Use code WINNING for an extra 25% off select styles.",
-            "fullDescription": "Although strap and band fit tend to provide the most clear signs that a bra correctly fits, a few other indicators can signal the wrong size, said Sweeney. \n\nA bra that is too small will often:\n- Have a neckline and/or underarm area that causes the breast to spill or cut out of the sides of the bra.\n\nA bra that is too big will often: \n- Show excess fabric bunching or gathering throughout the cup area."
+            "fullDescription": "Use promo code WINNING to get an extra 25% off select styles. It’s a great opportunity to refresh your wardrobe at a discount. The code applies to a limited selection of items. \n\nJust enter the code at checkout and the discount will be applied automatically. Don’t miss your chance to save with Nike!"
         }
     ],
     "newFromNikeHeader": {
@@ -516,7 +516,7 @@
                 {
                     "image": "Nike_swoosh_bra",
                     "type": "Finding the Best Bra Size: Additional Fit Factors to Consider",
-                    "description": "Although strap and band fit tend to provide the most clear signs that a bra correctly fits, a few other indicators can signal the wrong size, said Sweeney. \n\nA bra that is too small will often:\n- Have a neckline and/or underarm area that causes the breast to spill or cut out of the sides of the bra.\n\nA bra that is too big will often: \n- Show excess fabric bunching or gathering throughout the cup area.",
+                    "description": "A bra that is too small will often:\n- Have a neckline and/or underarm area that causes the breast to spill or cut out of the sides of the bra.\n\nA bra that is too big will often: \n- Show excess fabric bunching or gathering throughout the cup area.",
                 }
             ],
             "completeTheLookHeader":
@@ -552,7 +552,7 @@
                 {
                     "image": "Nike_swoosh_bra",
                     "type": "Finding the Best Bra Size: Additional Fit Factors to Consider",
-                    "description": "Although strap and band fit tend to provide the most clear signs that a bra correctly fits, a few other indicators can signal the wrong size, said Sweeney. \n\nA bra that is too small will often:\n\n- Have a neckline and/or underarm area that causes the breast to spill or cut out of the sides of the bra\n- Feature a neckline and/or underarm area that sits too low on the body\n- Contain a cup area that is too short, which can cause the bottom band to ride up and sit on the bottom of the breast rather than just below the breast tissue \n\nA bra that is too big will often: \n\n- Show excess fabric bunching or gathering throughout the cup area \n- Have a neckline and/or underarm area that sits too high, potentially rubbing the neck or underarm and causing chafing \n- Not provide any compression or support, or allow for too much breast movement",
+                    "description": "A bra that is too small will often:\n\n- Have a neckline and/or underarm area that causes the breast to spill or cut out of the sides of the bra\n- Feature a neckline and/or underarm area that sits too low on the body\n- Contain a cup area that is too short, which can cause the bottom band to ride up and sit on the bottom of the breast rather than just below the breast tissue \n\nA bra that is too big will often: \n\n- Show excess fabric bunching or gathering throughout the cup area \n- Have a neckline and/or underarm area that sits too high, potentially rubbing the neck or underarm and causing chafing \n- Not provide any compression or support, or allow for too much breast movement",
                 }
             ],
             "completeTheLookHeader":
@@ -629,95 +629,87 @@
     },
     "nikeTraining": [
         {
-            "image": "NIKE+PRO+DF+365+CROP+LS",
-            "description": "Air Jordan 1 Mid",
-            "type": "Air Jordan",
-            "price": 125,
+            "image": "Nike Swoosh High Support",
+            "description": "Sports Bra",
+            "type": "Nike High Support",
+            "price": 60,
             "categories": [
                 {
-                    "categoryImage": "NIKE+PRO+DF+365+CROP+LS",
+                    "categoryImage": "Nike Swoosh High Support_bag",
                     "subCategories": [
                         {
-                            "id": 1,
-                            "subCategoryImage": "NIKE+PRO+DF+365+CROP+LS",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 24,
+                            "subCategoryImage": "Nike Swoosh High Support_bag",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 125
+                            "price": 60
                         },
                         {
-                            "id": 2,
-                            "subCategoryImage": "AIR+JORDAN+1+MID_1",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 25,
+                            "subCategoryImage": "Nike Swoosh High Support_4",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 125
+                            "price": 60
                         },
                         {
-                            "id": 3,
-                            "subCategoryImage": "AIR+JORDAN+1+MID_2",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 26,
+                            "subCategoryImage": "Nike Swoosh High Support_5",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 125
+                            "price": 60
                         },
                         {
-                            "id": 4,
-                            "subCategoryImage": "AIR+JORDAN+1+MID_3",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 27,
+                            "subCategoryImage": "Nike Swoosh High Support_6",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 125
-                        },
-                        {
-                            "id": 5,
-                            "subCategoryImage": "AIR+JORDAN+1+MID_4",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
-                            "count": 1,
-                            "price": 125
+                            "price": 60
                         }
                     ]
                 },
                 {
-                    "categoryImage": "AIR+JORDAN+1+MID_5",
+                    "categoryImage": "Nike Swoosh High Support_0",
                     "subCategories": [
                         {
-                            "id": 6,
-                            "subCategoryImage": "AIR+JORDAN+1+MID_5",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 28,
+                            "subCategoryImage": "Nike Swoosh High Support_0",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 125
+                            "price": 60
                         },
                         {
-                            "id": 7,
-                            "subCategoryImage": "AIR+JORDAN+1+MID_6",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 29,
+                            "subCategoryImage": "Nike Swoosh High Support_1",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 125
+                            "price": 60
                         },
                         {
-                            "id": 8,
-                            "subCategoryImage": "AIR+JORDAN+1+MID_7",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 30,
+                            "subCategoryImage": "Nike Swoosh High Support_2",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 125
+                            "price": 60
                         },
                         {
-                            "id": 9,
-                            "subCategoryImage": "AIR+JORDAN+1+MID_8",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 31,
+                            "subCategoryImage": "Nike Swoosh High Support_3",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 125
+                            "price": 60
                         }
                     ]
                 }
             ],
-            "categoryName": "Men's Shoes",
+            "categoryName": "Training",
             "detailButtonsName": {
                 "firstButtonTitle": "Add to Bag",
                 "secondButtonTitle": "Favorite"
@@ -740,7 +732,7 @@
             },
             "productDescription": [
                 {
-                    "description": "Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colors and crisp leather give it a distinct identity."
+                    "description": "Get ready to go all out in this Swoosh sports bra. High support gives you a locked-in feeling and helps keep motion to a minimum, making it ideal for runs and high-impact sports. Sweat-wicking, adaptive material quickly recovers its shape so you can stay comfortable throughout your workout. And when you need to make adjustments, the bottom band's extended hook-and-loop closure makes it easy to change up your fit."
                 }
             ],
             "youMightAlsoLikeHeader": {
@@ -748,13 +740,13 @@
             },
             "youMightAlsoLike": [
                 {
-                    "image": "AIR+JORDAN+1+HIGH+G"
+                    "image": "Nike Swoosh High Support_17"
                 },
                 {
-                    "image": "AIR+JORDAN+1+HIGH+G.png"
+                    "image": "Nike Swoosh High Support_18"
                 },
                 {
-                    "image": "AIR+JORDAN+1+HIGH+G+NRG"
+                    "image": "Nike Swoosh High Support_19"
                 }
             ],
             "completeTheLookHeader": {
@@ -762,87 +754,109 @@
             },
             "completeTheLook": [
                 {
-                    "image": "look_0"
+                    "image": "Nike Swoosh High Support_11"
                 },
                 {
-                    "image": "look_1"
+                    "image": "Nike Swoosh High Support_12"
                 },
             ],
         },
         {
-            "id": 2,
-            "count": 1,
-            "image": "W+NK+DF+ALATE+TRACE+BRA",
-            "description": "Air Jordan I High G",
-            "type": "Air Jordan",
-            "price": 140,
+            "image": "Nike One Convertible_0",
+            "description": "Sports Bra",
+            "type": "Nike One",
+            "price": 45,
             "categories": [
                 {
-                    "categoryImage": "W+NK+DF+ALATE+TRACE+BRA",
+                    "categoryImage": "Nike One Convertible_0_bag",
                     "subCategories": [
                         {
-                            "id": 988,
-                            "subCategoryImage": "W+NK+DF+ALATE+TRACE+BRA",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 40,
+                            "subCategoryImage": "Nike One Convertible_0_bag",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 10
+                            "price": 45
                         },
                         {
-                            "id": 987,
-                            "subCategoryImage": "552528-03",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 41,
+                            "subCategoryImage": "Nike One Convertible_1",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 15
+                            "price": 45
+                        },
+                        {
+                            "id": 42,
+                            "subCategoryImage": "Nike One Convertible_2",
+                            "title": "Sports Bra",
+                            "category": "Training",
+                            "count": 1,
+                            "price": 45
+                        },
+                        {
+                            "id": 43,
+                            "subCategoryImage": "Nike One Convertible_3",
+                            "title": "Sports Bra",
+                            "category": "Training",
+                            "count": 1,
+                            "price": 45
                         }
                     ]
                 },
                 {
-                    "categoryImage": "CleaningEquipmentType1",
+                    "categoryImage": "Nike One Convertible_4",
                     "subCategories": [
                         {
-                            "id": 986,
-                            "subCategoryImage": "CleaningEquipmentType1",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 44,
+                            "subCategoryImage": "Nike One Convertible_4",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 30
+                            "price": 45
                         },
                         {
-                            "id": 985,
-                            "subCategoryImage": "CleaningEquipmentType3",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 45,
+                            "subCategoryImage": "Nike One Convertible_5",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 20
+                            "price": 45
                         },
                         {
-                            "id": 984,
-                            "subCategoryImage": "CleaningEquipmentType1",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 46,
+                            "subCategoryImage": "Nike One Convertible_6",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 50
+                            "price": 45
+                        },
+                        {
+                            "id": 47,
+                            "subCategoryImage": "Nike One Convertible_7",
+                            "title": "Sports Bra",
+                            "category": "Training",
+                            "count": 1,
+                            "price": 45
                         }
                     ]
                 }
             ],
-            "categoryName": "Shoes",
+            "categoryName": "Training",
             "detailButtonsName": {
                 "firstButtonTitle": "Add to Bag",
                 "secondButtonTitle": "Favorite"
             },
             "promo": [
                 {
-                    "image": "CleaningEquipmentType2",
-                    "title": "Special Offer",
-                    "description": "Get 20% off"
+                    "image": "shipping",
+                    "title": "Shopping As It Should Be",
+                    "description": "Get free shipping on orders $50+."
                 },
                 {
-                    "image": "CleaningEquipmentType3",
-                    "title": "Summer Sale",
-                    "description": "Save big on new arrivals"
+                    "image": "JordanLogo",
+                    "title": "Get Ready to Win",
+                    "description": "Use code WINNING for an extra 25% off select styles."
                 }
             ],
             "header": {
@@ -851,90 +865,131 @@
             },
             "productDescription": [
                 {
-                    "description": "Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colors and crisp leather give it a distinct identity."
+                    "description": "Nike One works for it all. This bra's convertible straps make it easy to wear under a variety of tops, while midweight, peachy-soft fabric stretches with you and dries quickly."
+                }
+            ],
+            "youMightAlsoLikeHeader": {
+                "title": "You Might Also Like"
+            },
+            "youMightAlsoLike": [
+                {
+                    "image": "Nike Swoosh High Support_19"
+                },
+                {
+                    "image": "Nike Swoosh High Support_17"
+                },
+                {
+                    "image": "Nike Swoosh High Support_18"
                 }
             ],
             "completeTheLookHeader": {
                 "title": "Complete The Look"
             },
-            "youMightAlsoLikeHeader": {
-                "title": "You Might Also Like"
-            },
             "completeTheLook": [
                 {
-                    "image": "nike-swift-stride-4"
+                    "image": "Nike One Convertible_9"
                 },
                 {
-                    "image": "nike-swift-stride-6"
+                    "image": "Nike One Convertible_8"
                 },
             ],
         },
         {
-            "id": 3,
-            "count": 1,
-            "image": "W+NP+SCULPT+DF+HR+3IN+SHORT",
-            "description": "Air Jordan I High G",
-            "type": "Air Jordan",
-            "price": 145,
+            "image": "Nike Zenvy Asymmetrical",
+            "description": "Sports Bra",
+            "type": "Nike Asymmetrical",
+            "price": 55,
             "categories": [
                 {
-                    "categoryImage": "W+NP+SCULPT+DF+HR+3IN+SHORT",
+                    "categoryImage": "Nike Zenvy Asymmetrical",
                     "subCategories": [
                         {
-                            "id": 982,
-                            "subCategoryImage": "W+NP+SCULPT+DF+HR+3IN+SHORT",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 32,
+                            "subCategoryImage": "Nike Zenvy Asymmetrical",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 100
+                            "price": 55
                         },
                         {
-                            "id": 981,
-                            "subCategoryImage": "d0-1",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 33,
+                            "subCategoryImage": "Nike Zenvy Asymmetrical_0",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 300
+                            "price": 55
+                        },
+                        {
+                            "id": 34,
+                            "subCategoryImage": "Nike Zenvy Asymmetrical_2",
+                            "title": "Sports Bra",
+                            "category": "Training",
+                            "count": 1,
+                            "price": 55
+                        },
+                        {
+                            "id": 35,
+                            "subCategoryImage": "Nike Zenvy Asymmetrical_3",
+                            "title": "Sports Bra",
+                            "category": "Training",
+                            "count": 1,
+                            "price": 55
                         }
                     ]
                 },
                 {
-                    "categoryImage": "CleaningEquipmentType1",
+                    "categoryImage": "Nike Zenvy Asymmetrical_4",
                     "subCategories": [
                         {
-                            "id": 980,
-                            "subCategoryImage": "CleaningEquipmentType2",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 36,
+                            "subCategoryImage": "Nike Zenvy Asymmetrical_4",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 100
+                            "price": 55
                         },
                         {
-                            "id": 979,
-                            "subCategoryImage§§": "CleaningEquipmentType3",
-                            "title": "Air Jordan 1 Mid",
-                            "category": "Men's Shoes",
+                            "id": 37,
+                            "subCategoryImage": "Nike Zenvy Asymmetrical_5",
+                            "title": "Sports Bra",
+                            "category": "Training",
                             "count": 1,
-                            "price": 200
+                            "price": 55
+                        },
+                        {
+                            "id": 38,
+                            "subCategoryImage": "Nike Zenvy Asymmetrical_6",
+                            "title": "Sports Bra",
+                            "category": "Training",
+                            "count": 1,
+                            "price": 55
+                        },
+                        {
+                            "id": 39,
+                            "subCategoryImage": "Nike Zenvy Asymmetrical_7",
+                            "title": "Sports Bra",
+                            "category": "Training",
+                            "count": 1,
+                            "price": 55
                         }
                     ]
                 }
             ],
-            "categoryName": "S",
+            "categoryName": "Training",
             "detailButtonsName": {
                 "firstButtonTitle": "Add to Bag",
                 "secondButtonTitle": "Favorite"
             },
             "promo": [
                 {
-                    "image": "CleaningEquipmentType2",
-                    "title": "Special Offer",
-                    "description": "Get 20% off"
+                    "image": "shipping",
+                    "title": "Shopping As It Should Be",
+                    "description": "Get free shipping on orders $50+."
                 },
                 {
-                    "image": "CleaningEquipmentType3",
-                    "title": "Summer Sale",
-                    "description": "Save big on new arrivals"
+                    "image": "JordanLogo",
+                    "title": "Get Ready to Win",
+                    "description": "Use code WINNING for an extra 25% off select styles."
                 }
             ],
             "header": {
@@ -943,21 +998,32 @@
             },
             "productDescription": [
                 {
-                    "description": "Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colors and crisp leather give it a distinct identity."
+                    "description": "Balance your day in comfort in this asymmetrical Zenvy sports bra. Its lightweight InfinaSoft fabric gives you softness that you can feel with every bend, stretch and shift."
+                }
+            ],
+            "youMightAlsoLikeHeader": {
+                "title": "You Might Also Like"
+            },
+            "youMightAlsoLike": [
+                {
+                    "image": "Nike Swoosh High Support_18"
+                },
+                {
+                    "image": "Nike Swoosh High Support_19"
+                },
+                {
+                    "image": "Nike Swoosh High Support_17"
                 }
             ],
             "completeTheLookHeader": {
                 "title": "Complete The Look"
             },
-            "youMightAlsoLikeHeader": {
-                "title": "You Might Also Like"
-            },
             "completeTheLook": [
                 {
-                    "image": "W+NK+DF+SWSH+HGH+SPT+BRA"
+                    "image": "Nike Zenvy Asymmetrical_8"
                 },
                 {
-                    "image": "W+NP+SCULPT+DF+HR+3IN+SHORT"
+                    "image": "Nike Zenvy Asymmetrical_9"
                 },
             ],
         }
@@ -976,7 +1042,7 @@
             "smallImage1Label2": "Next Generation",
             "smallImage2Label1": "Lightweight design",
             "smallImage2Label2": "Meet the Innovation",
-            "fullDescription": "Nike’s new Swift and Stride collections of elevated running essentials are the go-to apparel for the runner’s kit."
+            "fullDescription": "Jordan Brand’s new Zion 4 is built to accentuate the strength and speed at the center of Zion Williamson’s game. \n\nA Cushlon 3.0 drop-in midsole and full-length parabolic Air Zoom strobel provide a springy, double-stacked layer of cushioning, while a computationally designed outsole delivers excellent court feel. \n\nZion’s fourth signature silhouette will be available soon at jordan.com and select retail locations."
         }
     ],
     "nikeSwiftAndStrideHeader": {
@@ -986,48 +1052,48 @@
     "nikeSwiftAndStride": [
         {
             "image": "nike-swift-stride-4",
-            "description": "Swift and Stride collections",
+            "description": "Smart solutions",
             "type": "Nike’s new",
             "productInfo": [
                 {
-                    "image3": "nike-swift-stride-4",
-                    "title": "Introducing Elevated Essentials for Every Runner’s Kit: Nike Swift and Stride",
+                    "image": "nike-swift-stride-4",
+                    "title": "Introducing Elevated Essentials for Every Runner’s Kit: \nNike Swift and Stride",
                     "description": "Nike’s new Swift and Stride collections of elevated running essentials are the go-to apparel for the runner’s kit."
                 }
             ],
         },
         {
             "image": "nike-swift-stride-5",
-            "description": "Swift and Stride collections",
+            "description": "Design evolutions",
             "type": "Nike’s new",
             "productInfo": [
                 {
-                    "image3": "nike-swift-stride-5",
-                    "title": "Introducing Elevated Essentials for Every Runner’s Kit: Nike Swift and Stride",
+                    "image": "nike-swift-stride-5",
+                    "title": "Introducing Elevated Essentials for Every Runner’s Kit: \nNike Swift and Stride",
                     "description": "The collections combine existing running favorites and Nike innovations that work together to meet runners’ needs."
                 }
             ],
         },
         {
             "image": "nike-swift-stride-3",
-            "description": "Swift and Stride collections",
+            "description": "Running innovations",
             "type": "Nike’s new",
             "productInfo": [
                 {
-                    "image3": "nike-swift-stride-3",
-                    "title": "Introducing Elevated Essentials for Every Runner’s Kit: Nike Swift and Stride",
+                    "image": "nike-swift-stride-3",
+                    "title": "Introducing Elevated Essentials for Every Runner’s Kit: \nNike Swift and Stride",
                     "description": "The collections take the guesswork out of gear and feature evolved, more flattering fits and finishes to help runners look good, feel good and perform at their best."
                 },
             ],
         },
         {
             "image": "nike-swift-stride-6",
-            "description": "Swift and Stride collections",
+            "description": "Practical reflective features",
             "type": "Nike’s new",
             "productInfo": [
                 {
-                    "image3": "nike-swift-stride-6",
-                    "title": "Introducing Elevated Essentials for Every Runner’s Kit: Nike Swift and Stride",
+                    "image": "nike-swift-stride-6",
+                    "title": "Introducing Elevated Essentials for Every Runner’s Kit: \nNike Swift and Stride",
                     "description": "The collections will be available globally at nike.com and select retailers January 1, 2025."
                 },
             ],

@@ -50,7 +50,7 @@ extension DetailProductsCollectionCell {
     }
     
     func updateSimple(_ model: ProductInfo) {
-        photoImageView.image = UIImage(named: model.image3 ?? "")
+        photoImageView.image = UIImage(named: model.image ?? "")
         titleLabel.text = model.title
         descriptionLabel.text = model.description
     }
@@ -80,7 +80,7 @@ extension DetailProductsCollectionCell {
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
 
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-            descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor)
         ])
     }
 }

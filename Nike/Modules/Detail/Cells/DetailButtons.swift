@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 final class DetailButtons: UITableViewCell {
     
@@ -52,12 +53,14 @@ extension DetailButtons {
             guard let self = self, let currentModel = self.currentModel else { return }
             self.onAddToBag?([currentModel])
             self.updateBagButtonAppearance(self.addToBagButton)
+            ProgressHUD.succeed("Added to Bag")
         }), for: .touchUpInside)
         
         favoriteButton.addAction(UIAction(handler: { [weak self] _ in
             guard let self = self, let currentModel = self.currentModel else { return }
             self.onAddToFavorites?([currentModel])
             self.updateFavoriteButtonAppearance(self.favoriteButton)
+            ProgressHUD.succeed("Added to Favorite")
         }), for: .touchUpInside)
     }
     

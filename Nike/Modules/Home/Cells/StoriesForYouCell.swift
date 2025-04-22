@@ -127,12 +127,10 @@ extension StoriesForYouCell {
     
     @objc private func smallImageView1Tapped() {
         onSmallImage1Tapped?()
-        print("smallImageView1Tapped")
     }
     
     @objc private func smallImageView2Tapped() {
         onSmallImage2Tapped?()
-        print("smallImageView2Tapped")
     }
 }
 

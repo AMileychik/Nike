@@ -34,11 +34,11 @@ final class ShopSectionBuilder: SectionBuilderProtocol {
             ])
         case .women:
             sections.append(contentsOf: [
-                .newThisWeek(model: products.women.newThisWeekSection, header: products.women.titleHeaderModel),
+                .newThisWeek(model: products.women.newThisWeekSection, header: products.women.newThisWeekHeader),
                 .news(products.women.shopListSection),
-                .newAndFeatured(model: products.women.trends, header: products.women.titleHeaderModel),
-                .classicsSpotlightCell(model: products.women.jordanSneakersSection, header: products.women.classicsSpotlightHeader),
-                .newAndFeatured(model: products.women.classicsSpotlight, header: products.women.titleHeaderModel),
+                .newAndFeatured(model: products.women.facesOfInspiration, header: products.women.facesOfInspirationHeader),
+                .classicsSpotlightCell(model: products.women.jordanSneakersSection, header: products.women.jordanSneakersHeader),
+                .newAndFeatured(model: products.women.classicsSpotlight, header: products.women.classicsSpotlightHeader),
                 .nearbyStore(model: products.women.nearbyStores, header: products.women.nearbyStoresHeader)
             ])
         case .kids:

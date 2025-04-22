@@ -93,13 +93,15 @@ struct ShopVCMenModels: Codable {
 }
 
 struct ShopVCWomenModels: Codable {
+    let newThisWeekHeader: Header
     let newThisWeekSection: [Product]
     let shopListSection: [Product]
-    let titleHeaderModel: Header
+    let facesOfInspirationHeader: Header
+    let facesOfInspiration: [Product]
     let recentlyViewedSection: [Product]
+    let recentlyViewedHeader: Header
     let classicsSpotlightHeader: Header
     let classicsSpotlight: [Product]
-    let trends: [Product]
     let jordanSneakersHeader: Header
     let jordanSneakersSection: [Product]
     let nearbyStoresHeader: Header
@@ -230,7 +232,7 @@ struct VerticalProductModel: Codable {
 struct ProductInfo: Codable {
     let title: String?
     let description: String?
-    let image3: String?
+    let image: String?
 }
 
 struct Description: Codable {

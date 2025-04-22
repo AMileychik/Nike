@@ -56,7 +56,7 @@ class VerticalProductInfoCell: UITableViewCell {
         guard let dataType = productInfoCellDataType else { return }
 
         let width = UIScreen.main.bounds.width
-        let itemHeight = width * 1.85
+        let itemHeight = width * 1.75
 
         var itemCount = 0
 
@@ -154,7 +154,7 @@ extension VerticalProductInfoCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = collectionView.bounds.width
-        let height = width * 1.85
+        let height = width * 1.75
         return CGSize(width: width, height: height)
     }
 }

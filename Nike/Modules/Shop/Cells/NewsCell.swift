@@ -41,7 +41,7 @@ class NewsCell: UITableViewCell {
 //MARK: - Public
 extension NewsCell {
     
-    func updateShopListCell(with model: Product) {
+    func updateNewsCell(with model: Product) {
         photoImageView.image = model.image?.isEmpty == false ? UIImage(named: model.image ?? "") : nil
         logoImage.image = model.logoImage?.isEmpty == false ? UIImage(named: model.logoImage ?? "") : nil
         nameLabel.text = model.type

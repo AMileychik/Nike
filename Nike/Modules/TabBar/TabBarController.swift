@@ -33,7 +33,7 @@ class TabBarController: UITabBarController {
             return UINavigationController(rootViewController: viewController)
         }
         
-        selectedIndex = 1
+        selectedIndex = 0
         delegate = self
     }
     

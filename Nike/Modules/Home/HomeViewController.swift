@@ -133,7 +133,7 @@ extension HomeViewController {
             }
         }
         
-        homeViewModel.navigateFromTopPicks = { [weak self] model, categories, header, category, subcategory in
+        homeViewModel.navigateFromBecauseYouLike = { [weak self] model, categories, header, category, subcategory in
             guard let self = self else { return }
             
             let safeCategories = categories

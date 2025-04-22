@@ -33,7 +33,7 @@ class ProgressView: UIView {
         layer.addSublayer(backgroundLayer)
         
         progressLayer.backgroundColor = UIColor.systemGreen.cgColor
-        progressLayer.anchorPoint = CGPoint(x: 0, y: 0.5) // Чтобы расширялась слева направо
+        progressLayer.anchorPoint = CGPoint(x: 0, y: 0.5) 
         layer.addSublayer(progressLayer)
 
         textLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)

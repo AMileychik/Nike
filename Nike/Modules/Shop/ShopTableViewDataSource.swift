@@ -34,8 +34,8 @@ class ShopTableViewDataSource: NSObject, UITableViewDataSource {
         guard let sectionData = presenter.sections(at: section) else { return 0 }
         switch sectionData {
             
-        case .news(let rows):
-            return rows.count
+        case .news(let model):
+            return model.count
             
         default:
             return 1
@@ -70,11 +70,11 @@ class ShopTableViewDataSource: NSObject, UITableViewDataSource {
             cell.update(dataType: .newThisWeek(model), sectionHeight: 225)
             return cell
              
-        case .news(let rows):
+        case .news(let model):
             
             let cell = tableView.dequeueCell(indexPath) as NewsCell
-            let model = rows[indexPath.row]
-            cell.updateShopListCell(with: model)
+            let model = model[indexPath.row]
+            cell.updateNewsCell(with: model)
             
             cell.onPhotoTapped = {
                 self.presenter.didSelectListCellProduct(model)

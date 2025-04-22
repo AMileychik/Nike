@@ -23,7 +23,7 @@ class FavoritesService: FavoritesServiceProtocol {
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
     
-    private var subCategories = "SubCategories"
+    private var favoriteKey = "FavoriteKey"
     
     func saveAndAdd(_ newTopPicks: [SubCategoryModel]) {
         var currentTopPicks = fetch()
@@ -37,7 +37,7 @@ class FavoritesService: FavoritesServiceProtocol {
         }
         do {
             let data = try encoder.encode(currentTopPicks)
-            UserDefaults.standard.set(data, forKey: subCategories)
+            UserDefaults.standard.set(data, forKey: favoriteKey)
         } catch {
             print("Failed to save: \(error)")
         }
@@ -46,7 +46,7 @@ class FavoritesService: FavoritesServiceProtocol {
     func save(_ newTopPicks: [SubCategoryModel]) {
         do {
             let data = try encoder.encode(newTopPicks)
-            UserDefaults.standard.set(data, forKey: subCategories)
+            UserDefaults.standard.set(data, forKey: favoriteKey)
             
         } catch {
             print(error)
@@ -55,13 +55,12 @@ class FavoritesService: FavoritesServiceProtocol {
     }
     
     func fetch() -> [SubCategoryModel] {
-        guard let data = UserDefaults.standard.data(forKey: subCategories) else { return [] }
+        guard let data = UserDefaults.standard.data(forKey: favoriteKey) else { return [] }
         
         do {
             let array = try decoder.decode([SubCategoryModel].self, from: data)
-            array.forEach { 
-            print("Fetched SubCategory ID: \($0.id ?? 0)") }
             return array
+            
         } catch {
             print(error)
         }
@@ -71,13 +70,12 @@ class FavoritesService: FavoritesServiceProtocol {
     
     func fetchTopPicks() -> [SubCategoryModel] {
         
-        guard let data = UserDefaults.standard.data(forKey: subCategories) else {
-            print("No data found for key: \(subCategories)")
+        guard let data = UserDefaults.standard.data(forKey: favoriteKey) else {
+            print("No data found for key: \(favoriteKey)")
             return []
         }
         do {
             let topPicks = try JSONDecoder().decode([SubCategoryModel].self, from: data)
-            print("Saved successfully for key: \(subCategories)")
             return topPicks
             
         } catch {
@@ -89,14 +87,9 @@ class FavoritesService: FavoritesServiceProtocol {
 //MARK: - Delete
     @discardableResult
     func delete(_ product: SubCategoryModel) -> [SubCategoryModel] {
-        
         var products = fetch()
-        print(products.count)
         products.removeAll(where: { $0.id == product.id })
-        
-        print(products.count)
         save(products)
-        
         return products
     }
     

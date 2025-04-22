@@ -123,7 +123,7 @@ class ShopPresenter: IShopPresenterProtocol {
         case .women:
             addedSection = .recentlyViewed(
                 model: products.women.recentlyViewedSection,
-                header: products.women.titleHeaderModel
+                header: products.women.recentlyViewedHeader
             )
             
         case .kids:

@@ -14,19 +14,19 @@
                 "image": "mercurial-vapor-1-rgn-1",
                 "description": "Reintroducing a Football Icon",
                 "type": "The Chrome Mercurial Vapor",
-                "fullDescription": "A Nike sports bra technical designer weighs in on how to measure your sports bra size and determine best fit.\n\nFor many athletes, sports bras are a crucial part of every workout outfit. This is because a sports bra is one of the most technical clothing items athletes can own, explained Tara Sweeney, a Nike sports bra technical designer.\n\nBut the ideal fit comes down to more than just measurements. “Finding the right sports bra comes down to striking a balance between comfort and support for your breast size and firmness, body type and intended activities,” said Sweeney."
+                "fullDescription": "The chrome Mercurial Vapor 1 RGN, first worn by Ronaldo in 2002, will shine again this season on the feet of Nike athlete Vini Jr., enabling the speed and control central to his game. \n\nA suite of modern updates advances the legacy of the iconic boot, which was designed to reflect its environment: flashing cameras, packed stadiums and manicured football pitches. \n\nA limited run of 4,500 pairs, each including a unique tag referencing its production number, will be available at nike.com and select retail locations December 9."
             },
             {
                 "image": "fa24-jd-aj39-comms-product-stills-sol-sg-2688x1400",
                 "description": "Our values with the Air Jordan",
                 "type": "Air Jordan XXXIX",
-                "fullDescription": "A Nike sports bra technical designer weighs in on how to measure your sports bra size and determine best fit.\n\nFor many athletes, sports bras are a crucial part of every workout outfit. This is because a sports bra is one of the most technical clothing items athletes can own, explained Tara Sweeney, a Nike sports bra technical designer.\n\nBut the ideal fit comes down to more than just measurements. “Finding the right sports bra comes down to striking a balance between comfort and support for your breast size and firmness, body type and intended activities,” said Sweeney."
+                "fullDescription": "Studying Michael Jordan’s cross-step was the foundation for building the Air Jordan XXXIX, the next edition in the storied Air Jordan flagship line. \n\nThe Air Jordan XXXIX features a new midsole combination of full-length ZoomX foam and full-length Air Zoom for a premium cushioning experience, while the upper is constructed to secure the foot during explosive changes in direction. \n\nRooted in the motion and emotion of Michael Jordan’s game, the shoe’s design is created for the modern player dedicated to mastering basketball’s most effective movements. \n\nThe shoe was debuted by Orlando Magic forward and Jordan Brand athlete Paolo Banchero during the first round of the 2024 NBA Playoffs."
             },
             {
                 "image": "swooshdesktop1",
                 "description": "Nike Launches .SWOOSH",
                 "type": "Digital Community",
-                "fullDescription": "A Nike sports bra technical designer weighs in on how to measure your sports bra size and determine best fit.\n\nFor many athletes, sports bras are a crucial part of every workout outfit. This is because a sports bra is one of the most technical clothing items athletes can own, explained Tara Sweeney, a Nike sports bra technical designer.\n\nBut the ideal fit comes down to more than just measurements. “Finding the right sports bra comes down to striking a balance between comfort and support for your breast size and firmness, body type and intended activities,” said Sweeney."
+                "fullDescription": "Nike is launching .SWOOSH, a web3-enabled platform that champions athletes and serves the future of sport by creating a new, inclusive digital community and experience and a home for Nike virtual creations. \n\nThe platform has its own domain, welcome.swoosh.nike, to ensure a safe, trusted space. \n\n.SWOOSH will allow Nike Members to learn about, collect and eventually help co-create virtual creations, which are typically interactive digital objects such as virtual shoes or jerseys. \n\nCurrently in beta, registration to join .SWOOSH begins this month. For the rest of the year, Nike will grow the platform by inviting in a diverse, equitable community, then launch its first digital collection — shaped by its members — in 2023. \n\nShortly after the first digital collection drops, members will be able to enter a community challenge to win the opportunity to co-create virtual product with Nike. Those winners can earn a royalty on the virtual product they help co-create."
             }
         ],
         "shopListSection": [
@@ -35,9 +35,9 @@
                 "type": "Jordan Brand’s",
                 "productInfo": [
                     {
-                        "image3": "nike-swift-stride-6",
-                        "title": "T",
-                        "description": "Sweeney."
+                        "image": "heir-series-1",
+                        "title": "Inspired by the Game, the Heir Series Marks a New Era in Jordan Brand’s Basketball Legacy",
+                        "description": "Jordan Brand is ushering in a new era of basketball performance and style with the introduction of the Jordan Heir Series: \na silhouette that brings forward insights from the game yet is built for anyone who sets foot on the court."
                     }
                 ],
             },
@@ -46,9 +46,9 @@
                 "type": "Basketball",
                 "productInfo": [
                     {
-                        "image3": "nike-swift-stride-6",
-                        "title": "T",
-                        "description": "Sweeney."
+                        "image": "heir-series-16",
+                        "title": "Inspired by the Game, the Heir Series Marks a New Era in Jordan Brand’s Basketball Legacy",
+                        "description": "A rubber herringbone traction pattern adds to that court feel, enabling quickness and control. Meanwhile, an adaptive, flexible cage inspired by the connection and teamwork central to the game surrounds the shoe, driving support and comfort while preventing ankle rolling."
                     }
                 ],
             },
@@ -57,9 +57,9 @@
                 "type": "Legacy",
                 "productInfo": [
                     {
-                        "image3": "nike-swift-stride-6",
-                        "title": "T",
-                        "description": "Sweeney."
+                        "image": "heir-series-4",
+                        "title": "Inspired by the Game, the Heir Series Marks a New Era in Jordan Brand’s Basketball Legacy",
+                        "description": "Based on feedback from many athletes in the Jordan Brand Family, the Heir Series features an exterior layer of foam that protects a drop-in Cushlon 3.0 midsole, allowing the foot to be as low to the ground as possible to drive a flexible court feel for running and cutting."
                     }
                 ],
             },
@@ -69,28 +69,32 @@
                 "logoImage": "logoApha",
                 "productInfo": [
                     {
-                        "image3": "nike-swift-stride-6",
-                        "title": "T",
-                        "description": "Sweeney."
+                        "image": "heir-series-11",
+                        "title": "Inspired by the Game, the Heir Series Marks a New Era in Jordan Brand’s Basketball Legacy",
+                        "description": "The Jordan Brand Heir Series silhouette is now available globally at jordan.com and select retail locations."
                     }
                 ],
             }
         ],
         "clothingHeader": {
-            "title": "Closhing"
+            "title": "Clothing"
         },
         "clothing": [
             {
                 "image": "NikeSportswearMetro",
                 "description": "Nike Metro",
+                "fullDescription": "Made to last and infused with style, this oversized parka is the perfect finishing touch to any outfit. Its durable water-repellent outer shell sheds light rain to help you stay dry while lightweight synthetic fill helps keep you insulated and warm. Plus, a two-way zipper lets you experiment with how you wear it."
+                
             },
             {
                 "image": "SwimParka",
-                "description": "Swim Parka"
+                "description": "Swim Parka",
+                "fullDescription": "Keep the cold at bay with exterior water-resistant Nike Repel fabric and a full fleece lining on the inside, so you can stay cozy when you're out of the water. The two-way zipper makes for easy on and off, the toggle at the hood gives you a snug fit and the pockets are designed to help allow water drainage."
             },
             {
                 "image": "Nike SportswearStorm-FITADVGORE-TEX",
-                "description": "Nike Storm"
+                "description": "Nike Storm",
+                "fullDescription": "Gear up to take on the city in this water-repellent jacket. It pairs a roomy fit with structured cotton-nylon fabric, utility pockets and signature Nike Tech details."
             }
         ],
         "rafaelNadalHeader": {
@@ -99,89 +103,119 @@
         "rafaelNadal": [
             {
                 "image": "RafaelNadal_1",
-                "description": "Rafael Nadal",
-                "type": "Rafic",
-                "fullDescription": "A Nike sports bra technical designer weighs in on how to measure your sports bra size and determine best fit.\n\nFor many athletes, sports bras are a crucial part of every workout outfit. This is because a sports bra is one of the most technical clothing items athletes can own, explained Tara Sweeney, a Nike sports bra technical designer.\n\nBut the ideal fit comes down to more than just measurements. “Finding the right sports bra comes down to striking a balance between comfort and support for your breast size and firmness, body type and intended activities,” said Sweeney."
+                "description": "Great athlete",
+                "type": "Retiring As One of the All-Time Tennis Greats, Nike Celebrates Rafael Nadal",
+                "fullDescription": "A Nike athlete since he was 13 years old, Rafael Nadal has won two Olympic gold medals and 22 Grand Slams, with a record 14 in Paris, forever crowning him as the King of Clay."
             },
             {
                 "image": "RafaelNadal_2",
-                "description": "Rafael Nadal"
+                "description": "Fierce competitor",
+                "type": "Retiring As One of the All-Time Tennis Greats, Nike Celebrates Rafael Nadal",
+                "fullDescription": "In a streak of remarkable resilience, Rafa stood among the top 10 tennis players in the world for a record 17-plus consecutive years, including more than four total years as the world’s No. 1."
             },
             {
-                "image": "RafaelNadal_3",
-                "description": "Rafael Nadal"
+                "image": "rafael-nadal-3",
+                "description": "Humble champion",
+                "type": "Retiring As One of the All-Time Tennis Greats, Nike Celebrates Rafael Nadal",
+                "fullDescription": "The iconic Raging Bull symbol from Rafa’s Nike signature collection has long been synonymous with tennis greatness, and the Spaniard’s hallmark passion, energy and resilience have inspired countless athletes and fans to fall in love with the game."
             },
             {
                 "image": "RafaelNadal_4",
-                "description": "Rafael Nadal"
+                "description": "Mental toughness",
+                "type": "Retiring As One of the All-Time Tennis Greats, Nike Celebrates Rafael Nadal",
+                "fullDescription": "For more than two decades, he’s inspired tennis fans the world over with his hallmark passion, energy and resilience — inspiring countless athletes to pick up a racket for the first time."
             }
         ],
         "nikeZoomFly6Header": {
-            "title": "Nike ZoomFly6"
+            "title": "Nike Zoom Fly 6"
         },
         "nikeZoomFly6": [
             {
                 "image": "NikeZoomFly6_5",
-                "description": "Nike ZoomFly6"
+                "description": "Training and racing hybrid",
+                "type": "Train Fast to Race Faster in Nike’s Redesigned Zoom Fly 6",
+                "fullDescription": "The Nike Zoom Fly 6 is a best-in-class training and racing hybrid, delivering Nike’s top cushioning technology and plated innovation in a silhouette that offers supreme comfort and extra pep for everyday training sessions and personal bests on race day."
             },
             {
                 "image": "NikeZoomFly6_1",
-                "description": "Nike ZoomFly6"
+                "description": "Fastest trainers ever",
+                "type": "Train Fast to Race Faster in Nike’s Redesigned Zoom Fly 6",
+                "fullDescription": "The new Zoom Fly is among Nike’s fastest trainers ever, with a streamlined design that weighs at least 10% less than its predecessor, a full-length carbon fiber FlyPlate and more ZoomX foam for optimal energy return."
             },
             {
                 "image": "NikeZoomFly6_2",
-                "description": "Nike ZoomFly6"
+                "description": "The best cushioning technology",
+                "type": "Train Fast to Race Faster in Nike’s Redesigned Zoom Fly 6",
+                "fullDescription": "The Zoom Fly’s redesigned upper aims to replicate the race day experience on any training run, with a two-layer woven mesh system offering high-end comfort in a soft, sock-like fit without sacrificing breathability, durability or weight. A new outsole also features a thin web of rubber that’s both lightweight and grippy, driving top-end performance no matter the day’s objective."
             },
             {
                 "image": "NikeZoomFly6_3",
-                "description": "Nike ZoomFly6"
+                "description": "Plated innovation",
+                "type": "Train Fast to Race Faster in Nike’s Redesigned Zoom Fly 6",
+                "fullDescription": "As is the case across Nike’s industry-leading Racing footwear line, the brand’s roster of elite athletes played a critical role in informing the development of the new Zoom Fly."
             },
             {
                 "image": "NikeZoomFly6_4",
-                "description": "Nike ZoomFly6"
+                "description": "Special edition",
+                "type": "Train Fast to Race Faster in Nike’s Redesigned Zoom Fly 6",
+                "fullDescription": "In addition to several colorways available at launch, Nike’s design team created a special edition of the Zoom Fly inspired by the hallmark red clay roads where Eliud has trained for decades. \n\nThe Nike Zoom Fly 6 will be available globally at nike.com and select retail locations November 1, with Eliud’s colorway arriving in early December."
             }
         ],
         "jacketsHeader": {
-            "title": "Jackets"
+            "title": "Jackets & Hoodies"
         },
         "jackets": [
             {
                 "image": "AirJordanWordmark",
                 "description": "Jordan Wordmark",
+                "type": "Jordan Wordmark",
+                "fullDescription": "Elevate your casual game with Air Jordan. Smooth on the outside with unbrushed loops on the inside, this heavyweight French terry hoodie offers breathable warmth with a premium look and feel. Plus, its vibrant color nods to Tokyo's legendary pink cherry blossoms."
             },
             {
                 "image": "AirJordan_men",
                 "description": "Air Jordan",
+                "type": "Air Jordan",
+                "fullDescription": "Elevate your casual game with Air Jordan. Fashion and function collide in this roomy layer. Water-repellent nylon and lightweight synthetic fill help you stay dry and warm when bad weather threatens your day."
             },
             {
                 "image": "TatumChicago",
-                "description": "Tatum Chicago"
+                "description": "Tatum Chicago",
+                "type": "Tatum Chicago",
+                "fullDescription": "Jayson Tatum has made a name for himself as one of the smoothest players in the game. So, it's only fitting that his signature collection is just as smooth. Crafted from durable canvas, this workwear-inspired jacket features an allover wash for that perfectly worn-in look."
             }
         ],
         "shoesSectionHeader": {
-            "title": "Shoes"
+            "title": "Top Picks Shoes"
         },
         "shoesSection": [
             {
                 "image": "NikeAirMax90Drift",
                 "description": "Nike AirMax 90",
-                "price": 150
+                "price": 150,
+                "type": "Nike Air Max 90 Drift",
+                "fullDescription": "The Air Max 90 Drift adds a more durable option to your shoe rotation. Its color-blocked design helps accentuate the different textures and layers, including tough ripstop and rubber paired with real and synthetic leather. Meanwhile, Max Air cushioning and a Waffle outsole keep it comfortable enough for the street or trail."
             },
             {
                 "image": "NikeAirMaxScorpionFlyknitSE",
-                "description": "Nike Scorpion",
-                "price": 175
+                "description": "Nike VaporMax",
+                "price": 175,
+                "type": "Nike Air VaporMax",
+                "fullDescription": "Have you ever walked on Air? \nStep into the Air VaporMax 2023 to see how it's done. The innovative tech is revealed through the perforated sockliner (pull it out to see more). The stretchy Flyknit upper is made with at least 20% recycled content by weight."
                 
             },
             {
                 "image": "NikeAlphafly3",
-                "description": "Nike Alpha",
-                "price": 135
+                "description": "Nike Alphafly 3",
+                "price": 285,
+                "type": "Nike Alphafly 3",
+                "fullDescription": "Fine-tuned for marathon speed, the Alphafly 3 helps push you beyond what you thought possible. Three innovative technologies power your run: A double dose of Air Zoom units helps launch you into your next step; a full-length carbon fiber plate helps propel you forward with ease; and a heel-to-toe ZoomX foam midsole helps keep you fresh from start to 26.2. Time to leave your old personal records in the dust."
             },
             {
                 "image": "NikeZegama2",
                 "description": "Nike Zegama",
-                "price": 275
+                "price": 180,
+                "type": "Nike Zegama 2",
+                "fullDescription": "Up the mountain, through the woods, to the top of the trail you can go. Equipped with an ultra-responsive ZoomX foam midsole, the Zegama 2 is designed to conquer steep ridges, jagged rocks and races from trailhead to tip. Optimal cushioning complements a rugged outsole made for your trail running journey."
             }
         ],
         "nearbyStoresHeader": {
@@ -191,158 +225,227 @@
         "nearbyStores": [
             {
                 "image": "NikeStore_1",
-                "description": "Nike Sawgrass",
-                "type": "4.8 mi",
-                "storeHours": "10:00 AM - 9:00 PM"
+                "description": "Nike Quebec City",
+                "type": "4.9 mi",
+                "storeHours": "10:00 AM - 9:00 PM",
+                "fullDescription": "5401 Bd des Galeries \nQuebec, Quebec, G2K 1N4, CA"
             },
             {
                 "image": "NikeStore_2",
-                "description": "Nike Sawgrass",
-                "type": "4.8 mi",
-                "storeHours": "10:00 AM - 9:00 PM"
+                "description": "Nike Eaton de Montreal",
+                "type": "28.8 mi",
+                "storeHours": "9:00 AM - 6:00 PM",
+                "fullDescription": "705 Saint-Catherine St W \nMontreal, Quebec, H4B 4G5, CA"
             },
             {
                 "image": "NikeStore_3",
-                "description": "Nike Sawgrass",
-                "type": "4.8 mi",
-                "storeHours": "10:00 AM - 9:00 PM"
+                "description": "Nike Dix30",
+                "type": "34.2 mi",
+                "storeHours": "12:00 AM - 11:00 PM",
+                "fullDescription": "9090 Boul. Leduc \nBrossard, Quebec, J4Y 0E9, CA"
             },
             {
                 "image": "NikeStore_4",
-                "description": "Nike Sawgrass",
-                "type": "4.8 mi",
-                "storeHours": "10:00 AM - 9:00 PM"
+                "description": "Nike Factory Store",
+                "type": "42.8 mi",
+                "storeHours": "8:00 AM - 6:00 PM",
+                "fullDescription": "1007-B6 rue du Marche Central \nMontreal, Quebec, H4N 1J8, CA"
             },
             {
                 "image": "NikeStore_5",
-                "description": "Nike Sawgrass",
-                "type": "4.8 mi",
-                "storeHours": "10:00 AM - 9:00 PM"
+                "description": "Nike Laval",
+                "type": "46.4 mi",
+                "storeHours": "10:00 AM - 10:00 PM",
+                "fullDescription": "3035 Boul Le Carrefour \nLaval, Quebec, H7T 1C8, CA"
             }
         ]
     },
     "women": {
-        "titleHeaderModel": {
-            "title": "New This Week",
-            "buttonTitle": "View All"
+        "newThisWeekHeader": {
+            "title": "New This Week"
         },
         "newThisWeekSection": [
             {
-                "image": "W+NK+DF+SWSH+HGH+SPT+BRA 1",
+                "image": "Nike Swoosh High Support_7",
                 "description": "Nike Launches Training Club",
-                "type": "World-class trainers"
+                "type": "World-class trainers",
+                "fullDescription": "Nike launched the Nike Training Club app as a fitness platform offering various workouts, including strength, endurance, and yoga, led by Nike Master Trainers. \n\nThe app provides access to over 200 free workouts, ranging from 5 to 50 minutes, and is designed to help users see and feel results. Nike Training Club also collaborates with Netflix, offering their workouts through the streaming service."
             },
             {
-                "image": "W+NK+DF+SWSH+HGH+SPT+BRA2",
+                "image": "Nike Swoosh High Support_8",
                 "description": "Workouts on Netflix",
-                "type": "More than 90 NTC workouts"
+                "type": "More than 90 NTC workouts",
+                "fullDescription": "Nike Training Club (NTC) partnered with Netflix to offer a selection of over 90 workouts, totaling over 30 hours of content, available on all Netflix subscription tiers says SportsPro. \n\nThese workouts cater to various fitness levels, require minimal equipment, and include a range of workout types like yoga, strength, and HIIT. The NTC workouts on Netflix are designed to be accessible and inclusive, offering guidance and motivation from Nike's master trainers says Men's Journal."
             }
         ],
         "shopListSection": [
             {
-                "image": "Frame 9"
+                "image": "Frame 9",
+                "productInfo": [
+                    {
+                        "image": "nike-about-newsroom-so-win-jordan-chiles-quote",
+                        "title": "Nike’s New “So Win” Brand Anthem Celebrates the Power of Sport",
+                        "description": "Nike unveiled its new brand anthem, “So Win,” during Super Bowl LIX."
+                    }
+                ],
             },
             {
-                "image": "Frame 10"
+                "image": "Frame 10",
+                "productInfo": [
+                    {
+                        "image": "nike-about-newsroom-so-win-jordan-chiles-2-quote",
+                        "title": "Nike’s New “So Win” Brand Anthem Celebrates the Power of Sport",
+                        "description": "More than an anthem, “So Win” is a celebration of the power of sport — harnessing Nike’s iconic roster to encourage all athletes to block out the noise, dig in and let their hard work speak for itself."
+                    }
+                ],
             },
             {
-                "image": "Frame 11"
+                "image": "Frame 11",
+                "productInfo": [
+                    {
+                        "image": "nike-about-newsroom-so-win-nicole-graham-quote",
+                        "title": "Nike’s New “So Win” Brand Anthem Celebrates the Power of Sport",
+                        "description": "Among the Nike athletes seen in “So Win” are Jordan Chiles, Caitlin Clark, Sabrina Ionescu, Sha’Carri Richardson, A’ja Wilson and Sophia Wilson."
+                    }
+                ],
             },
             {
-                "image": "Frame 12"
+                "image": "Frame 12",
+                "productInfo": [
+                    {
+                        "image": "nike-brand-anthem",
+                        "title": "Nike’s New “So Win” Brand Anthem Celebrates the Power of Sport",
+                        "description": "“You don’t wait for attention, you take it. You put in the work; you stay ready; and, when the moment comes, you own it,” says Chiles. “Winning isn’t just about medals. It’s about overcoming, about proving to yourself that you’re capable of more than you ever imagined. And doing it all authentically.” \n\nSo win, whatever it takes."
+                    }
+                ],
             }
         ],
-        "trends": [
+        "facesOfInspirationHeader": {
+            "title": "Faces of Inspiration"
+        },
+        "facesOfInspiration": [
             {
                 "image": "jordan-wings-x-paris-saint-germain-10",
-                "description": "Jordan Wings"
+                "description": "Jordan Wings",
+                "fullDescription": "Jordan Wings and Paris Saint-Germain teamed up to create a unique collection that blends the basketball legacy of the Jordan brand with the elegant style of the Parisian football club.\n\nThe collection is inspired by street culture, sports, and contemporary fashion. Every detail highlights the spirit of competition, freedom of expression, and the pursuit of excellence."
             },
             {
                 "image": "keely-hodgkinson-great-britain-track-field-nike-1",
-                "description": "Keely Hodgkinson"
+                "description": "Keely Hodgkinson",
+                "fullDescription": "Keely Hodgkinson won her first national title when she was just 15 years old. At the Tokyo Games, she won a silver medal in the 800 meter. In June of 2024, Keely defended her 800 meter title at the European Athletics Championships despite being ill. In July, she set a new British 800-meter record with a time of 1:54.61.\n\nA Nike athlete since 2019, Keely has spent the last five years working with the brand's researchers and designers and providing valuable athlete insights to help guide product innovation for women runners."
             },
             {
                 "image": "Marshawn Lynch",
-                "description": "Marshawn Lynch"
+                "description": "Marshawn Lynch",
+                "fullDescription": "American football icon Marshawn Lynch teamed up with Nike to create products that reflect his bold and authentic spirit.\nTogether, they released limited collections of sneakers and apparel inspired by the “Beast Mode” philosophy.\n\nEvery detail captures Lynch’s character — strength, confidence, and street culture.This collaboration became a symbol of passion for the game and staying true to yourself both on and off the field."
             },
             {
                 "image": "Allison Hueman",
-                "description": "Allison Hueman"
+                "description": "Allison Hueman",
+                "fullDescription": "Renowned artist Allison Hueman collaborated with Nike to create vibrant and inspiring designs that blend art, culture, and athletic spirit.Her limited-edition collections feature bold colors, fluid shapes, and powerful storytelling.\n\nEach piece reflects Hueman’s signature style, celebrating individuality, creativity, and self-expression. This collaboration stands as a tribute to the fusion of art and sport, encouraging athletes to embrace their true colors on and off the field."
             }
         ],
+        "recentlyViewedHeader": {
+            "title": "Recently Viewed",
+            "buttonTitle": "Clear"
+        },
         "recentlyViewedSection": [
             {
-                "image": "fa24-jd-aj39-comms-product-stills-sol-sg-2688x1400",
-                "description": "Nike AirMax 90",
-                "price": 150
+                "image": "Nike24.7ImpossiblySoft",
+                "description": "Nike 24.7",
+                "price": 90,
+                "type": "Nike 24.7 ImpossiblySoft",
+                "fullDescription": "Extraordinarily soft and smooth, our ImpossiblySoft fabric feels made for all-day motion. With plenty of flex, this sweat-wicking top gives you comfort that doesn't quit."
             },
             {
-                "image": "W+NK+DF+SWSH+HGH+SPT+BRA",
-                "description": "Nike Scorpion",
-                "price": 175
-                
+                "image": "Nike Air Max Dn8",
+                "description": "Nike Air Max Dn8",
+                "price": 220,
+                "type": "Nike Air Max Dn8",
+                "fullDescription": "More Air, less bulk. The Dn8 takes our Dynamic Air system and condenses it into a sleek, low-profile package. Powered by eight pressurized Air tubes, it gives you a responsive sensation with every step. Enter an unreal experience of movement."
             },
             {
-                "image": "jordan-brand-launches-luka-2-basketball-shoe",
-                "description": "Nike Alpha",
-                "price": 135
+                "image": "NikeSportswearPhoenixFleece",
+                "description": "Nike Phoenix Fleece",
+                "price": 75,
+                "type": "Nike Sportswear Phoenix Fleece",
+                "fullDescription": "Grounded in style, comfort and versatility, meet our take on luxury loungewear. Our roomiest fit paired with exaggerated details (like the oversized pocket and taller ribbing) ensures this hoodie is anything but basic. All that's left to decide is whether to style it with the matching sweats or other pieces from your wardrobe."
             },
             {
-                "image": "NIKE+PRO+DF+365+CROP+LS",
-                "description": "Nike Alpha",
-                "price": 135
+                "image": "NikeSwoosh_",
+                "description": "Nike Swoosh",
+                "price": 58,
+                "type": "Nike Swoosh",
+                "fullDescription": "When you want it all, this tank is the pick. The iconic Swoosh bra is built in and smooth, stretchy fabric snuggly holds you, so you're set with everything you need to go from the office to the gym and back again. With sewn-in padding and a racerback silhouette, you can feel confident that nothing is shifting as you go about your day."
             },
             {
-                "image": "nike-swift-stride-4",
-                "description": "Nike Zegama",
-                "price": 275
+                "image": "NikeSportswearC",
+                "description": "Nike Sportswear",
+                "price": 60,
+                "type": "Nike Sportswear Club Fleece",
+                "fullDescription": "Club Fleece sweatshirts, universally loved for their coziness and consistency, are for everyone. Always soft and made with a relaxed fit, they’re basics that help you do more. An essential for cold-weather layering, this crew-neck option is a quick and easy way to add warmth to your favorite puffer or jacket."
             }
         ],
         "jordanSneakersHeader": {
-            "title": "Jordan",
-            "buttonTitle": "Find a Store"
+            "title": "Original Air Jordans"
         },
         "jordanSneakersSection": [
             {
                 "image": "AIR+JORDAN+1+HIGH+G",
-                "description": "AIR JORDAN",
-                "price": 180
+                "description": "Air Jordan I High G",
+                "price": 190,
+                "type": "Air Jordan I High G",
+                "fullDescription": "Feel unbeatable, from the tee box to the final putt. Inspired by one of the most iconic sneakers of all time, the Air Jordan 1 G is an instant classic on the course. With Air cushioning underfoot, a Wings logo on the heel and an integrated traction pattern to help you power through your swing, it delivers all the clubhouse cool of the original AJ1—plus everything you need to play 18 holes in comfort."
             },
             {
-                "image": "AIR+JORDAN+1+HIGH+G + Green",
-                "description": "AIR JORDAN",
-                "price": 175
+                "image": "Air Jordan 1 Mid SE",
+                "description": "Air Jordan 1 Mid SE",
+                "price": 135,
+                "type": "Air Jordan 1 Mid SE",
+                "fullDescription": "This special edition AJ1 is almost too hot to handle. Genuine leather gives them a premium feel. A subtle metallic shine on the collar and Swoosh logo makes 'em pop. Are you ready to fire up your look?"
             },
             {
-                "image": "AIR+JORDAN+1+HIGH+G.png",
-                "description": "AIR JORDAN",
-                "price": 190
+                "image": "Air Jordan 1 Mid SE_special",
+                "description": "Air Jordan 1 Mid SE",
+                "price": 165,
+                "type": "Air Jordan 1 Mid SE",
+                "fullDescription": "We brought the receipts with this special edition AJ1. Made with smooth leather and soft suede, this all-time favorite gets a tasty new burger-inspired look to give you mouth-watering style."
             },
             {
                 "image": "AIR+JORDAN+1+HIGH+G+NRG",
-                "description": "AIR JORDAN",
-                "price": 220
+                "description": "Air Jordan 1 Mid",
+                "price": 125,
+                "type": "Air Jordan 1 Mid",
+                "fullDescription": "Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colors and crisp leather give it a distinct identity."
             }
         ],
         "classicsSpotlightHeader": {
-            "title": "Classics Spotlight"
+            "title": "Nike Style"
         },
         "classicsSpotlight": [
             {
                 "image": "NikeSportswear",
-                "description": "Nike Sportswear"
+                "description": "Nike Phoenix",
+                "type": "Nike Phoenix",
+                "fullDescription": "With a two-way zipper and a loose fit that's perfect for layering, this cozy fleece sweatshirt gives you plenty of styling options."
             },
             {
                 "image": "NikeSportswearPhoenix",
-                "description": "Nike Phoenix"
+                "description": "Nike 24.7",
+                "type": "Nike 24.7 ImpossiblySoft",
+                "fullDescription": "Extraordinarily soft and smooth, our ImpossiblySoft fabric feels made for all-day motion. Sweat-wicking tech and a loose fit give you comfort through all your moves."
             },
             {
                 "image": "NikePro",
-                "description": "Nike Pro"
+                "description": "Nike Pro",
+                "type": "Nike Pro",
+                "fullDescription": "Lightweight and stretchy, these smooth Nike Pro leggings dry quickly, helping keep you ready to sweat. The soft elastic waistband stays put so you can go hard feeling limitless."
             },
             {
-                "image": "NikeSportswearPhoenixFleece",
-                "description": "Nike Fleece"
+                "image": "NikeSportswearPhoenixFleece2",
+                "description": "Nike Fleece",
+                "type": "Nike Sportswear Phoenix Fleece",
+                "fullDescription": "With a two-way zipper and a loose fit that's perfect for layering, this cozy fleece sweatshirt gives you plenty of styling options."
             }
         ],
         "nearbyStoresHeader": {
@@ -352,33 +455,38 @@
         "nearbyStores": [
             {
                 "image": "NikeStore_1",
-                "description": "Nike Sawgrass",
-                "type": "4.8 mi",
-                "storeHours": "10:00 AM - 9:00 PM"
+                "description": "Nike Quebec City",
+                "type": "4.9 mi",
+                "storeHours": "10:00 AM - 9:00 PM",
+                "fullDescription": "5401 Bd des Galeries \nQuebec, Quebec, G2K 1N4, CA"
             },
             {
                 "image": "NikeStore_2",
-                "description": "Nike Sawgrass",
-                "type": "4.8 mi",
-                "storeHours": "10:00 AM - 9:00 PM"
+                "description": "Nike Eaton de Montreal",
+                "type": "28.8 mi",
+                "storeHours": "9:00 AM - 6:00 PM",
+                "fullDescription": "705 Saint-Catherine St W \nMontreal, Quebec, H4B 4G5, CA"
             },
             {
                 "image": "NikeStore_3",
-                "description": "Nike Sawgrass",
-                "type": "4.8 mi",
-                "storeHours": "10:00 AM - 9:00 PM"
+                "description": "Nike Dix30",
+                "type": "34.2 mi",
+                "storeHours": "12:00 AM - 11:00 PM",
+                "fullDescription": "9090 Boul. Leduc \nBrossard, Quebec, J4Y 0E9, CA"
             },
             {
                 "image": "NikeStore_4",
-                "description": "Nike Sawgrass",
-                "type": "4.8 mi",
-                "storeHours": "10:00 AM - 9:00 PM"
+                "description": "Nike Factory Store",
+                "type": "42.8 mi",
+                "storeHours": "8:00 AM - 6:00 PM",
+                "fullDescription": "1007-B6 rue du Marche Central \nMontreal, Quebec, H4N 1J8, CA"
             },
             {
                 "image": "NikeStore_5",
-                "description": "Nike Sawgrass",
-                "type": "4.8 mi",
-                "storeHours": "10:00 AM - 9:00 PM"
+                "description": "Nike Laval",
+                "type": "46.4 mi",
+                "storeHours": "10:00 AM - 10:00 PM",
+                "fullDescription": "3035 Boul Le Carrefour \nLaval, Quebec, H7T 1C8, CA"
             }
         ]
     },
@@ -390,31 +498,62 @@
             {
                 "image": "newsroom-spsu24-converse-kids-a06664c-look-03-00268",
                 "description": "Converse Introduces",
-                "type": "Chuck Taylor All Star"
+                "type": "Chuck Taylor All Star",
+                "fullDescription": "Converse is introducing its first lightweight, slip-on shoe for kids with the Chuck Taylor All Star Play Lite CX. It releases beginning March 1. \n\nFor the first time, Converse’s CX foam cushioning arrives in a kid-friendly silhouette that combines all-day comfort and easy on-off, helping ensure more time for play and less time for lacing up. \n\nStrategically placed circular vent holes in the silhouette’s upper help little toes breathe, while the upper's low cut and open design allows kids to easily slide their foot in and go. The Chuck Taylor All Star Play Lite CX is also simple to clean with water."
             },
             {
                 "image": "cosmic-runner",
                 "description": "Nike Redefines Running",
-                "type": "Kids’ Cosmic Runner"
+                "type": "Kids’ Cosmic Runner",
+                "fullDescription": "Nike’s new Cosmic Runner is made just for kids, powering their pursuits in sport and play with all-day comfort, supportive cushioning and kid-right durability. \n\nThe Cosmic Runner is the first kids’ silhouette to feature layered haptic printing, which adds texture and helps protect mesh from scraping in high-wear zones where kids need it most. \n\nThe silhouette features a reinforced toe-tip and full rubber outsole that incorporate Nike Grind, a pull tab that makes it easy to step into and a one-piece upper that eliminates seams, delivering added comfort. \n\nThe performance and style of the Cosmic Runner underscores Nike’s commitment to serving runners of all ages, abilities and intensities: inspiring them on every step of their athletic journeys and delivering innovation that supports their pursuit of greatness. \n\nThe Cosmic Runner will be available globally in a full run of kids’ sizing, from babies to big kids, at nike.com and select retail locations beginning November 1."
             },
             {
                 "image": "mds-mercurial-superfly-1",
                 "description": "Nike Lights up the Pitch",
-                "type": "New Mercurial Dream"
+                "type": "New Mercurial Dream",
+                "fullDescription": "The Mercurial Dream Speed 009 is the latest iteration of Nike’s Dream Speed franchise, drawing on three prior models to celebrate legacy, speed and self-belief in a boot inspired by the fastest athletes in football. \n\nThe boot features a unique three-fourth length Air Zoom unit, integrated speed cage structure, Vaporposite+ upper and tri-star studs. \n\nThe Mercurial Dream Speed 009 will be available globally in adult and kids’ sizes November 4 at nike.com and select retail locations."
             }
         ],
         "shopListSection": [
             {
-                "image": "Frame 13"
+                "image": "Frame 13",
+                "productInfo": [
+                    {
+                        "image": "courtyard-02-5v5-mixed-shoot-34",
+                        "title": "The Courtyard in Manila Gives the Local Basketball Community a Space to Thrive",
+                        "description": "Ahead of the FIBA Basketball World Cup, Nike is opening an outdoor basketball court in Manila to give the local community year-round access to play. \n\nThe Courtyard is located in the heart of Bonifacio Global City, a district in Taguig, Metro Manila, Philippines. The space is a popular destination for Manila youth, serving as a hangout spot and sports hub. Covering 2,182 square meters, the space includes two full-size basketball courts made of Nike Grind and one half-court training area intended for practice shooting. Weekly pickup games and regular basketball camps will be led by Nike coaches, and Nike Members will be able to reserve the courts through the Nike App. All programs, skill camps and athlete camps will be offered for free year-round."
+                    }
+                ]
             },
             {
-                "image": "Frame 14"
+                "image": "Frame 14",
+                "productInfo": [
+                    {
+                        "image": "courtyard-02-5v5-mixed-shoot",
+                        "title": "The Courtyard in Manila Gives the Local Basketball Community a Space to Thrive",
+                        "description": "To help further grow the basketball community and expand sport for the next generation, Nike is partnering with Girls Got Game Philippines, a local nonprofit that aims to empower young women through sport. Weekly programs such as “Her Hoops” and elevated events such as “Her Weekend” will be available for female ballers across Manila. As part of the coaching camps, Nike will organize athlete skills camps, prime-time pickup games, and shoe trialing for the basketball campers."
+                    }
+                ]
             },
             {
-                "image": "Frame 15"
+                "image": "Frame 15",
+                "productInfo": [
+                    {
+                        "image": "courtyard-04-courthero-shoot-0",
+                        "title": "The Courtyard in Manila Gives the Local Basketball Community a Space to Thrive",
+                        "description": "“Having this court here in the heart of Metro Manila is huge,” says Xavier Nunag, Commissioner of the University Athletic Association of the Philippines. “It’s different when you play alone in your barangay. Playing here gives you the prime-time feeling that you’re part of Filipino basketball culture.”"
+                    }
+                ]
             },
             {
-                "image": "Frame 16"
+                "image": "Frame 16",
+                "productInfo": [
+                    {
+                        "image": "courtyard",
+                        "title": "The Courtyard in Manila Gives the Local Basketball Community a Space to Thrive",
+                        "description": "Created by homegrown artist Kiefer Indiongco, the Courtyard’s design is inspired by the vibrant festivities of the Philippines and the country’s love for the game. The design features traditional patterns weaved together with basketball symbols to celebrate the everyday player in Manila. "
+                    }
+                ]
             }
         ],
         "pinkNikeHeader": {
@@ -423,62 +562,87 @@
         "pinkNike": [
             {
                 "image": "NikeFull-ZipClubSet",
-                "description": "Zip Club Set"
+                "description": "Zip Club Set",
+                "type": "Zip Club Set",
+                "fullDescription": "This 2-piece set is an easy way to dress little ones for fun. The hoodie is made of soft fleece for lightweight warmth, has slightly dropped shoulders create a relaxed fit, the full-zip closure makes layering easy and the matching tapered pants have a stretchy waistband for a comfy fit they can play freely in. Pair with any Nike tank or tee for a completed look."
             },
             {
                 "image": "NikeDri-FITKids",
-                "description": "Dri-FIT Kids"
+                "description": "Dri-FIT Kids",
+                "type": "Dri-FIT Kids",
+                "fullDescription": "Put your little athlete in this performance tracksuit, made of soft pique knit fabric enhanced with quick-drying, moisture-wicking Dri-FIT technology to help keep them cool and dry while they play. The full-zip jacket has a roomy cut to make layering easy and the ribbed cuffs and hem help retain warmth. The matching pants have a stretch waistband for a comfy fit and tapered legs with ribbed cuffs that provide a cozy, secure feel. Pair with any Nike tank or tee for a completed look."
             },
             {
                 "image": "NikeSportswearK",
-                "description": "Nike Sport"
+                "description": "Nike Sport",
+                "type": "Nike Sport",
+                "fullDescription": "You can't go wrong with classic Nike style. Made from soft and breathable cotton, this tee has an easy fit that's perfect for all your daily adventures."
             },
             {
                 "image": "NikeSportswearClubFleece",
-                "description": "Club Fleece"
+                "description": "Club Fleece",
+                "type": "Club Fleece",
+                "fullDescription": "Always cool. Always comfortable. Smooth on the outside and brushed soft on the inside, this lightweight fleece sweatshirt is an easy layer when you want a little extra warmth. Baggy through the body with a slight crop, it offers room to move without feeling too big."
             }
         ],
         "jordanKidsHeaderModel": {
-            "title": "Jordan Kids"
+            "title": "Little Legends"
         },
         "jordanKids": [
             {
                 "image": "JordanBrooklynFleece",
-                "description": "Jordan Brooklyn"
-                
+                "description": "Jordan Brooklyn",
+                "type": "Jordan Brooklyn",
+                "fullDescription": "Made of anti-pill cotton/poly fleece for a longer wear life, this eye-catching hoodie is a cozy way to complement your Jordans. The hood is cozy, dropped shoulders create a relaxed fit, and the kangaroo pocket can be used to stash small items or to help keep your hands toasty. Pair with the Jordan Brooklyn Fleece Printed Pants for a coordinated look."
             },
             {
                 "image": "JordanMJBrooklyn",
-                "description": "Jordan MJ Brooklyn"
+                "description": "Jordan MJ Brooklyn",
+                "type": "Jordan MJ Brooklyn",
+                "fullDescription": "These pants are a classic silhouette made of soft cotton/poly fleece that feels smooth on the outside and soft on the inside. The stretch waistband with drawcord provides a comfy fit and pockets on the sides and back provide spots for you to stash small items. Tapered legs with ribbed cuffs create a cozy, secure feel that keeps up with you throughout the day. Pair with the Jordan MJ Brooklyn Fleece Essential Crew for a coordinated look."
             },
             {
                 "image": "JordanElevatedJersey",
-                "description": "Jordan Jersey"
+                "description": "Jordan Jersey",
+                "type": "Jordan Jersey",
+                "fullDescription": "With a Henley inspired design, this jersey is a style that can be worn during sport and during chill times with friends. It's made of breathable poly knit mesh fabric and features the 23 and Jordan patches on the chest and back. The snap closure on the front neckline provides easy dressing and styling, and the shirttail hem adds an elevated touch."
             },
             {
                 "image": "JordanMVP",
-                "description": "Jordan MVP"
+                "description": "Jordan MVP",
+                "type": "Jordan MVP",
+                "fullDescription": "Made of anti-pill cotton/poly fleece for a longer wear life, this eye-catching hoodie is how you complement your Jordans like an MVP. The roomy cut lends itself to easy layering, dropped shoulders create a relaxed fit, and the kangaroo pocket can be used to stash small items or to help keep your hands toasty. Pair with any of the Jordan MVP bottoms for a coordinated look."
             },
             {
                 "image": "JordanSeeMeShine",
-                "description": "See Me Shine"
+                "description": "See Me Shine",
+                "type": "Jordan See Me Shine",
+                "fullDescription": "Made of soft cotton/poly fleece that feels smooth on the outside and soft on the inside, this 2-piece set is an easy way to dress your little one for everyday play. The roomy hoodie is a classic silhouette roomy enough for easy layering, and the matching pants have a stretch waistband for a comfy fit and the tapered legs with ribbed cuffs create a cozy, secure feel."
             }
         ],
         "nikeNewsHeader": {
-            "title": "Playground"
+            "title": "Nike’s New Playground"
         },
         "nikeNews": [
             {
-                "image": "playground-for-all-1"
+                "image": "playground-for-all-1",
+                "type": "Nike’s New Playground for All in Seoul Inspires Daily Movement for Local Youth",
+                "fullDescription": "Nike has opened its second Playground for All in Seoul, marking its latest effort to create inclusive, supportive environments for youth sport and play."
             },
             {
-                "image": "playground-for-all-8"
+                "image": "playground-for-all-8",
+                "type": "Nike’s New Playground for All in Seoul Inspires Daily Movement for Local Youth",
+                "fullDescription": "The project gives new life to two aging basketball courts in the district of Gangnam, transforming one into a multi-use area and renovating the other into a 3-on-3 basketball destination."
             },
             {
-                "image": "playground-for-all-6"
+                "image": "playground-for-all-6",
+                "type": "Nike’s New Playground for All in Seoul Inspires Daily Movement for Local Youth",
+                "fullDescription": "Both spaces reuse materials Nike consumers have donated through the brand’s Recycling + Donation program, underscoring the brand’s commitment to sustainability."
             },
             {
-                "image": "playground-for-all-13"
+                "image": "playground-for-all-13",
+                "type": "Nike’s New Playground for All in Seoul Inspires Daily Movement for Local Youth",
+                "fullDescription": "The playground opening follows the dedication of the first Playground for All last year in Seoul’s Geumcheon district and joins a host of Nike initiatives that aim to make sport and play welcoming and inclusive for the next generation."
             }
         ]
     }
