@@ -1,6 +1,6 @@
 //
 //  UICollectionView + Extension.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/22/24.
 //

@@ -1,6 +1,6 @@
 //
 //  RecentlyViewedCollectionViewCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/30/24.
 //
@@ -47,7 +47,6 @@ extension RecentlyViewedCollectionCell {
         backgroundColor = .systemBackground
         contentView.addSubview(photoImageView)
         contentView.addSubview(horizontalStackView)
-        
         horizontalStackView.addArrangedSubview(nameLabel)
         horizontalStackView.addArrangedSubview(priceLabel)
     }

@@ -1,6 +1,6 @@
 //
 //  BagService.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 3/6/25.
 //
@@ -85,7 +85,7 @@ class BagService: BagServiceProtocol {
         }
     }
     
-//     MARK: - Delete
+    //MARK: - Delete
     @discardableResult
     func delete(_ product: SubCategoryModel) -> [SubCategoryModel] {
         var products = fetch()
@@ -106,7 +106,7 @@ class BagService: BagServiceProtocol {
         }
     }
     
-// MARK: - CalculateTotalSectionPrice
+    //MARK: - CalculateTotalSectionPrice
     func calculateTotalSectionPrice(for model: SubCategoryModel) -> Double {
         guard let price = model.price, let count = model.count else {
             return 0
@@ -114,7 +114,7 @@ class BagService: BagServiceProtocol {
         return price * count
     }
     
-// MARK: - CalculateTotalPriceForSecondSection
+    //MARK: - CalculateTotalPriceForSecondSection
     func calculateTotalPrice() -> Double {
         let products = fetchTopPicks()
         var totalPrice = 0.0

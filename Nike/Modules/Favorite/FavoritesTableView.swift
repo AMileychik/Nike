@@ -1,6 +1,6 @@
 //
 //  FavoriteTableView.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/13/24.
 //
@@ -50,8 +50,8 @@ extension FavoritesTableView: UITableViewDataSource {
         switch sections {
             
         case .favorites(let model):
+            
             let cell = tableView.dequeueCell(indexPath) as FavoritesTableViewCell
-           
             cell.update(model, isEditing: isEditingFavorites)
             
             if let viewController = self.findParentViewController() as? FavoritesViewController {

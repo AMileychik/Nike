@@ -1,6 +1,6 @@
 //
 //  InsetLabel.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/10/24.
 //

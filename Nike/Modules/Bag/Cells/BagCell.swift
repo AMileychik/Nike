@@ -1,6 +1,6 @@
 //
 //  Orders.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 12/17/24.
 //
@@ -16,15 +16,13 @@ final class BagCell: UITableViewCell {
     
     weak var delegate: BagCellDelegate?
     weak var parentViewController: UIViewController?
+    private var subCategoryModel: SubCategoryModel?
     var bagService = BagService()
-    
-    private var productModel: SubCategoryModel?
     
     private let photoImageView = ImageView(type: .common)
     private let titleLabel = Label(type: .title)
     private let descriptionLabel = Label(type: .titleDescription)
     private let priceLabel = Label(type: .subtitle)
-    
     private let separatorView = UIView.makeSeparator()
     
     private lazy var quantityButton: UIButton = {
@@ -59,6 +57,7 @@ final class BagCell: UITableViewCell {
 extension BagCell {
     
     @objc private func quantityButtonTapped() {
+        
         let quantityPickerViewController = QuantityPickerViewController()
         quantityPickerViewController.delegate = self
         quantityPickerViewController.modalPresentationStyle = .pageSheet
@@ -75,7 +74,7 @@ extension BagCell {
 extension BagCell: QuantitySelectionDelegate {
     
     func didSelectQuantity(_ count: Double) {
-        guard let model = productModel else { return }
+        guard let model = subCategoryModel else { return }
         configureQuantityButton(count: count)
         
         var storedProducts = bagService.fetchTopPicks()
@@ -97,15 +96,12 @@ extension BagCell: QuantitySelectionDelegate {
 extension BagCell {
     
     func update(_ model: SubCategoryModel) {
-        self.productModel = model
+        self.subCategoryModel = model
         guard let price = model.price, let count = model.count else { return }
-        
-        configureQuantityButton(count: count)
-        
         photoImageView.image = UIImage(named: model.subCategoryImage ?? "")
         titleLabel.text = model.title
         descriptionLabel.text = model.category
-        
+        configureQuantityButton(count: count)
         updateProductPriceLabel(price: price, count: count)
     }
     
@@ -122,13 +118,11 @@ extension BagCell {
     }
     
     func setupConstraints() {
-        
         let minHeightConstraint = contentView.heightAnchor.constraint(equalToConstant: 240)
         minHeightConstraint.priority = .defaultLow
         minHeightConstraint.isActive = true
         
         quantityButton.contentHorizontalAlignment = .left
-        
         [quantityButton, separatorView].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         
         NSLayoutConstraint.activate([

@@ -1,6 +1,6 @@
 //
 //  ProductInfoCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 4/2/25.
 //
@@ -36,12 +36,9 @@ class HorizontalProductInfoCell: UITableViewCell {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.isPagingEnabled = true
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         collectionView.registerCell(DetailProductsCollectionCell.self)
-        
         return collectionView
     }()
     
@@ -61,7 +58,6 @@ extension HorizontalProductInfoCell {
     
     func update(dataType: ProductInfoCellDataType) {
         self.productInfoCellDataType = dataType
-        
         switch dataType {
             
         case .newFromNike(let model):
@@ -192,7 +188,6 @@ extension HorizontalProductInfoCell {
 extension HorizontalProductInfoCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
 }

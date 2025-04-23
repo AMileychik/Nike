@@ -1,6 +1,6 @@
 //
 //  TemporaryPromotionCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 12/19/24.
 //

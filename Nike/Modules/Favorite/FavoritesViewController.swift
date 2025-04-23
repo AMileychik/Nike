@@ -1,6 +1,6 @@
 //
 //  FavoriteVC.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/13/24.
 //
@@ -53,10 +53,8 @@ extension FavoritesViewController {
     
     private func updateFavoritesSections() {
         let fetchedProducts = favoritesService.fetch()
-        
         tableView.favoriteSections = FavoriteSectionBuilder.createFavoriteSections(
             from: fetchedProducts)
-        
         tableView.reloadData()
     }
 }

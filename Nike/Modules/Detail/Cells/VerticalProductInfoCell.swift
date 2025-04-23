@@ -1,6 +1,6 @@
 //
 //  VerticalProductInfoCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 4/8/25.
 //
@@ -34,11 +34,9 @@ class VerticalProductInfoCell: UITableViewCell {
         collectionView.showsVerticalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isScrollEnabled = false
-        
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerCell(VerticalProductInfoCollectionViewCell.self)
-        
         return collectionView
     }()
     
@@ -54,13 +52,14 @@ class VerticalProductInfoCell: UITableViewCell {
     
     func updateCollectionViewHeight() {
         guard let dataType = productInfoCellDataType else { return }
-
+        
         let width = UIScreen.main.bounds.width
         let itemHeight = width * 1.75
-
+        
         var itemCount = 0
-
+        
         switch dataType {
+            
         case .newFromNikeDetailSections(let model):
             itemCount = model.first?.productData?.count ?? 0
         case .storiesForYouDetailSections(let model):
@@ -70,9 +69,9 @@ class VerticalProductInfoCell: UITableViewCell {
         case .verticalProductModel(let model):
             itemCount = model.count
         }
-
+        
         let totalHeight = CGFloat(itemCount) * itemHeight
-
+        
         if let existing = heightConstraint {
             existing.constant = totalHeight
         } else {
@@ -90,8 +89,8 @@ extension VerticalProductInfoCell {
     
     func update(dataType: VerticalProductInfoCellDataType) {
         self.productInfoCellDataType = dataType
-        
         switch dataType {
+            
         case .newFromNikeDetailSections(let model):
             self.newFromNike = model
         case .storiesForYouDetailSections(let model):
@@ -101,7 +100,7 @@ extension VerticalProductInfoCell {
         case .verticalProductModel(let model):
             self.special = model
         }
-
+        
         updateCollectionViewHeight()
         collectionView.reloadData()
     }
@@ -113,6 +112,7 @@ extension VerticalProductInfoCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let dataType = productInfoCellDataType else { return 0 }
         switch dataType {
+            
         case .newFromNikeDetailSections(let model):
             return model.first?.productData?.count ?? 0
         case .storiesForYouDetailSections(let model):
@@ -123,28 +123,32 @@ extension VerticalProductInfoCell: UICollectionViewDataSource {
             return model.count
         }
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let dataType = productInfoCellDataType else { return UICollectionViewCell() }
-
-        let cell = collectionView.dequeuCell(indexPath) as VerticalProductInfoCollectionViewCell
-
         switch dataType {
+            
         case .newFromNikeDetailSections(let model):
+            let cell = collectionView.dequeuCell(indexPath) as VerticalProductInfoCollectionViewCell
             let product = model.first?.productData?[indexPath.item]
             if let product { cell.updateProductImage(product) }
-
+            return cell
+            
         case .storiesForYouDetailSections(let model):
+            let cell = collectionView.dequeuCell(indexPath) as VerticalProductInfoCollectionViewCell
             cell.updateStoriesForYou(model[indexPath.item])
-
+            return cell
+            
         case .shopDetailSections(let model):
+            let cell = collectionView.dequeuCell(indexPath) as VerticalProductInfoCollectionViewCell
             cell.updateShopVCSections(model[indexPath.item])
-
+            return cell
+            
         case .verticalProductModel(let model):
+            let cell = collectionView.dequeuCell(indexPath) as VerticalProductInfoCollectionViewCell
             cell.updateVerticalProductModel(model[indexPath.item])
+            return cell
         }
-
-        return cell
     }
 }
 

@@ -1,6 +1,6 @@
 //
 //  DetailTableViewDataSource.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 3/23/25.
 //
@@ -29,16 +29,13 @@ enum DetailSection {
 
 final class DetailTableViewDataSource: NSObject, UITableViewDataSource {
     
-    var detailSections: [DetailSection] = []
     weak var tableView: UITableView?
     private var bagService: BagServiceProtocol
     private var favoritesService: FavoritesServiceProtocol
     private var selectedSubCategory: SubCategoryModel?
-
-    init(tableView: UITableView, 
-         bagService: BagServiceProtocol,
-         favoritesService: FavoritesServiceProtocol) {
-        
+    var detailSections: [DetailSection] = []
+    
+    init(tableView: UITableView, bagService: BagServiceProtocol, favoritesService: FavoritesServiceProtocol) {
         self.tableView = tableView
         self.bagService = bagService
         self.favoritesService = favoritesService
@@ -133,44 +130,44 @@ final class DetailTableViewDataSource: NSObject, UITableViewDataSource {
             cell.updateYouMightAlsoLikeHeader(header)
             cell.update(.oneMoremediumSquareCollectionViewCell(model: model), sectionHeight: 364)
             return cell
-        
+            
         case .storiesForYou(let model):
             
             let cell = tableView.dequeueCell(indexPath) as VerticalProductInfoCell
             cell.update(dataType: .storiesForYouDetailSections(model))
             return cell
-        
+            
         case .horizontalProductInfo(let model):
             
             let cell = tableView.dequeueCell(indexPath) as HorizontalProductInfoCell
             cell.update(dataType: .shopDetailSections(model))
             return cell
-        
+            
         case .verticalProductInfoCell(let model):
             
-           let cell = tableView.dequeueCell(indexPath) as VerticalProductInfoCell
-           cell.update(dataType: .newFromNikeDetailSections(model))
-           return cell
-       
+            let cell = tableView.dequeueCell(indexPath) as VerticalProductInfoCell
+            cell.update(dataType: .newFromNikeDetailSections(model))
+            return cell
+            
         case .verticalWithProductModel(let model):
             
             let cell = tableView.dequeueCell(indexPath) as VerticalProductInfoCell
             cell.update(dataType: .verticalProductModel(model))
             return cell
-        
+            
         case .productInfo(let model):
             
             let cell = tableView.dequeueCell(indexPath) as HorizontalProductInfoCell
             cell.update(dataType: .productInfo(model))
             return cell
-        
+            
         case .descriptionModel(let model):
             
             let cell = tableView.dequeueCell(indexPath) as DescriptionCell
             let data = model[indexPath.item]
             cell.update2(data)
             return cell
-       
+            
         case .shopVCListCellSectiont(let model):
             let cell = tableView.dequeueCell(indexPath) as HorizontalProductInfoCell
             cell.update(dataType: .shopListDetailSections(model))
@@ -208,9 +205,7 @@ final class DetailTableViewDataSource: NSObject, UITableViewDataSource {
 // MARK: - CategoriesContainerDelegate
 extension DetailTableViewDataSource: CategoriesContainerDelegate {
     
-    func didSelectSubCategory(with model: [SubCategoryModel], 
-                              subCategory: String) {
-        
+    func didSelectSubCategory(with model: [SubCategoryModel], subCategory: String) {
         detailSections[0] = .subCategories(model)
         tableView?.reloadData()
     }

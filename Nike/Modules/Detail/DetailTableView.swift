@@ -1,6 +1,6 @@
 //
 //  DetailTableView.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/28/24.
 //
@@ -9,11 +9,7 @@ import UIKit
 
 final class DetailTableView: UITableView {
     
-    private lazy var dataSourceManager = DetailTableViewDataSource(
-            tableView: self,
-            bagService: BagService(),
-            favoritesService: FavoritesService()
-            )
+    private lazy var dataSourceManager = DetailTableViewDataSource(tableView: self, bagService: BagService(), favoritesService: FavoritesService())
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)

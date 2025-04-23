@@ -1,6 +1,6 @@
 //
 //  OrdersService.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 12/13/24.
 //
@@ -84,7 +84,7 @@ class FavoritesService: FavoritesServiceProtocol {
         }
     }
     
-//MARK: - Delete
+    //MARK: - Delete
     @discardableResult
     func delete(_ product: SubCategoryModel) -> [SubCategoryModel] {
         var products = fetch()
@@ -103,8 +103,8 @@ class FavoritesService: FavoritesServiceProtocol {
             }
         }
     }
-        
-// MARK: - CalculateTotalSectionPrice
+    
+    //MARK: - CalculateTotalSectionPrice
     func calculateTotalSectionPrice(for model: SubCategoryModel) -> Double {
         guard let price = model.price, let count = model.count else {
             return 0
@@ -112,7 +112,7 @@ class FavoritesService: FavoritesServiceProtocol {
         return price * count
     }
     
-// MARK: - CalculateTotalPriceForSecondSection
+    //MARK: - CalculateTotalPriceForSecondSection
     func calculateTotalPriceForSecondSection() -> Double {
         let products = fetchTopPicks()
         var totalPrice = 0.0

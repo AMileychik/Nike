@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 9/27/24.
 //
@@ -27,10 +27,10 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStyle()
+        setupRefreshControl()
         setupViews()
         setupActivityIndicator()
         setupConstraints()
-        setupRefreshControl()
         bindViewModel()
         homeViewModel.loadProducts()
     }
@@ -75,18 +75,20 @@ extension HomeViewController {
 }
 //MARK: - Navigation
 extension HomeViewController {
-   
+    
     func toProductDetailSections(model: [Product],
-                                categories: Categories,
-                                header: Header,
-                                category: String,
-                                subCategory: SubCategoryModel) {
+                                 categories: Categories,
+                                 header: Header,
+                                 category: String,
+                                 subCategory: SubCategoryModel) {
         
         let detailVC = dependencyContainer.screenFactory.createDetailScreen()
-        detailVC.updateProductDetailSections(model: model, 
-                        categories: categories,
-                        header: header, category: category,
-                        subCategory: subCategory)
+        
+        detailVC.updateProductDetailSections(model: model,
+                                             categories: categories,
+                                             header: header,
+                                             category: category,
+                                             subCategory: subCategory)
         
         push(detailVC)
     }
@@ -143,10 +145,10 @@ extension HomeViewController {
                 print("subCategory is nil")
                 return
             }
-
+            
             self.toProductDetailSections(model: model, categories: safeCategories!, header: safeHeader!, category: category, subCategory: subcategory)
         }
-    
+        
         homeViewModel.navigateFromPromo = { [weak self] model in
             guard let self = self else { return }
             self.toPromoDetailSections(model: model)
@@ -161,7 +163,7 @@ extension HomeViewController {
             guard let self = self else { return }
             self.toNewFromNikeDetailSections(model: model)
         }
-    
+        
         homeViewModel.navigateFromExploreButton = { [weak self] model in
             guard let self = self else { return }
             self.toNewFromNikeVerticalDetailsections(model: model)
@@ -175,7 +177,7 @@ extension HomeViewController {
     
     private func updateUI(for state: HomeViewModel.State) {
         switch state {
-        
+            
         case .initial:
             break
             

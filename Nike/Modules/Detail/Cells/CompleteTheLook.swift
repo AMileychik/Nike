@@ -1,6 +1,6 @@
 //
 //  CompleteTheLook.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 3/5/25.
 //
@@ -8,7 +8,7 @@
 import UIKit
 
 final class CompleteTheLook: UITableViewCell {
-
+    
     private var categories: [CompleteTheLookModel] = []
     
     private lazy var headerTitleLabel = Label(type: .header)
@@ -23,9 +23,7 @@ final class CompleteTheLook: UITableViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.showsHorizontalScrollIndicator = false
-        
         collectionView.registerCell(CompleteTheLookCollectionViewCell.self)
-        
         return collectionView
     }()
     
@@ -61,7 +59,7 @@ extension CompleteTheLook {
         updateCollectionViewHeight(to: sectionHeight)
         collectionView.reloadData()
     }
-
+    
     private func updateCollectionViewHeight(to height: CGFloat) {
         if let heightConstraint = collectionView.constraints.first(where: { $0.firstAttribute == .height }) {
             heightConstraint.constant = height
@@ -91,6 +89,7 @@ extension CompleteTheLook: UICollectionViewDelegate {}
 
 //MARK: - UICollectionViewDelegateFlowLayout
 extension CompleteTheLook: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 300, height: 375)
     }

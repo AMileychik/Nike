@@ -1,6 +1,6 @@
 //
 //  Description.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 3/1/25.
 //

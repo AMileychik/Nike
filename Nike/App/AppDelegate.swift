@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 9/27/24.
 //

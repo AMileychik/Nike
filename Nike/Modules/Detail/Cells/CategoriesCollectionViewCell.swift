@@ -1,6 +1,6 @@
 //
 //  CategoriesCollectionViewCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/14/24.
 //
@@ -35,7 +35,6 @@ extension CategoriesCollectionViewCell {
     
     func setupViews() {
         contentView.addSubview(photoImageView)
-        
         photoImageView.layer.borderColor = UIColor.black.cgColor
         photoImageView.layer.borderWidth = 1
         photoImageView.clipsToBounds = true

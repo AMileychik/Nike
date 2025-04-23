@@ -1,6 +1,6 @@
 //
 //  DetailVC.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/28/24.
 //
@@ -11,9 +11,7 @@ final class DetailViewController: UIViewController {
     
     private let tableView = DetailTableView()
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
+    init() { super.init(nibName: nil, bundle: nil) }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -35,66 +33,45 @@ final class DetailViewController: UIViewController {
 extension DetailViewController {
     
     //MARK: - ProductDetailSections
-    func updateProductDetailSections(
-        model: [Product],
-        categories: Categories,
-        header: Header,
-        category: String,
-        subCategory: SubCategoryModel
+    func updateProductDetailSections(model: [Product], categories: Categories, header: Header, category: String, subCategory: SubCategoryModel
     ) {
         title = model.first?.type
         
-        tableView.updateSections(DetailSectionBuilder.createProductDetailSections(
-            model: model,
-            categories: categories,
-            header: header,
-            category: category,
-            subCategory: subCategory
-        ))
+        tableView.updateSections(DetailSectionBuilder.createProductDetailSections(model: model, categories: categories, header: header, category: category, subCategory: subCategory))
     }
     
     //MARK: - PromoDetailSections
     func updatePromoDetailSections(model: [Product]) {
         title = model.first?.type
-        tableView.updateSections(DetailSectionBuilder.createPromoDetailSections(
-            model: model
-        ))
+        tableView.updateSections(DetailSectionBuilder.createPromoDetailSections(model: model))
     }
     
     //MARK: - NewFromNikeDetailSections
     func updateNewFromNikeDetailSections(model: [NewFromNikeModel]){
         title = model.first?.title
-        tableView.updateSections(DetailSectionBuilder.createNewFromNikeDetailSections(
-            model: model
-        ))
+        tableView.updateSections(DetailSectionBuilder.createNewFromNikeDetailSections(model: model))
     }
     
     //MARK: - NewFromNikeVerticalDetailSections
     func updateVerticalNewFromNikeDetailSections(model: [NewFromNikeModel]) {
         title = model.first?.title
-        tableView.updateSections(DetailSectionBuilder.createVerticalNewFromNikeDetailSections(
-            model: model
-        ))
+        tableView.updateSections(DetailSectionBuilder.createVerticalNewFromNikeDetailSections(model: model))
     }
     
     //MARK: - StoriesForYouDetailSections
     func updateStoriesForYouDetailSections(model: [StoriesForYou]) {
         title = model.first?.largeImageLabel1
-        tableView.updateSections(DetailSectionBuilder.createStoriesForYouDetailSections(
-            model: model
-        ))
+        tableView.updateSections(DetailSectionBuilder.createStoriesForYouDetailSections(model: model))
     }
     
     //MARK: - ShopDetailSections
     func updasteShopDetailSections(model: [Product]) {
-        tableView.updateSections(DetailSectionBuilder.createShopDetailSections(
-            model: model))
+        tableView.updateSections(DetailSectionBuilder.createShopDetailSections(model: model))
     }
     
     //MARK: - ShopListDetailSections
     func updateShopListDetailSections(model: [Product]) {
-        tableView.updateSections(DetailSectionBuilder.createShopListDetailSections(
-            model: model))
+        tableView.updateSections(DetailSectionBuilder.createShopListDetailSections(model: model))
     }
 }
 

@@ -1,6 +1,6 @@
 //
 //  HeaderButton.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 2/28/25.
 //
@@ -9,11 +9,8 @@ import UIKit
 
 final class HeaderButton: UIView {
     
-    var onButtonTapped: (()->())?
-    
     lazy var customButton: UIButton = {
         var button = UIButton(type: .system)
-        
         button.backgroundColor = .white
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         button.setTitleColor(UIColor(white: 0.4, alpha: 1), for: .normal)
@@ -23,6 +20,8 @@ final class HeaderButton: UIView {
         
         return button
     }()
+    
+    var onButtonTapped: (()->())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

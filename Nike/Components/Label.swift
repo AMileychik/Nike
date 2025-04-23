@@ -1,6 +1,6 @@
 //
 //  Label.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/23/24.
 //
@@ -43,7 +43,7 @@ class Label: InsetLabel {
             textColor = UIColor(white: 0.4, alpha: 1)
             numberOfLines = 0
             translatesAutoresizingMaskIntoConstraints = false
-       
+            
         case .subTitleDescription:
             font = UIFont.systemFont(ofSize: 16, weight: .medium)
             textColor = UIColor(white: 0.1, alpha: 1)
@@ -83,25 +83,25 @@ class Label: InsetLabel {
             textColor = .white
             font = UIFont.systemFont(ofSize: 13)
             translatesAutoresizingMaskIntoConstraints = false
-       
+            
         case .alwaysPopularBoltWeight:
             numberOfLines = 0
             textColor = .white
             font = UIFont.systemFont(ofSize: 14, weight: .bold)
             translatesAutoresizingMaskIntoConstraints = false
-        
+            
         case .header:
             font = UIFont.systemFont(ofSize: 20, weight: .medium)
             textColor = UIColor(white: 0.1, alpha: 1)
             numberOfLines = 0
             translatesAutoresizingMaskIntoConstraints = false
-       
+            
         case .headerDescriptionLabel:
             font = UIFont.systemFont(ofSize: 20, weight: .medium)
             textColor = UIColor(white: 0.4, alpha: 1)
             numberOfLines = 0
             translatesAutoresizingMaskIntoConstraints = false
-       
+            
         case .highlighted:
             font = UIFont.systemFont(ofSize: 36, weight: .bold)
             textColor = UIColor(red: 1.0, green: 1.0, blue: 0.2, alpha: 1.0)

@@ -1,6 +1,6 @@
 //
 //  PageControlCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/7/24.
 //
@@ -57,10 +57,9 @@ class PromoCarouselCell: UITableViewCell {
         let blackPart = UIView()
         blackPart.backgroundColor = .clear
         blackPart.translatesAutoresizingMaskIntoConstraints = false
-        blackPart.frame = CGRect(x: 0, y: 0, width: 0, height: height) 
+        blackPart.frame = CGRect(x: 0, y: 0, width: 0, height: height)
         
         indicator.addSubview(blackPart)
-        
         return indicator
     }
     
@@ -114,7 +113,7 @@ class PromoCarouselCell: UITableViewCell {
                 blackPart.frame.size.width = indicatorWidth * (fractionalPage - CGFloat(index) + 1)
                 blackPart.frame.origin.x = 0
                 blackPart.backgroundColor = .black
-           
+                
             } else {
                 blackPart.frame.size.width = 0
                 blackPart.backgroundColor = .clear
@@ -132,11 +131,7 @@ class PromoCarouselCell: UITableViewCell {
     
     func startAutoScrollTimer() {
         guard autoScrollTimer == nil, isAutoScrollingEnabled else { return }
-        autoScrollTimer = Timer.scheduledTimer(timeInterval: 3.0, 
-                                               target: self,
-                                               selector: #selector(scrollToNextPage),
-                                               userInfo: nil,
-                                               repeats: true)
+        autoScrollTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(scrollToNextPage), userInfo: nil, repeats: true)
     }
     
     @objc private func scrollToNextPage() {
@@ -159,19 +154,14 @@ class PromoCarouselCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-
         stopAutoScrollTimer()
-
         pageControlData = []
-        
         collectionView.setContentOffset(.zero, animated: false)
         collectionView.reloadData()
-        
         indicatorsViews.forEach { $0.removeFromSuperview() }
         indicatorsViews.removeAll()
     }
 }
-
 
 //MARK: - Public
 extension PromoCarouselCell {
@@ -179,6 +169,7 @@ extension PromoCarouselCell {
     func update(_ model: [Product], sectionHeight: CGFloat) {
         self.pageControlData = model
         setupIndicators()
+        
         if let heightConstraint = collectionView.constraints.first(where: { $0.firstAttribute == .height }) {
             heightConstraint.constant = sectionHeight
             heightConstraint.priority = .defaultHigh
@@ -189,7 +180,7 @@ extension PromoCarouselCell {
 
 // MARK: - UICollectionViewDataSource
 extension PromoCarouselCell: UICollectionViewDataSource {
-   
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pageControlData.count
     }
@@ -204,7 +195,7 @@ extension PromoCarouselCell: UICollectionViewDataSource {
 
 // MARK: - UIScrollViewDelegate
 extension PromoCarouselCell: UIScrollViewDelegate {
-   
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateIndicatorProgress(scrollOffset: scrollView.contentOffset.x)
     }
@@ -212,7 +203,7 @@ extension PromoCarouselCell: UIScrollViewDelegate {
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension PromoCarouselCell: UICollectionViewDelegateFlowLayout {
-   
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width
         return CGSize(width: width, height: collectionView.frame.height)
@@ -234,7 +225,7 @@ extension PromoCarouselCell: UICollectionViewDelegateFlowLayout {
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let pageControlCell = cell as? PromoCarouselCell {
-            pageControlCell.stopAutoScrollTimer() 
+            pageControlCell.stopAutoScrollTimer()
         }
     }
 }
@@ -243,7 +234,6 @@ extension PromoCarouselCell: UICollectionViewDelegateFlowLayout {
 extension PromoCarouselCell: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let model = pageControlData[indexPath.item]
         promoCarouselCellDelegate?.didSelectItem(model: [model])
     }
@@ -251,6 +241,7 @@ extension PromoCarouselCell: UICollectionViewDelegate {
 
 // MARK: - Layout
 private extension PromoCarouselCell {
+    
     func setupViews() {
         contentView.addSubview(collectionView)
     }
@@ -261,7 +252,7 @@ private extension PromoCarouselCell {
             collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 0),
+            collectionView.heightAnchor.constraint(equalToConstant: 0)
         ])
     }
 }

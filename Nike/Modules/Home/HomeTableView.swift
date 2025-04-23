@@ -1,6 +1,6 @@
 //
 //  HomeTableView.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/29/24.
 //
@@ -12,10 +12,7 @@ class HomeTableView: UITableView {
     private let homeViewModel: HomeViewModel
     private let dataSourceManager: HomeTableViewDataSource
     
-    init(homeViewModel: HomeViewModel, 
-         frame: CGRect = .zero,
-         style: UITableView.Style = .plain) {
-       
+    init(homeViewModel: HomeViewModel, frame: CGRect = .zero, style: UITableView.Style = .plain) {
         self.homeViewModel = homeViewModel
         self.dataSourceManager = HomeTableViewDataSource(homeViewModel: homeViewModel)
         super.init(frame: frame, style: style)

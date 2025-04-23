@@ -1,6 +1,6 @@
 //
 //  Array + Extension.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 2/7/25.
 //

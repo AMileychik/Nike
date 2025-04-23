@@ -1,6 +1,6 @@
 //
 //  ShopListCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 1/17/25.
 //
@@ -8,14 +8,14 @@
 import UIKit
 
 class NewsCell: UITableViewCell {
-
-    var onPhotoTapped: (() -> Void)?
     
     private var shopListData: [Product] = []
     
     private let photoImageView = ImageView(type: .common)
     private let logoImage = ImageView(type: .smallSquare)
     private let nameLabel = Label(type: .header)
+    
+    var onPhotoTapped: (() -> Void)?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -32,7 +32,10 @@ class NewsCell: UITableViewCell {
         photoImageView.addGestureRecognizer(tapGesture)
         photoImageView.isUserInteractionEnabled = true
     }
-    
+}
+
+//MARK: - Action Handler
+extension NewsCell {
     @objc private func photoImageTapped() {
         onPhotoTapped?()
     }

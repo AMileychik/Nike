@@ -1,6 +1,6 @@
 //
 //  UIColor + Extention.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 1/14/25.
 //

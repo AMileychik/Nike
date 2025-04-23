@@ -1,6 +1,6 @@
 //
 //  VideoCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/8/24.
 //
@@ -13,11 +13,11 @@ class VideoCell: UITableViewCell {
     private var player: AVPlayer?
     private var playerLayer: AVPlayerLayer?
     private var playerItem: AVPlayerItem?
-    
     private var gradientView: GradientView?
     private lazy var muteButton = UIButton()
-    
     private lazy var bottomButton = HeaderButton()
+    
+    var onBottomButtonTapped: (() -> Void)?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -31,8 +31,6 @@ class VideoCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    var onBottomButtonTapped: (() -> Void)?
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -64,15 +62,12 @@ class VideoCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
         player?.pause()
         playerLayer?.removeFromSuperlayer()
         player = nil
         playerLayer = nil
-        
         gradientView?.removeFromSuperview()
         gradientView = nil
-        
         resetMuteButton()
     }
     
@@ -113,16 +108,16 @@ class VideoCell: UITableViewCell {
 
 //MARK: - Layout
 extension VideoCell {
-
+    
     func setupViews() {
         contentView.addSubview(muteButton)
         contentView.addSubview(bottomButton)
     }
-
+    
     private func setupConstraints() {
         muteButton.translatesAutoresizingMaskIntoConstraints = false
         bottomButton.translatesAutoresizingMaskIntoConstraints = false
-
+        
         NSLayoutConstraint.activate([
             muteButton.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
             muteButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
@@ -139,7 +134,6 @@ extension VideoCell {
 
 //MARK: - Event Handler
 extension VideoCell {
-    
     func setupButtonActions() {
         bottomButton.onButtonTapped = { [weak self] in
             self?.onBottomButtonTapped?()

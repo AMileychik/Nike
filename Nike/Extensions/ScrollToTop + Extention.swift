@@ -1,6 +1,6 @@
 //
 //  ScrollToTop + Extention.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 1/28/25.
 //

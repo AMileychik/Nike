@@ -1,6 +1,6 @@
 //
 //  ShopTableView.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/30/24.
 //
@@ -17,7 +17,6 @@ class ShopTableView: UITableView {
         self.dataSourceManager = ShopTableViewDataSource(presenter: presenter)
         super.init(frame: .zero, style: .plain)
         commonInit()
-
         registerCells()
     }
     
@@ -51,7 +50,7 @@ extension ShopTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let section = presenter.sections(at: indexPath.section) else { return 0 }
         switch section {
-        
+            
         case .news:
             return 110
         default:

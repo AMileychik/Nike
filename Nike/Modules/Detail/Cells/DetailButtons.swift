@@ -1,6 +1,6 @@
 //
 //  DetailButtons.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/12/24.
 //
@@ -12,11 +12,11 @@ final class DetailButtons: UITableViewCell {
     
     private var currentModel: SubCategoryModel?
     
-    private let favoriteButton = UIButton()
+    private let addToFavoriteButton = UIButton()
     private let addToBagButton = UIButton()
     
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [addToBagButton, favoriteButton])
+        let stackView = UIStackView(arrangedSubviews: [addToBagButton, addToFavoriteButton])
         stackView.axis = .vertical
         stackView.spacing = 12
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -49,17 +49,20 @@ final class DetailButtons: UITableViewCell {
 extension DetailButtons {
     
     private func setupActions() {
+        
         addToBagButton.addAction(UIAction(handler: { [weak self] _ in
             guard let self = self, let currentModel = self.currentModel else { return }
             self.onAddToBag?([currentModel])
             self.updateBagButtonAppearance(self.addToBagButton)
+            
             ProgressHUD.succeed("Added to Bag")
         }), for: .touchUpInside)
         
-        favoriteButton.addAction(UIAction(handler: { [weak self] _ in
+        addToFavoriteButton.addAction(UIAction(handler: { [weak self] _ in
             guard let self = self, let currentModel = self.currentModel else { return }
             self.onAddToFavorites?([currentModel])
-            self.updateFavoriteButtonAppearance(self.favoriteButton)
+            self.updateFavoriteButtonAppearance(self.addToFavoriteButton)
+            
             ProgressHUD.succeed("Added to Favorite")
         }), for: .touchUpInside)
     }
@@ -75,6 +78,7 @@ extension DetailButtons {
             }
         }
     }
+    
     private func updateFavoriteButtonAppearance(_ button: UIButton) {
         button.setTitle(Text.Detail.favorited, for: .normal)
         
@@ -93,7 +97,7 @@ extension DetailButtons {
     
     func update(_ model: DetailButtonsModel, current: SubCategoryModel?) {
         addToBagButton.setTitle(model.firstButtonTitle, for: .normal)
-        favoriteButton.setTitle(model.secondButtonTitle, for: .normal)
+        addToFavoriteButton.setTitle(model.secondButtonTitle, for: .normal)
         currentModel = current
     }
 }
@@ -103,7 +107,7 @@ extension DetailButtons {
     
     private func setupViews() {
         contentView.addSubview(stackView)
-        configureButtonAppearance(favoriteButton)
+        configureButtonAppearance(addToFavoriteButton)
         configureButtonAppearance(addToBagButton)
     }
     
@@ -115,7 +119,7 @@ extension DetailButtons {
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -24),
             
             addToBagButton.heightAnchor.constraint(equalToConstant: 50),
-            favoriteButton.heightAnchor.constraint(equalToConstant: 50)
+            addToFavoriteButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 }

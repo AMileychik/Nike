@@ -1,6 +1,6 @@
 //
 //  FavoriteVCTableViewCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/13/24.
 //
@@ -12,18 +12,18 @@ protocol FavoritesTableViewCellDelegate: AnyObject {
 }
 
 final class FavoritesTableViewCell: UITableViewCell {
-
+    
+    weak var delegate: FavoritesTableViewCellDelegate?
     private let favoritesService: FavoritesServiceProtocol = FavoritesService()
     private var productModel: [SubCategoryModel] = []
     private var isEditingFavorites: Bool = false
-    weak var delegate: FavoritesTableViewCellDelegate?
-
+    
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 1
         layout.minimumLineSpacing = 24
-
+        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isScrollEnabled = false
@@ -38,7 +38,7 @@ final class FavoritesTableViewCell: UITableViewCell {
         setupView()
         setupConstraints()
     }
-
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         fatalError("init(coder:) has not been implemented")
@@ -47,7 +47,7 @@ final class FavoritesTableViewCell: UITableViewCell {
 
 //MARK: - Public
 extension FavoritesTableViewCell {
-   
+    
     func update(_ model: [SubCategoryModel], isEditing: Bool = false) {
         self.productModel = model.map {
             var item = $0
@@ -60,14 +60,14 @@ extension FavoritesTableViewCell {
         updateCollectionViewHeight()
         collectionView.reloadData()
     }
-
+    
     func updateCollectionViewHeight() {
         let rows = ceil(Double(productModel.count) / 2.0)
         let itemWidth = (UIScreen.main.bounds.width - (3 * 1)) / 2
         let itemHeight = itemWidth * 1.5
         let lineSpacing: CGFloat = 24
         let totalHeight = (rows * itemHeight) + ((rows - 1) * lineSpacing) + 8
-
+        
         if let heightConstraint = collectionView.constraints.first(where: { $0.firstAttribute == .height }) {
             heightConstraint.constant = totalHeight
             
@@ -101,17 +101,15 @@ extension FavoritesTableViewCell {
 
 //MARK: - UICollectionViewDataSource
 extension FavoritesTableViewCell: UICollectionViewDataSource {
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeuCell(indexPath) as FavoriteCollectionViewCell
-
         
         let model = productModel[indexPath.item]
-        
         cell.update(model, isEditing: isEditingFavorites)
         
         let isHeartFilled = model.isHeartFilled ?? false
@@ -123,7 +121,6 @@ extension FavoritesTableViewCell: UICollectionViewDataSource {
             guard let self = self else { return }
             let updatedData = self.favoritesService.delete(model)
             self.productModel = updatedData
-//            self.collectionView.reloadData()
         }
         
         return cell
@@ -132,7 +129,9 @@ extension FavoritesTableViewCell: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 extension FavoritesTableViewCell: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let cell = collectionView.cellForItem(at: indexPath) as? FavoriteCollectionViewCell
         cell?.onSelectItem?()
         delegate?.presentComingSoonViewController()
@@ -153,11 +152,11 @@ extension FavoritesTableViewCell: UICollectionViewDelegateFlowLayout {
 
 // MARK: - Layout
 extension FavoritesTableViewCell {
-
+    
     private func setupView() {
         contentView.addSubview(collectionView)
     }
-
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),

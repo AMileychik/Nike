@@ -1,6 +1,6 @@
 //
 //  AlwaysPopularCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/9/24.
 //
@@ -28,7 +28,7 @@ class StoriesForYouCell: UITableViewCell {
     
     private lazy var headerButton = HeaderButton()
     private lazy var bottomButton = HeaderButton()
-
+    
     var onHeaderButtonTapped: (() -> Void)?
     var onBottomButtonTapped: (() -> Void)?
     
@@ -102,7 +102,7 @@ extension StoriesForYouCell {
             self?.onBottomButtonTapped?()
         }
     }
-     
+    
     func setupLargeImageTappedAction() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(largeImageTapped))
         largeImageView.addGestureRecognizer(tapGesture)
@@ -139,7 +139,6 @@ extension StoriesForYouCell {
     
     private func setupViews() {
         contentView.backgroundColor = UIColor.black.adjustBrightness(by: 0.1)
-        
         headerTitleLabel.textColor = .white
         
         [largeImageView, smallImageView1, smallImageView2, headerTitleLabel, headerButton, bottomButton,

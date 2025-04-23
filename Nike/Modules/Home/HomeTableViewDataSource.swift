@@ -1,6 +1,6 @@
 //
 //  HomeTableViewDataSource.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 3/23/25.
 //
@@ -50,7 +50,7 @@ class HomeTableViewDataSource: NSObject, UITableViewDataSource {
             cell.updateHeader(header)
             cell.update(dataType: .product(model))
             cell.setupHeaderButtonAction()
-           
+            
             cell.onHeaderButtonTapped = { [weak homeViewModel] in
                 homeViewModel?.sendEvent(.headerButtonDidTap, from: tableView.viewController)
             }
@@ -135,17 +135,13 @@ extension HomeTableViewDataSource: BecauseYouLikeContainerDelegate {
     
     func didSelectItem(model: [Product], categories: Categories?, header: Header?, category: String, subCategory: SubCategoryModel?) {
         
-        homeViewModel.sendEvent(.homeTopPicksDidTap(model: model,
-                                                    categories: categories,
-                                                    header: header,
-                                                    category: category,
-                                                    subCategory: subCategory))
+        homeViewModel.sendEvent(.homeTopPicksDidTap(model: model, categories: categories, header: header, category: category, subCategory: subCategory))
     }
 }
 
 //MARK: - PromoCarouselCellDelegate
 extension HomeTableViewDataSource: PromoCarouselCellDelegate {
-   
+    
     func didSelectItem(model: [Product]) {
         homeViewModel.sendEvent(.promoDidTap(model))
     }

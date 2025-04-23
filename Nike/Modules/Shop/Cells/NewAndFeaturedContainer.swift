@@ -1,6 +1,6 @@
 //
 //  NewAndFeatureCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 1/24/25.
 //
@@ -104,7 +104,7 @@ extension NewAndFeaturedContainer: UICollectionViewDelegateFlowLayout {
 
 //MARK: - UICollectionViewDelegate
 extension NewAndFeaturedContainer: UICollectionViewDelegate {
-   
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedItem = newAndFeaturedData[indexPath.item]
         delegate?.didSelectNewAndFeatured(selectedItem)

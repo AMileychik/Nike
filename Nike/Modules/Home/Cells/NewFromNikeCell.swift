@@ -1,6 +1,6 @@
 //
 //  ListCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/8/24.
 //
@@ -14,7 +14,6 @@ protocol NewFromNikeCellDelegate: AnyObject {
 class NewFromNikeCell: UITableViewCell {
     
     weak var newFromNikeCellDelegate: NewFromNikeCellDelegate?
-    
     private var newFromNikeData: [NewFromNikeModel] = []
     private var rowHeights: [CGFloat] = []
     private var gradienrIndexes: [Int] = []
@@ -40,13 +39,10 @@ class NewFromNikeCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         setupViews()
         setupConstraints()
-        
         tableView.delegate = self
         tableView.dataSource = self
-        
         tableView.registerCell(NestedCell.self)
         tableView.registerCell(VideoCell.self)
     }
@@ -103,8 +99,8 @@ extension NewFromNikeCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let data = newFromNikeData[indexPath.row]
-        if let videoURLString = data.videoURL, let videoURL = Bundle.main.url(forResource: videoURLString,
-                                                                              withExtension: "mp4") {
+        if let videoURLString = data.videoURL, let videoURL = Bundle.main.url(forResource: videoURLString, withExtension: "mp4") {
+            
             let cell = tableView.dequeueCell(indexPath) as VideoCell
             cell.update(url: videoURL, addGradient: true, isMuted: true)
             cell.setupViews()
@@ -114,10 +110,10 @@ extension NewFromNikeCell: UITableViewDataSource {
             cell.onBottomButtonTapped = { [weak self] in
                 self?.onButtomTappedTapped?()
             }
-            
             return cell
             
         } else {
+            
             let cell = tableView.dequeueCell(indexPath) as NestedCell
             let shouldAddGradient = gradienrIndexes.contains(indexPath.row)
             
@@ -127,16 +123,7 @@ extension NewFromNikeCell: UITableViewDataSource {
                let productData = data.productData,
                let youMightAlsoLikeModel = data.completeTheLookModel {
                 
-                cell.updateHomeCell(with: NewFromNikeModel(videoURL: nil,
-                                                           image: imageName,
-                                                           logoTitle: logoTitle,
-                                                           detailImage: nil,
-                                                           title: nil,
-                                                           description: nil,
-                                                           productData: productData,
-                                                           completeTheLookHeader: youMightAlsoLikeHeader,
-                                                           completeTheLookModel: youMightAlsoLikeModel),
-                                    addGradient: shouldAddGradient)
+                cell.updateHomeCell(with: NewFromNikeModel(videoURL: nil, image: imageName, logoTitle: logoTitle, detailImage: nil, title: nil, description: nil, productData: productData, completeTheLookHeader: youMightAlsoLikeHeader, completeTheLookModel: youMightAlsoLikeModel), addGradient: shouldAddGradient)
             }
             cell.setupButtonActions()
             
@@ -167,7 +154,6 @@ extension NewFromNikeCell {
     private func setupViews() {
         contentView.addSubview(headerStackView)
         contentView.addSubview(tableView)
-        
         headerStackView.addArrangedSubview(headerTitleLabel)
         headerStackView.addArrangedSubview(headerButton)
     }
@@ -175,7 +161,6 @@ extension NewFromNikeCell {
     func setupConstraints() {
         tableViewHeightConstraint = tableView.heightAnchor.constraint(equalToConstant: 0)
         tableViewHeightConstraint?.isActive = true
-        
         headerButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([

@@ -1,6 +1,6 @@
 //
 //  DetailVCPageControlCollectionViewCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/13/24.
 //

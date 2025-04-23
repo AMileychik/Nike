@@ -1,6 +1,6 @@
 //
 //  MediumSquareCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 2/27/25.
 //
@@ -18,7 +18,7 @@ enum MediumSquareContainerDataType {
     
     var itemSize: CGSize {
         switch self {
-       
+            
         case .mediumSquareCollectionViewCell:
             return CGSize(width: 250, height: 364)
             
@@ -30,19 +30,14 @@ enum MediumSquareContainerDataType {
 
 class MediumSquareContainer: UITableViewCell {
     
+    weak var delegate: MediumSquareCellDelegate?
+    private var dataType: MediumSquareContainerDataType?
     private var mediumSquareContainerDataType: MediumSquareContainerDataType?
     
-    weak var delegate: MediumSquareCellDelegate?
-    
-    private var dataType: MediumSquareContainerDataType?
-
-
     private lazy var headerTitleLabel = Label(type: .header)
     private let headerStackView = StackView(type: .headerStackView)
     private lazy var headerButton = HeaderButton()
-    
-    var onHeaderButtonTapped: (() -> Void)?
-    
+        
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -56,6 +51,8 @@ class MediumSquareContainer: UITableViewCell {
         collectionView.registerCell(MediumSquareCollectionCell.self)
         return collectionView
     }()
+    
+    var onHeaderButtonTapped: (() -> Void)?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -105,7 +102,7 @@ extension MediumSquareContainer: UICollectionViewDataSource {
             
         case .mediumSquareCollectionViewCell(models: let model):
             return model.count
-        
+            
         case .oneMoremediumSquareCollectionViewCell(model: let model):
             return model.count
         }
@@ -116,12 +113,14 @@ extension MediumSquareContainer: UICollectionViewDataSource {
         switch mediumSquareContainerDataType {
             
         case .mediumSquareCollectionViewCell(models: let model):
+            
             let cell = collectionView.dequeuCell(indexPath) as MediumSquareCollectionCell
             let data = model[indexPath.item]
             cell.updateNearbyStoreSection(data)
             return cell
-       
+            
         case .oneMoremediumSquareCollectionViewCell(model: let model):
+            
             let cell = collectionView.dequeuCell(indexPath) as MediumSquareCollectionCell
             let data = model[indexPath.item]
             cell.updateYouMightAlsoLike(data)
@@ -132,13 +131,15 @@ extension MediumSquareContainer: UICollectionViewDataSource {
 
 //MARK: - UICollectionViewDelegate
 extension MediumSquareContainer: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dataType = dataType else { return }
         switch dataType {
+            
         case .mediumSquareCollectionViewCell(let model):
             let selectedProduct = model[indexPath.item]
             delegate?.didSelectMediumSquareCell(selectedProduct)
-    
+            
         case .oneMoremediumSquareCollectionViewCell(let model):
             let selectedProduct = model[indexPath.item]
             delegate?.didSelectMediumSquareCell2(selectedProduct)

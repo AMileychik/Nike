@@ -1,6 +1,6 @@
 //
 //  WelcomeCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 9/27/24.
 //
@@ -38,7 +38,7 @@ extension WelcomeCell {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            welcomeLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 21),
+            welcomeLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             welcomeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
             welcomeLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
             welcomeLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)

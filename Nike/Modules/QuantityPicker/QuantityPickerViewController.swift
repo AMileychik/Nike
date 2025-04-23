@@ -1,6 +1,6 @@
 //
 //  QtySelectionViewController.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 2/1/25.
 //

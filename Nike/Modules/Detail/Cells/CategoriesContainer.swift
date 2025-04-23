@@ -1,6 +1,6 @@
 //
 //  TableViewCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/3/24.
 //
@@ -15,13 +15,11 @@ protocol CategoriesContainerDelegate: AnyObject {
 final class CategoriesContainer: UITableViewCell {
       
     weak var delegate: CategoriesContainerDelegate?
-    
     private var favoritesService: FavoritesServiceProtocol = FavoritesService()
     private var categories: [Categories] = []
     private var subCategoryModel: [SubCategoryModel] = []
 
     private lazy var collectionView: UICollectionView = {
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         
@@ -63,6 +61,7 @@ extension CategoriesContainer: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       
         let cell = collectionView.dequeuCell(indexPath) as CategoriesCollectionViewCell
         let categories = categories[indexPath.item]
         cell.updateCategories(categories)

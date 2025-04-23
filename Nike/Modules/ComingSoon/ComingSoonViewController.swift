@@ -1,6 +1,6 @@
 //
 //  ComingSoonViewController.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 2/12/25.
 //

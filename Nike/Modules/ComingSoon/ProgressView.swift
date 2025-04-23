@@ -1,6 +1,6 @@
 //
 //  ProgressView.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 4/3/25.
 //

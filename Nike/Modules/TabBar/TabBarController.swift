@@ -1,6 +1,6 @@
 //
 //  MainTabBarController.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/9/24.
 //
@@ -19,7 +19,7 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         let screens: [(UIViewController, String, String)] = [
             (dependencyContainer.screenFactory.createShopScreen(), Text.TabBarController.shop, Images.magnifyingglass),
             (dependencyContainer.screenFactory.createHomeScreen(), Text.TabBarController.home, Images.house),
@@ -33,7 +33,7 @@ class TabBarController: UITabBarController {
             return UINavigationController(rootViewController: viewController)
         }
         
-        selectedIndex = 0
+        selectedIndex = 1
         delegate = self
     }
     

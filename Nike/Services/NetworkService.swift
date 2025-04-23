@@ -1,6 +1,6 @@
 //
 //  TopPicksLoader.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/3/24.
 //

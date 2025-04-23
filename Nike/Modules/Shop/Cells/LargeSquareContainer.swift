@@ -1,6 +1,6 @@
 //
 //  NearbyStoresCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/23/24.
 //
@@ -25,12 +25,11 @@ enum LargeSquareContainerDataType {
 class LargeSquareContainer: UITableViewCell {
     
     weak var delegate: LargeSquareContainerDelegate?
-
     private var largeSquareContainerDataType: LargeSquareContainerDataType?
     
     private lazy var titleLabel = Label(type: .header)
     private let labelStackView = StackView(type: .headerStackView)
-
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -56,13 +55,6 @@ class LargeSquareContainer: UITableViewCell {
     }
 }
 
-//MARK: - Event Handler
-extension LargeSquareContainer {
-    @objc private func buttonTapped() {
-        print("Tapped")
-    }
-}
-
 //MARK: - Public
 extension LargeSquareContainer {
     
@@ -82,7 +74,7 @@ extension LargeSquareContainer {
 
 //MARK: - UICollectionViewDataSource
 extension LargeSquareContainer: UICollectionViewDataSource {
-  
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let dataType2 = largeSquareContainerDataType else { return 0 }
         switch dataType2 {
@@ -101,7 +93,6 @@ extension LargeSquareContainer: UICollectionViewDataSource {
             let cell = collectionView.dequeuCell(indexPath) as LargeSquareCollectionCell
             let data = model[indexPath.item]
             cell.updateNearbyStoreSection(data)
-            
             return cell
         }
     }
@@ -112,8 +103,9 @@ extension LargeSquareContainer: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dataType = largeSquareContainerDataType else { return }
         switch dataType {
-       
+            
         case .nearbyStoreSectionData(let model):
+            
             let selectedProduct = model[indexPath.item]
             delegate?.didSelectLargeSquareCell(selectedProduct)
         }
@@ -149,7 +141,7 @@ extension LargeSquareContainer {
         NSLayoutConstraint.activate([
             labelStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 48),
             labelStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
-
+            
             collectionView.topAnchor.constraint(equalTo: labelStackView.bottomAnchor, constant: 24),
             collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),

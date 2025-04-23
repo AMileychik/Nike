@@ -1,6 +1,6 @@
 //
 //  DetailVCPageControlTableViewCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/13/24.
 //
@@ -71,8 +71,8 @@ extension DetailProductsContainer: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeuCell(indexPath) as DetailProductsCollectionCell
         
+        let cell = collectionView.dequeuCell(indexPath) as DetailProductsCollectionCell
         let subCategories = subCategories[indexPath.item]
         cell.update(subCategories)
         return cell
@@ -84,6 +84,7 @@ extension DetailProductsContainer: UICollectionViewDelegate {}
 
 //MARK: - UIScrollViewDelegate
 extension DetailProductsContainer: UIScrollViewDelegate {
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageWidth = scrollView.frame.size.width
         currentPage = Int(scrollView.contentOffset.x / pageWidth)
@@ -118,6 +119,7 @@ extension DetailProductsContainer {
 
 //MARK: - UICollectionViewDelegateFlowLayout
 extension DetailProductsContainer: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }

@@ -1,6 +1,6 @@
 //
 //  CompleteTheLookCollectionViewCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 3/5/25.
 //
@@ -36,9 +36,8 @@ extension CompleteTheLookCollectionViewCell {
     func setupViews() {
         backgroundColor = .systemBackground
         contentView.addSubview(photoImageView)
-        photoImageView.layer.cornerRadius = 6
-        
         contentView.backgroundColor = UIColor.lightGray.adjustBrightness(by: 0.150)
+        photoImageView.layer.cornerRadius = 6
     }
     
     func setupConstraints() {

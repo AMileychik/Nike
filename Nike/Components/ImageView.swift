@@ -1,6 +1,6 @@
 //
 //  ImageView.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/23/24.
 //
@@ -44,7 +44,7 @@ class ImageView: UIImageView {
             heightAnchor.constraint(equalToConstant: 100).isActive = true
             widthAnchor.constraint(equalToConstant: 100).isActive = true
             translatesAutoresizingMaskIntoConstraints = false
-
+            
         case .favorite:
             contentMode = .scaleAspectFill
             clipsToBounds = true
@@ -83,33 +83,33 @@ class ImageView: UIImageView {
             layer.cornerRadius = 10
             isUserInteractionEnabled = true
             translatesAutoresizingMaskIntoConstraints = false
-      
+            
         case .pageControl:
             contentMode = .scaleAspectFill
             clipsToBounds = true
             widthAnchor.constraint(equalToConstant: 125).isActive = true
-       
+            
         case .product:
             translatesAutoresizingMaskIntoConstraints = false
             contentMode = .scaleAspectFill
             clipsToBounds = true
             heightAnchor.constraint(equalToConstant: 200).isActive = true
             widthAnchor.constraint(equalToConstant: 150).isActive = true
-       
+            
         case .mediumSquareCell:
             contentMode = .scaleAspectFill
             clipsToBounds = true
             heightAnchor.constraint(equalToConstant: 250).isActive = true
             widthAnchor.constraint(equalToConstant: 250).isActive = true
             translatesAutoresizingMaskIntoConstraints = false
-       
+            
         case .size:
             contentMode = .scaleAspectFill
             clipsToBounds = true
             heightAnchor.constraint(equalToConstant: 50).isActive = true
             widthAnchor.constraint(equalToConstant: 100).isActive = true
             translatesAutoresizingMaskIntoConstraints = false
-       
+            
         case .completeTheLook:
             contentMode = .scaleAspectFit
             clipsToBounds = true

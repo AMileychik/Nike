@@ -1,6 +1,6 @@
 //
 //  ButtonContainerView.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 2/16/25.
 //
@@ -62,5 +62,4 @@ class ButtonContainerView: UIView {
     @objc private func buttonTapped() {
         print("Button \(button.currentTitle ?? "") tapped")
     }
-    
 }

@@ -1,6 +1,6 @@
 //
 //  TopPicksCollectionCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 1/13/25.
 //
@@ -20,7 +20,7 @@ class BecauseYouLikeCollectionCell: UICollectionViewCell {
     private let descriptionLabel = Label(type: .titleDescription)
     private var priceLabel = Label(type: .subTitleDescription)
     private let horizontalStackView = StackView(type: .productCell)
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -44,8 +44,8 @@ extension BecauseYouLikeCollectionCell {
     
     func update(dataType: DataType) {
         self.dataType = dataType
-        
         switch dataType {
+            
         case .productModel(let models):
             guard let model = models.first else { return }
             update(with: model)
@@ -56,7 +56,7 @@ extension BecauseYouLikeCollectionCell {
         photoImageView.image = UIImage(named: model.image ?? "")
         nameLabel.text = model.type
         descriptionLabel.text = model.description
-      
+        
         if let price = model.price {
             priceLabel.text = "$\(price)"
         } else {
@@ -71,7 +71,6 @@ extension BecauseYouLikeCollectionCell {
     private func setupViews() {
         backgroundColor = .systemBackground
         photoImageView.layer.cornerRadius = 6
-        
         horizontalStackView.spacing = 4
         
         [photoImageView, horizontalStackView].forEach { contentView.addSubview($0) }

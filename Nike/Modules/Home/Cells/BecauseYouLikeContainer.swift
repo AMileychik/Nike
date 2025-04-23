@@ -1,6 +1,6 @@
 //
 //  TopPicksCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 1/13/25.
 //
@@ -8,12 +8,7 @@
 import UIKit
 
 protocol BecauseYouLikeContainerDelegate: AnyObject {
-    
-    func didSelectItem(model: [Product],
-                       categories: Categories?,
-                       header: Header?,
-                       category: String,
-                       subCategory: SubCategoryModel?)
+    func didSelectItem(model: [Product], categories: Categories?, header: Header?, category: String, subCategory: SubCategoryModel?)
 }
 
 enum BecauseYouLikeContainerDataType {
@@ -29,17 +24,14 @@ enum BecauseYouLikeContainerDataType {
 
 class BecauseYouLikeContainer: UITableViewCell {
     
-    private var productsContainerDataType: BecauseYouLikeContainerDataType?
     weak var becauseYouLikeContainerDelegate: BecauseYouLikeContainerDelegate?
-    
-    let categories: [Categories] = []
+    private var becauseYouLikeContainerDataType: BecauseYouLikeContainerDataType?
+    private let categories: [Categories] = []
     
     private let headerTitleLabel = Label(type: .header)
     private let headerDescriptionLabel = Label(type: .headerDescriptionLabel)
-    
     private let headerStackView = StackView(type: .headerStackView)
     private let buttonStackView = StackView(type: .headerStackView)
-    
     private lazy var headerButton = HeaderButton()
     
     var onHeaderButtonTapped: (() -> Void)?
@@ -54,7 +46,6 @@ class BecauseYouLikeContainer: UITableViewCell {
         collectionView.showsHorizontalScrollIndicator = false
         
         collectionView.registerCell(BecauseYouLikeCollectionCell.self)
-        
         return collectionView
     }()
     
@@ -75,21 +66,19 @@ extension BecauseYouLikeContainer {
     func updateHeader(_ model: Header) {
         headerTitleLabel.text = model.title
         headerDescriptionLabel.text = model.subtitleLabel
-        
         headerButton.customButton.setTitle(model.buttonTitle, for: .normal)
         
         if let subtitle = model.subtitleLabel, !subtitle.isEmpty {
             if !headerStackView.arrangedSubviews.contains(headerDescriptionLabel) {
                 headerStackView.addArrangedSubview(headerDescriptionLabel)
             }
-            
         } else {
             headerDescriptionLabel.removeFromSuperview()
         }
     }
     
     func update(dataType: BecauseYouLikeContainerDataType) {
-        self.productsContainerDataType = dataType
+        self.becauseYouLikeContainerDataType = dataType
         collectionView.reloadData()
     }
 }
@@ -108,8 +97,7 @@ extension BecauseYouLikeContainer {
 extension BecauseYouLikeContainer: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        guard let dataType = productsContainerDataType else { return 0 }
+        guard let dataType = becauseYouLikeContainerDataType else { return 0 }
         switch dataType {
             
         case .product(let model):
@@ -118,16 +106,14 @@ extension BecauseYouLikeContainer: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let dataType = productsContainerDataType else { return UICollectionViewCell() }
+        guard let dataType = becauseYouLikeContainerDataType else { return UICollectionViewCell() }
         switch dataType {
             
         case .product(let model):
-            let cell = collectionView.dequeuCell(indexPath) as BecauseYouLikeCollectionCell
             
+            let cell = collectionView.dequeuCell(indexPath) as BecauseYouLikeCollectionCell
             let topPicksData = model[indexPath.item]
             cell.update(dataType: .productModel([topPicksData]))
-            
             return cell
         }
     }
@@ -137,24 +123,18 @@ extension BecauseYouLikeContainer: UICollectionViewDataSource {
 extension BecauseYouLikeContainer: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let dataType = productsContainerDataType else { return }
-        
+        guard let dataType = becauseYouLikeContainerDataType else { return }
         switch dataType {
-        case .product(let model):
-            let model = model[indexPath.item]
-            let category = model.categoryName ?? ""
             
+        case .product(let model):
+            
+            let model = model[indexPath.item]
             let categories = model.categories?.first ?? Categories(id: nil, categoryImage: "", subCategories: [])
             let header = model.header ?? Header(title: "", subtitleLabel: "", buttonTitle: "")
+            let category = model.categoryName ?? ""
             let subCategory = model.categories?.first?.subCategories?.first ?? SubCategoryModel(id: nil, subCategoryImage: "", title: "", category: "", count: nil, price: nil, isHeartFilled: nil)
             
-            becauseYouLikeContainerDelegate?.didSelectItem(
-                model: [model],
-                categories: categories,
-                header: header,
-                category: category,
-                subCategory: subCategory
-            )
+            becauseYouLikeContainerDelegate?.didSelectItem(model: [model], categories: categories, header: header, category: category, subCategory: subCategory)
         }
     }
 }
@@ -163,7 +143,7 @@ extension BecauseYouLikeContainer: UICollectionViewDelegate {
 extension BecauseYouLikeContainer: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return productsContainerDataType?.itemSize ?? .zero
+        return becauseYouLikeContainerDataType?.itemSize ?? .zero
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -181,6 +161,7 @@ extension BecauseYouLikeContainer {
     private func setupViews() {
         [collectionView, headerStackView, buttonStackView].forEach { contentView.addSubview($0) }
         [headerTitleLabel, headerDescriptionLabel].forEach { headerStackView.addArrangedSubview($0) }
+        
         buttonStackView.addArrangedSubview(headerButton)
     }
     

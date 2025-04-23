@@ -1,6 +1,6 @@
 //
 //  CustomButton.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 2/23/25.
 //
@@ -9,13 +9,13 @@ import UIKit
 
 final class CustomButton: UIView {
     
-    var onButtonTapped: (() -> Void)?
-    
     lazy var customButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    var onButtonTapped: (() -> Void)?
     
     init(
         title: String? = nil,

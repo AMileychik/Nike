@@ -1,6 +1,6 @@
 //
 //  ThankYouCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/2/24.
 //
@@ -40,12 +40,11 @@ extension ThankYouCell {
         photoImageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            contentView.heightAnchor.constraint(equalToConstant: 250),
-
             photoImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             photoImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             photoImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            photoImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            photoImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            contentView.heightAnchor.constraint(equalToConstant: 250)
         ])
     }
 }

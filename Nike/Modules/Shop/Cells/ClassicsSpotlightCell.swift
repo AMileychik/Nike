@@ -1,6 +1,6 @@
 //
 //  ClassicsSpotlightCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 1/24/25.
 //
@@ -14,7 +14,6 @@ protocol ClassicsSpotlightCellDelegate: AnyObject {
 class ClassicsSpotlightCell: UITableViewCell {
 
     weak var delegate: ClassicsSpotlightCellDelegate?
-
     private var data: [Product] = []
     
     private lazy var titleLabel = Label(type: .header)
@@ -73,18 +72,18 @@ extension ClassicsSpotlightCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeuCell(indexPath) as ClassicsSpotlightCollectionViewCell
         let data = data[indexPath.item]
         cell.update(data)
-       
         return cell
     }
 }
 
 //MARK: - UICollectionViewDelegate
 extension ClassicsSpotlightCell: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let selectedProduct = data[indexPath.item]
         delegate?.didSelectClassicsSpotlight(selectedProduct)
     }
@@ -112,7 +111,6 @@ extension ClassicsSpotlightCell {
     private func setupViews() {
         contentView.addSubview(labelStackView)
         contentView.addSubview(collectionView)
-        
         labelStackView.addArrangedSubview(titleLabel)
     }
     
@@ -126,7 +124,7 @@ extension ClassicsSpotlightCell {
             collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
-            collectionView.heightAnchor.constraint(equalToConstant: 0),
+            collectionView.heightAnchor.constraint(equalToConstant: 0)
         ])
     }
 }

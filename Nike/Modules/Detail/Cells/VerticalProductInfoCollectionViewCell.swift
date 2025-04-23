@@ -1,6 +1,6 @@
 //
 //  VerticalProductInfoCollectionViewCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 4/8/25.
 //
@@ -68,7 +68,6 @@ extension VerticalProductInfoCollectionViewCell {
         
         titleLabel.numberOfLines = 0
         descriptionLabel.numberOfLines = 0
-        
         photoImageView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false

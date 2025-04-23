@@ -1,6 +1,6 @@
 //
 //  BagVC.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 12/13/24.
 //
@@ -11,7 +11,6 @@ final class BagViewController: UIViewController {
     
     private let bagService: BagServiceProtocol
     private var tableView = BagTableView()
-    
     private let buttonsView = UIView()
     private let separatorView = UIView.makeSeparator()
     
@@ -30,7 +29,7 @@ final class BagViewController: UIViewController {
         backgroundColor: .black,
         titleColor: .white,
         cornerRadius: 22)
-        
+    
     init(bagService: BagServiceProtocol = BagService()) {
         self.bagService = bagService
         super.init(nibName: nil, bundle: nil)
@@ -60,7 +59,7 @@ final class BagViewController: UIViewController {
     }
     
     private func setupButtonActions() {
-        payButton.onButtonTapped = { [weak self] in 
+        payButton.onButtonTapped = { [weak self] in
             self?.handlePayButtonTap() }
         
         checkoutButton.onButtonTapped = { [weak self] in
@@ -112,6 +111,7 @@ extension BagViewController  {
     private func setupViews() {
         [tableView, buttonsView].forEach { view.addSubview($0) }
         [separatorView, payButton, checkoutButton].forEach { buttonsView.addSubview($0) }
+        
         buttonsView.backgroundColor = .white
     }
     

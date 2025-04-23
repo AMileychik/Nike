@@ -1,6 +1,6 @@
 //
 //  DependencyContainer.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/15/24.
 //

@@ -1,6 +1,6 @@
 //
 //  NestedCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/9/24.
 //
@@ -11,6 +11,7 @@ class NestedCell: UITableViewCell {
     
     private let descriptionLabel = Label(type: .highlighted)
     private let photoImageView = ImageView(type: .common)
+    private var gradientView: GradientView?
     
     private lazy var exploreButton = CustomButton(
         title: Text.Home.explore,
@@ -19,7 +20,7 @@ class NestedCell: UITableViewCell {
         font: UIFont.systemFont(ofSize: 16, weight: .medium)
     )
     
-    private var gradientView: GradientView?
+    var onExploreButtonTapped: (() -> Void)?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -31,8 +32,6 @@ class NestedCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    var onExploreButtonTapped: (() -> Void)?
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -56,7 +55,7 @@ extension NestedCell {
         
         descriptionLabel.text = model.logoTitle
         photoImageView.image = UIImage(named: model.image ?? "")
-
+        
         if addGradient {
             if gradientView == nil {
                 let gradient = GradientView()
@@ -64,6 +63,7 @@ extension NestedCell {
                 self.gradientView = gradient
             }
             gradientView?.isHidden = false
+            
         } else {
             gradientView?.isHidden = true
         }
@@ -92,7 +92,7 @@ extension NestedCell {
             photoImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             photoImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             photoImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
-           
+            
             descriptionLabel.leadingAnchor.constraint(equalTo: exploreButton.leadingAnchor),
             descriptionLabel.bottomAnchor.constraint(equalTo: exploreButton.topAnchor, constant: -16),
             

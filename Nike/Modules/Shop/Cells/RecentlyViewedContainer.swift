@@ -1,6 +1,6 @@
 //
 //  TestCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/26/24.
 //
@@ -14,7 +14,6 @@ protocol RecentlyViewedContainerContainerDelegate: AnyObject {
 class RecentlyViewedContainer: UITableViewCell {
     
     weak var delegate: RecentlyViewedContainerContainerDelegate?
-    
     private var recentlyViewedData: [Product] = []
     
     private lazy var headerTitleLabel = Label(type: .header)
@@ -95,7 +94,6 @@ extension RecentlyViewedContainer: UICollectionViewDataSource {
         
         let data = recentlyViewedData[indexPath.item]
         cell.updateRecentlyViewed(data)
-        
         return cell
     }
 }

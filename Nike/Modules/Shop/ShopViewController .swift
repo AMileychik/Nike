@@ -1,6 +1,6 @@
 //
 //  ShopVC.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 10/30/24.
 //
@@ -37,7 +37,6 @@ final class ShopViewController: UIViewController {
         setupView()
         setupConstraints()
         presenter.viewDidLoad()
-        
         activityIndicator.startAnimating()
     }
     

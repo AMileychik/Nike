@@ -1,6 +1,6 @@
 //
 //  NewAndFeaturedCell.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 11/27/24.
 //
@@ -25,16 +25,15 @@ enum HorizontalRectangleContainerDataType {
 class HorizontalRectangleContainer: UITableViewCell {
     
     weak var delegate: HorizontalRectangleContainerDelegate?
-    
     private var dataType: HorizontalRectangleContainerDataType?
-       
+    
     private lazy var titleLabel = Label(type: .header)
     private let labelStackView = StackView(type: .headerStackView)
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-       
+        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
@@ -55,7 +54,7 @@ class HorizontalRectangleContainer: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         titleLabel.text = nil
@@ -84,7 +83,7 @@ extension HorizontalRectangleContainer {
 
 //MARK: - UICollectionViewDataSource
 extension HorizontalRectangleContainer: UICollectionViewDataSource {
-   
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let dataType = dataType else { return 0 }
         switch dataType {
@@ -112,6 +111,7 @@ extension HorizontalRectangleContainer: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dataType = dataType else { return }
         switch dataType {
+            
         case .newThisWeek(let model):
             let selectedProduct = model[indexPath.item]
             delegate?.didSelectProduct(selectedProduct)

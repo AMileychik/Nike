@@ -1,6 +1,6 @@
 //
 //  ShopTableViewDataSource.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 3/23/25.
 //
@@ -12,10 +12,10 @@ enum ShopSection {
     case newThisWeek(model: [Product], header: Header)
     case news([Product])
     case newAndFeatured(model: [Product], header: Header)
-    case nearbyStore(model: [Product], header: Header)
+    case rafaelNadal(model: [Product], header: Header)
     case recentlyViewed(model: [Product], header: Header)
     case classicsSpotlightCell(model: [Product], header: Header)
-    case rafaelNadal(model: [Product], header: Header)
+    case nearbyStore(model: [Product], header: Header)
 }
 
 class ShopTableViewDataSource: NSObject, UITableViewDataSource {
@@ -166,7 +166,6 @@ extension ShopTableViewDataSource: MediumSquareCellDelegate {
     func didSelectMediumSquareCell(_ product: Product) {
         presenter.didSelectProduct(product)
     }
-    
     func didSelectMediumSquareCell2(_ product: YouMightAlsoLikeModel) {}
 }
 
@@ -177,6 +176,7 @@ extension ShopTableViewDataSource: NewAndFeaturedContainerDelegate {
     }
 }
 
+//MARK: - LargeSquareContainerDelegate
 extension ShopTableViewDataSource: LargeSquareContainerDelegate {
     func didSelectLargeSquareCell(_ product: Product) {
         presenter.didSelectProduct(product)

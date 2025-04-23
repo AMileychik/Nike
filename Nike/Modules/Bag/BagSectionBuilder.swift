@@ -1,6 +1,6 @@
 //
 //  BagSectionBuilder.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 4/14/25.
 //

@@ -1,6 +1,6 @@
 //
 //  HomeViewModel.swift
-//  LagomStore
+//  Nike
 //
 //  Created by Александр Милейчик on 1/27/25.
 //
@@ -34,6 +34,7 @@ class HomeViewModel {
     }
     
     private let homeLoader: NetworkServiceProtocol
+    
     private(set) var homeSections: [HomeSection] = []
     
     private(set) var state: State = .initial {
@@ -42,10 +43,10 @@ class HomeViewModel {
     
     var stateChanged: ((State) -> Void)?
     var sectionsChanged: (([HomeSection]) -> Void)?
-    var navigateFromPromo: (([Product]) -> Void)?
     var navigateFromBecauseYouLike: (([Product], Categories?, Header?, String, SubCategoryModel?) -> Void)?
-    var navigateFromNewFromNike: (([NewFromNikeModel]) -> Void)?
+    var navigateFromPromo: (([Product]) -> Void)?
     var navigateFromExploreButton: (([NewFromNikeModel]) -> Void)?
+    var navigateFromNewFromNike: (([NewFromNikeModel]) -> Void)?
     var navigateFromStoriesForYou: (([StoriesForYou]) -> Void)?
     var navigateToCommingSoonVC: ((UIViewController) -> Void)?
     
