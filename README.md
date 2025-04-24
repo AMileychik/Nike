@@ -44,9 +44,9 @@
 ### Home screenshots
 
 <div style="display: flex; gap: 10px;">
-  <img src="Screenshots/home_screen_1.png" alt="Home Screen 1" width="335"/>
-  <img src="Screenshots/home_screen_2.png" alt="Home Screen 2" width="335"/>
-  <img src="Screenshots/home_screen_3.png" alt="Home Screen 3" width="335"/>
+  <img src="Screenshots/home_screen_1.png" alt="Home Screen 1" width="333"/>
+  <img src="Screenshots/home_screen_2.png" alt="Home Screen 2" width="333"/>
+  <img src="Screenshots/home_screen_3.png" alt="Home Screen 3" width="333"/>
 </div>
 
 ---
@@ -91,7 +91,7 @@
 - Подсчет итоговой суммы.
 - Возможность добавить товары в избранное прямо из корзины.
 
-**Архитектура:** MVС 
+**Архитектура:** MVC  
 **Интересные моменты:** пересчет стоимости в реальном времени, обработка пустой корзины, избранное из корзины.
 
 ---
