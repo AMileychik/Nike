@@ -8,7 +8,7 @@ Users can browse products, choose categories, add items to favorites or the shop
 ## Project Highlights
 
 - Utilizes various architectures: **MVVM**, **MVP**, **MVC**.
-- **Dependency Injection** implemented via a custom DI container..
+- **Dependency Injection** implemented via a custom DI container.
 - Adheres to **SOLID** and **Clean Code** principles.
 - Responsive and modern interface.
 - Works with **JSON** and persists state.
@@ -44,8 +44,8 @@ The project uses several services to manage data and network requests:
 - Absracts networking logic via `NetworkServiceProtocol`.
 
 **FavoritesService / BagService**
-- works with `UserDefaults` using `JSONEncoder/Decoder`.
-- Supports favorites and cart with state persistence.
+- Works with `UserDefaults` using `JSONEncoder/Decoder`.
+- Supports **Favorites** and **Bag** with state persistence.
 - Calculates total amount and item count.
 - Implemented via `FavoritesServiceProtocol`, `BagServiceProtocol`. 
 
@@ -126,7 +126,7 @@ Business logic coverage using XCTest.
 - Sections with product categories for adding to **Favorite** or **Bag**.
 - Horizontal promo carousel with smooth progress update (the black part of the indicator smoothly moves and changes width based on the scroll position (UIScrollViewDelegate)).
 - Section with video and gradient.
-- Introductory sections with products and their descriptions
+- Introductory sections with products and their descriptions.
 
 **Architecture:** MVVM  
 **Features:** dynamic greeting, nested collectionViews inside tableView, reusability of sections.
@@ -145,8 +145,8 @@ Business logic coverage using XCTest.
 
 - Category list: Men, Women, Kids.
 - Each category contains:
-- Products with images and descriptions;
-- Introductory banners or product articles.
+- products with images and descriptions;
+- introductory banners or product articles.
 
 **Architecture:** MVP  
 **Features:** the presenter manages the display logic and business logic, and the screen is scalable for any category.
@@ -164,11 +164,11 @@ Business logic coverage using XCTest.
 ### Detail
 
 - Viewing the product card with a large number of photos.
-- Adding to the cart or favorites.
+- Adding to the **Favorites** or **Bag**.
 - Switching between product alternatives.
 
 **Architecture:** MVC  
-**Features:** image carousel, custom add-to-cart button, product availability status (selected / not selected), using the ProgressHUD library to visualize adding the product to “Favorite” or “Bag”. 
+**Features:** image carousel, custom add-to-cart button, product availability status (selected / not selected), using the ProgressHUD library to visualize adding the product to **Favorite** or **Bag**. 
 
 ### Detail screenshots
 
@@ -192,6 +192,7 @@ Business logic coverage using XCTest.
 
 <div style="display: flex; gap: 10px;">
   <img src="Screenshots/favorite_screen_1.png" alt="Favorite Screen 1" width="333"/>
+  <img src="Screenshots/favorite_screen_2.png" alt="Favorite Screen 2" width="333"/>
 </div>
 
 ---
@@ -210,6 +211,7 @@ Business logic coverage using XCTest.
 
 <div style="display: flex; gap: 10px;">
   <img src="Screenshots/bag_screen_1.png" alt="Bag Screen 1" width="333"/>
+  <img src="Screenshots/bag_screen_2.png" alt="Bag Screen 2" width="333"/>
 </div>
 
 ---
