@@ -214,7 +214,7 @@ Business logic coverage using XCTest.
 
 ---
 
-## Планы по развитию
+## Future Development Plans
 
 - Authentication and user profile.
 - Order placement and submission.
