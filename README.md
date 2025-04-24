@@ -261,7 +261,7 @@ Notes
 # ScreenShots
 
 ## Home Screen
-![Home Screen](Screenshots/home_screen_1.png)
+[![Home Screen](Screenshots/home_screen_1.png)](Screenshots/home_screen_1.png)
 
 ## Shop Screen
 ![Shop Screen](Screenshots/shop_screen.png)
