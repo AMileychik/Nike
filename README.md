@@ -1,4 +1,4 @@
-# Nike
+# Nike App — iOS Pet Project
 
 ## Описание
 
@@ -65,16 +65,18 @@ DI внедряется один раз при запуске приложени
 - Повторное нажатие на активный таб вызывает scrollToTop().
 - По умолчанию выбран экран **Home**.
 
-## UI-компоненты & Design System
+## Компонентый UI & Design System (Factory Pattern)
 
-**ImageView**  
-- Кастомный `UIImageView` со стилями: `.common`, `.product`, `.favorite`, и др.
+Компоненты интерфейса реализованы через паттерн **Factory**, что позволяет централизованно настраивать стиль и поведение элементов UI.
 
-**Label**  
-- Кастомный `InsetLabel` с шрифтами и стилями: `.screenTitle`, `.price`, `.highlighted`, и др.
+**ImageView**
+- Фабричный UIImageView с предустановленными стилями: .common, .product, .favorite и др.
 
-**StackView**  
-- UIStackView с конфигурациями: `.productCell`, `.listHeader`, `.headerStackView`.
+**Label**
+- Кастомный InsetLabel, создаваемый через фабрику с поддержкой стилей: .screenTitle, .price, .highlighted и др.
+
+**StackView**
+- UIStackView, конфигурируемый через фабрику с вариантами: .productCell, .listHeader, .headerStackView.
 
 ## Extensions
 
@@ -90,7 +92,9 @@ DI внедряется один раз при запуске приложени
 - `UINavigationController.swift` — настройка внешнего вида и добавление поиска.
 - `UIView+Extension.swift` — `makeSeparator()` и `viewController`.
 
-## Constants 
+## Constants and Recources на базе Flyweight
+
+Использован паттерн **Flyweight** для минимизации памяти и централизации повторяющихся UI-настроек.
 
 Централизованные настройки UI:
 
