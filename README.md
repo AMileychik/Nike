@@ -1,135 +1,135 @@
 # Nike App — iOS Pet Project
 
-## Описание
+## Description
 
-**Nike** — мобильное приложение интернет-магазина бренда Nike, разработанное как pet project. Приложение демонстрирует современные подходы к архитектуре, чистому коду и UI/UX-дизайну.  
-Пользователь может просматривать товары, выбирать категории, добавлять в избранное или корзину и оформлять заказы.
+**Nike** is a mobile e-commerce app for the Nike brand, developed as a pet project. The app showcases modern approaches to architecture, clean code, and UI/UX design.
+Users can browse products, choose categories, add items to favorites or the shopping bag, and place orders.
 
-## Особенности проекта
+## Project Highlights
 
-- Использование различных архитектур: **MVVM**, **MVP**, **MVC**.
-- **Dependency Injection** через собственный DI-контейнер.
-- Соблюдение принципов **SOLID** и **Clean Code**.
-- Адаптивный и современный интерфейс.
-- Работа с **JSON** и сохранение состояния.
-- Покрытие бизнес-логики модульными тестами.
+- Utilizes various architectures: **MVVM**, **MVP**, **MVC**.
+- **Dependency Injection** implemented via a custom DI container..
+- Adheres to **SOLID** and **Clean Code** principles.
+- Responsive and modern interface.
+- Works with **JSON** and persists state.
+- Business logic is covered by unit tests.
 
-## Архитектура
+## Architecture
 
-| Экран         | Архитектура |
-|---------------|-------------|
-| Home          | MVVM        |
-| Shop          | MVP         |
-| Detail        | MVC         |
-| Favorite      | MVC         |
-| Bag           | MVC         |
+| Screen        | Architecture |
+|---------------|--------------|
+| Home          | MVVM         |
+| Shop          | MVP          |
+| Detail        | MVC          |
+| Favorite      | MVC          |
+| Bag           | MVC          |
 
-## Внедрение зависимостей
+## Dependency Injection
 
-В проекте реализован DI через `DependencyContainer` и `ScreenFactory`:
+The project implements DI using `DependencyContainer` and `ScreenFactory`: 
 
-- Все зависимости (`URLSession`, `JSONDecoder`, `NetworkService`) создаются централизованно.
-- `ScreenFactory` собирает модули, передавая зависимости через инициализаторы.
-- Такой подход снижает связанность, упрощает тестирование и масштабирование.
+- All dependencies (`URLSession`, `JSONDecoder`, `NetworkService`) are created centrally.
+- `ScreenFactory` assembles modules by passing dependencies through initializers.
+- This approach reduces coupling, simplifies testing, and improves scalability.
 
-DI внедряется один раз при запуске приложения и используется для построения всех модулей.
+DI is initialized once at the application launch and is used to construct all modules.
 
 ## Services
 
-Проект использует несколько сервисов для управления данными и сетевыми запросами:
+The project uses several services to manage data and network requests:
 
 **NetworkService**
-- Загружает данные с `localhost:3001`.
-- Возвращает `Result` с моделями `HomeSectionsResponse`, `ShopSectionsResponse`.
-- Абстрагирует сетевую логику через `NetworkServiceProtocol`.
+- Load data from `localhost:3001`.
+- Returns a `Result` containing `HomeSectionsResponse`, `ShopSectionsResponse` models.
+- Absracts networking logic via `NetworkServiceProtocol`.
 
 **FavoritesService / BagService**
-- Работа с `UserDefaults` через `JSONEncoder/Decoder`.
-- Поддержка избранного и корзины с сохранением состояния.
-- Подсчёт суммы и количества товаров.
-- Реализованы через `FavoritesServiceProtocol`, `BagServiceProtocol`. 
+- works with `UserDefaults` using `JSONEncoder/Decoder`.
+- Supports favorites and cart with state persistence.
+- Calculates total amount and item count.
+- Implemented via `FavoritesServiceProtocol`, `BagServiceProtocol`. 
 
 ## Custom Views
 
-- `CustomButton` — настраиваемая кнопка с иконкой, цветом и обработчиком.
-- `ButtonContainerView` — кнопка с разделителем.
-- `GradientView` — вертикальный градиент.
-- `ShadowView` — вью с тенью (включается флагом).
+- `CustomButton` — customizable button with icon, color, and action handler.
+- `ButtonContainerView` — button with a separator.
+- `GradientView` — vertical gradient view.
+- `ShadowView` — view with shadow (enabled via a flag).
 
 ## Tab Bar
 
-Кастомный `TabBarController`:
+Custom `TabBarController`:
 
-- Четыре экрана: Shop, Home, Favorites, Bag.
-- Внедрение через DI и обёртка в `UINavigationController`.
-- Повторное нажатие на активный таб вызывает scrollToTop().
-- По умолчанию выбран экран **Home**.
+- Four screens: Shop, Home, Favorites, Bag.
+- Injected via DI and wrapped in `UINavigationController`.
+- Re-tapping the active tab triggers scrollToTop().
+- **Home** is selected by default.
 
-## Компонентый UI & Design System (Factory Pattern)
+## Component-Based UI & Design System (Factory Pattern)
 
-Компоненты интерфейса реализованы через паттерн **Factory**, что позволяет централизованно настраивать стиль и поведение элементов UI.
+UI components are implemented using the **Factory** pattern, allowing centralized configuration of styles and behaviors for UI elements.
 
 **ImageView**
-- Фабричный UIImageView с предустановленными стилями: .common, .product, .favorite и др.
+- Factory-created UIImageView with predefined styles: .common, .product, .favorite, and others.
 
 **Label**
-- Кастомный InsetLabel, создаваемый через фабрику с поддержкой стилей: .screenTitle, .price, .highlighted и др.
+- Custom InsetLabel, generated via a factory with support for styles like .screenTitle, .price, .highlighted, etc.
 
 **StackView**
-- UIStackView, конфигурируемый через фабрику с вариантами: .productCell, .listHeader, .headerStackView.
+- UIStackView configured through a factory with variants such as .productCell, .listHeader, .headerStackView.
 
 ## Extensions
 
-- `Date+WelcomeText.swift` — текст приветствия по времени суток.
-- `UICollectionViewCell+Extension.swift` — `reuseCVId` и протокол `ReusableCollectionViewCell`.
-- `UICollectionView+Extension.swift` — регистрация и извлечение ячеек.
-- `UITableViewCell+reuseId.swift` — `reuseId` и `Reusable`.
-- `UITableViewCell+dequeueCell.swift` — универсальное извлечение ячеек.
-- `UIColor+Extension.swift` — изменение яркости цвета.
-- `ScrollToTop+Extension.swift` — прокрутка к началу.
-- `Array+Extension.swift` — безопасный доступ к элементам.
+- `Date+WelcomeText.swift` — greeting text based on the time of day.
+- `UICollectionViewCell+Extension.swift` — `reuseCVId` and `ReusableCollectionViewCell` protocol.
+- `UICollectionView+Extension.swift` — cell registration and retrieval.
+- `UITableViewCell+reuseId.swift` — `reuseId` and `Reusable`.
+- `UITableViewCell+dequeueCell.swift` — universal cell retrieval.
+- `UIColor+Extension.swift` — color brightness adjustment.
+- `ScrollToTop+Extension.swift` — scroll to the top.
+- `Array+Extension.swift` — safe access to elements.
 - `UIResponder.swift` — `findParentViewController()`.
-- `UINavigationController.swift` — настройка внешнего вида и добавление поиска.
-- `UIView+Extension.swift` — `makeSeparator()` и `viewController`.
+- `UINavigationController.swift` — appearance configuration and adding search.
+- `UIView+Extension.swift` — `makeSeparator()` and `viewController`.
 
-## Constants and Recources на базе Flyweight
+## Constants and Resources based on Flyweight
 
-Использован паттерн **Flyweight** для минимизации памяти и централизации повторяющихся UI-настроек.
+The **Flyweight** pattern is used to minimize memory usage and centralize repetitive UI configurations.
 
-Централизованные настройки UI:
+Centralized UI settings:
 
-- `Layout.swift` — отступы.
-- `Constants.swift` — логические значения, например, количество баннеров.
-- `Font.swift` — шрифты проекта.
-- `Text.swift` — строки UI, сгруппированные по экранам.
-- `Images.swift` — системные и кастомные иконки.
+- `Layout.swift` — margins and padding.
+- `Constants.swift` — logical values, such as the number of banners.
+- `Font.swift` — project fonts.
+- `Text.swift` — UI strings grouped by screens.
+- `Images.swift` — system and custom icons.
 
 ## Unit Tests
 
-Покрытие бизнес-логики через `XCTest`.
+Business logic coverage using XCTest.
 
-**Тестируемые компоненты:**
-- `ShopViewController` — viewDidLoad, обновление UI.
-- `ShopPresenter` — события, загрузка данных.
-- `ProductService` — обращение к сервису.
+**Tested components:**
+- `ShopViewController` — viewDidLoad, UI updates.
+- `ShopPresenter` — events, data loading.
+- `ProductService` — service calls.
 
-**Методы:**
-- Spy-объекты (например, `ShopPresenterSpy`) для отслеживания вызовов.
-- `XCTestExpectation` — ожидание асинхронных событий.
-- Мокаем зависимости через протоколы.
+**Methods:**
+- Spy objects (e.g., `ShopPresenterSpy`) to track method calls.
+- `XCTestExpectation` — waiting for asynchronous events.
+- Mocking dependencies through protocols.
 
-## Экраны
+## Screens
 
 ### Home
 
-- Приветствие пользователя в зависимости от времени суток.
-- Секции с категориями товаров для добавления в **Favorite** или **Bag**.
-- Горизонтальная промо-карусель с плавным обновлением прогресса (чёрная часть индикатора плавно перемещается и изменяет ширину в зависимости от позиции прокрутки (UIScrollViewDelegate)).
-- Секция с видео и градиентом.
-- Ознакомительные секции с товарами и их описанием.
+- User greeting based on the time of day.
+- Sections with product categories for adding to **Favorite** or **Bag**.
+- Horizontal promo carousel with smooth progress update (the black part of the indicator smoothly moves and changes width based on the scroll position (UIScrollViewDelegate)).
+- Section with video and gradient.
+- Introductory sections with products and their descriptions
 
-**Архитектура:** MVVM  
-**Особенности:** динамическое приветствие, вложенные collectionView внутри tableView, reusability секций.
+**Architecture:** MVVM  
+**Features:** dynamic greeting, nested collectionViews inside tableView, reusability of sections.
 
 ### Home screenshots
 
@@ -143,13 +143,13 @@ DI внедряется один раз при запуске приложени
 
 ### Shop
 
-- Список категорий: Men, Women, Kids.
-- Каждая категория содержит:
-- товары с изображениями и описанием;
-- ознакомительные баннеры или статьи о продукте.
+- Category list: Men, Women, Kids.
+- Each category contains:
+- Products with images and descriptions;
+- Introductory banners or product articles.
 
-**Архитектура:** MVP  
-**Особенности:** презентер управляет логикой отображения и бизнес-логикой, экран масштабируется под любую категорию.
+**Architecture:** MVP  
+**Features:** the presenter manages the display logic and business logic, and the screen is scalable for any category.
 
 ### Shop screenshots
 
@@ -163,12 +163,12 @@ DI внедряется один раз при запуске приложени
 
 ### Detail
 
-- Просмотр карточки товара с большим количеством фото.
-- Добавление в корзину или избранное.
-- Переключение между альтернативами товара.
+- Viewing the product card with a large number of photos.
+- Adding to the cart or favorites.
+- Switching between product alternatives.
 
-**Архитектура:** MVC  
-**Особенности:** карусель изображений, кастомная кнопка добавления, состояние товара (выбран / нет), использование библиотеки **ProgressHUD** для визуализации добавления товара в "Favorite" or "Bag". 
+**Architecture:** MVC  
+**Features:** image carousel, custom add-to-cart button, product availability status (selected / not selected), using the ProgressHUD library to visualize adding the product to “Favorite” or “Bag”. 
 
 ### Detail screenshots
 
@@ -181,12 +181,12 @@ DI внедряется один раз при запуске приложени
 
 ### Favorite
 
-- Список всех избранных товаров.
-- Удаление из избранного.
-- Состояние автоматически сохраняется.
+- List of all favorite products.
+- Removal from favorites.
+- State is automatically saved.
 
-**Архитектура:** MVC  
-**Особенности:** синхронизация с Detail, динамическое обновление UI.
+**Architecture:** MVC  
+**Features:** synchronization with Detail, dynamic UI updates..
 
 ### Favorite screenshots
 
@@ -198,13 +198,13 @@ DI внедряется один раз при запуске приложени
 
 ### Bag
 
-- Добавленные товары с возможностью удалить по свайпу и нажатию.
-- Возможность добавить товары по свайпу в избранное прямо из корзины.
-- Выбор количесва товара через кастомный QuantityPickerViewController с UIPickerView.
-- Подсчет итоговой суммы.
+- Added items with the ability to delete by swipe or tap.
+- Ability to add items to favorites by swipe directly from the cart.
+- Quantity selection for items through a custom QuantityPickerViewController with UIPickerView.
+- Calculation of the total amount.
 
-**Архитектура:** MVC  
-**Особенности:** пересчет стоимости в реальном времени, удобный выбор количесва товара, избранное из корзины.
+**Architecture:** MVC  
+**Features:** real-time price recalculation, convenient item quantity selection, favorites from the bag.
 
 ### Bag screenshots
 
@@ -216,32 +216,32 @@ DI внедряется один раз при запуске приложени
 
 ## Планы по развитию
 
-- Авторизация и личный профиль
-- Оформление и отправка заказа
-- Темная тема
+- Authentication and user profile.
+- Order placement and submission.
+- Dark mode.
 
 ---
 
-## Контакты
+## Contact
 
-- Разработчик: Alexander Mileychik
+- Developer: Alexander Mileychik
 - GitHub: github.com/AMileychik/Nike
 - Email: amileychik@gmail.com
 
 ---
 
-## Установка
+## Installation
 
-1. Склонировать репозиторий можно с помощью терминала или Sourcetree по этой ссылке https://github.com/AMileychik/Nike.git
+1. Clone the repository using the terminal or Sourcetree with this link: https://github.com/AMileychik/Nike.git
 
-2. Открой .xcodeproj в Xcode.
+2. Open the .xcodeproj file in Xcode.
 
-3. Установи зависимости c помощью SPM.
+3. Install dependencies using SPM.
 
-4. Установи Mockoon (https://mockoon.com/download/).
+4. Install Mockoon (https://mockoon.com/download/).
 
-5. Скопируй из проекта (папка Resources) файлы Home.json и Shop.json, создай  http://localhost:3001/shop и http://localhost:3001/home.
+5. Copy the files Home.json and Shop.json from the project (Resources folder), and create http://localhost:3001/shop and http://localhost:3001/home.
 
-6. Запусти сервер на Mockoon (Start server).
+6. Start the server on Mockoon (Start server).
 
-5. Скомпилируй проект на симуляторе.
+7. Build the project on the simulator.
