@@ -285,10 +285,11 @@ Notes:
 # ScreenShots
 
 ## Home Screen
-<img src="Screenshots/home_screen_1.png" alt="Home Screen" width="300"/>
-<img src="Screenshots/home_screen_2.png" alt="Home Screen" width="300"/>
-<img src="Screenshots/home_screen_3.png" alt="Home Screen" width="300"/>
-<img src="Screenshots/home_screen_4.png" alt="Home Screen" width="300"/>
+<div style="display: flex; gap: 10px;">
+  <img src="Screenshots/home_screen_1.png" alt="Home Screen 1" width="300"/>
+  <img src="Screenshots/home_screen_2.png" alt="Home Screen 2" width="300"/>
+  <img src="Screenshots/home_screen_3.png" alt="Home Screen 3" width="300"/>
+</div>
 
 ## Shop Screen
 ![Shop Screen](Screenshots/shop_screen.png)
