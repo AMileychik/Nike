@@ -285,7 +285,7 @@ Notes:
 # ScreenShots
 
 ## Home Screen
-![Home Screen](Screenshots/home_screen_1.png)
+<img src="Screenshots/home_screen_1.png" alt="Home Screen" width="300"/>
 
 ## Shop Screen
 ![Shop Screen](Screenshots/shop_screen.png)
