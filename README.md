@@ -76,82 +76,76 @@ FavoritesService & BagService
 
 В проекте используются кастомные компоненты для переиспользуемости и упрощения настройки UI:
 
-ImageView
+**ImageView**
 
-Кастомный UIImageView с разными преднастроенными стилями, определяемыми через ImageViewType. Используется для унификации размеров, закруглений и прочих параметров.
+Кастомный UIImageView с разными преднастроенными стилями, определяемыми через ImageViewType. Используется для унификации размеров, закруглений и прочих параметров. Примеры: .common, .favorite, .nearbySection, .product, .completeTheLook, и др.
 
-Примеры: .common, .favorite, .nearbySection, .product, .completeTheLook, и др.
+**Label**
 
-Label
+Кастомный UILabel (наследуется от InsetLabel) с предустановленными шрифтами, цветами и отступами. Примеры: .screenTitle, .price, .alwaysPopularBoltWeight, .highlighted, и др.
 
-Кастомный UILabel (наследуется от InsetLabel) с предустановленными шрифтами, цветами и отступами.
+**StackView**
 
-Примеры: .screenTitle, .price, .alwaysPopularBoltWeight, .highlighted, и др.
-
-StackView
-
-Кастомный UIStackView с различными конфигурациями осей, выравнивания и отступов.
-
-Примеры: .productCell, .headerStackView, .listHeader, и др.
+Кастомный UIStackView с различными конфигурациями осей, выравнивания и отступов. Примеры: .productCell, .headerStackView, .listHeader, и др.
 
 ## Extensions
 
 В проекте активно используются расширения (extensions) для повышения читаемости кода, повторного использования логики и удобства при работе с UI-компонентами. Ниже приведены ключевые расширения:
--    Date+WelcomeText.swift
+-    **Date+WelcomeText.swift**
 
 Генерация приветственного текста в зависимости от времени суток: "Good Morning, Alexander" и т.п.
--    UICollectionViewCell + Extension.swift
+-    **UICollectionViewCell + Extension.swift**
 
 Добавлен протокол ReusableCollectionViewCell с computed-свойством reuseCVId для удобной регистрации и переиспользования ячеек коллекции.
--    UICollectionView + Extension.swift
+-    **UICollectionView + Extension.swift**
 
 Упрощена регистрация и извлечение ячеек.
--    UITableViewCell + reuseId.swift
+-    **UITableViewCell + reuseId.swift**
 
 Протокол Reusable и свойство reuseId для UITableViewCell.
--    UITableViewCell + dequeueCell.swift
+-    **UITableViewCell + dequeueCell.swift**
 
 Расширение для регистрации и извлечения ячеек таблицы по типу.
--    UIColor + Extension.swift
+-    **UIColor + Extension.swift**
 
 Метод adjustBrightness(by:) — изменение яркости цвета на заданный процент.
--    ScrollToTop + Extension.swift
+-    **ScrollToTop + Extension.swift**
 
 Метод scrollToTop(animated:) для быстрого прокручивания таблицы вверх.
--    Array + Extension.swift
+-   **Array + Extension.swift**
 
 Безопасный доступ к элементам массива с помощью array[safe: index].
--    UIResponder.swift
+-    **UIResponder.swift**
 
 Метод findParentViewController() для поиска родительского UIViewController.
--    UINavigationController.swift
+-    **UINavigationController.swift**
 
 Конфигурация navigation bar (шрифт, отступы, цвет) и добавление кнопки лупы (поиск).
--    UIView + Extension.swift
--    Метод makeSeparator() — создание стандартной линии-разделителя.
--    Свойство viewController — возвращает UIViewController, которому принадлежит UIView.
+-    **UIView + Extension.swift**
+-    **Метод makeSeparator()** — создание стандартной линии-разделителя.
+-    **Свойство viewController** — возвращает UIViewController, которому принадлежит UIView.
 
 ## Constants 
 
 Для унификации и централизации всех повторяющихся значений в проекте используется структура констант. Это упрощает настройку дизайна, работу с текстами, шрифтами и изображениями, а также уменьшает количество “магических чисел” в коде.
 
-- Layout.swift
+- **Layout.swift**
 
 Содержит отступы, используемые во всём проекте.
 
-- Constants.swift
+- **Constants.swift**
 
 Содержит другие логические числовые значения, например количество баннеров и категорий.
 
-- Font.swift
+- **Font.swift**
 
 Централизованная работа с шрифтами (SF Pro Rounded).
 
-- Text.swift
+- **Text.swift**
 
 Хранит все строки UI (в том числе локализуемые), сгруппированные по экранам.
 
-- Images.swift
+- **Images.swift**
 
 Содержит имена системных и кастомных иконок.
 
