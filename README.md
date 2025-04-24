@@ -1,48 +1,50 @@
 # Nike
 
-# Home module
+## Home Module
 
-Overview:
+### Overview
 
-The HomeViewController in this app serves as the main entry screen for the Nike app, displaying various sections such as welcome messages, top picks, promotions, and more. This is achieved through a series of UITableView sections that dynamically load and display data retrieved from the network.
+The `HomeViewController` in this app serves as the main entry screen for the Nike app, displaying various sections such as welcome messages, top picks, promotions, and more. This is achieved through a series of `UITableView` sections that dynamically load and display data retrieved from the network.
 
-Sections:
+### Sections
 
-    1.  Welcome Section
-    -   Displays a personalized greeting based on the time of day, such as “Good Morning”, “Good Afternoon”, etc.
-    -   This section is generated dynamically from a date-based welcome message.
-    
-    2.  Because You Like Section
-    -   This section presents a list of products or categories tailored to the user’s preferences, such as top picks or favorite items.
-    -   The data is provided via a Header and a list of Product models, and the section header can be customized.
-    
-    3.  Promo Section
-    -   A carousel displaying promotional products or offers.
-    -   Tapping on any promo will navigate to detailed information about the promotion.
-    
-    4.  New From Nike Section
-    -   This section showcases newly released products or collections from Nike, also provided with a Header for categorization.
-    -   Tapping on any item in this section navigates to a detailed view of the product.
-    
-    5.  Stories For You Section
-    -   Displays Nike-related content such as articles, videos, or stories that are curated for the user.
-    -   Tapping on a story will lead to more detailed information.
-    
-    6.  Thank You Section
-    -   A final section that thanks the user for using the app or participating in a promotion, possibly showcasing a product or offer.
+1. **Welcome Section**  
+   Displays a personalized greeting based on the time of day, such as “Good Morning”, “Good Afternoon”, etc.  
+   This section is generated dynamically from a date-based welcome message.
 
-Key Components
+2. **Because You Like Section**  
+   Presents a list of products or categories tailored to the user’s preferences, such as top picks or favorite items.  
+   The data is provided via a Header and a list of Product models, and the section header can be customized.
 
-    -   ViewModel (HomeViewModel):
-    -   Handles the logic for data fetching and state management.
-    -   Supports various events like tapping on promotional items, refreshing data, etc.
-    -   It updates the UI based on the current state (initial, loading, loaded, error).
-    -   Table View (HomeTableView):
-    -   A custom UITableView used to display the various sections dynamically.
-    -   Each section is represented by a custom table view cell, such as WelcomeCell, PromoCarouselCell, etc.
-    -   Navigation:
-    -   Various sections can lead to detailed screens, such as product detail screens, promo detail screens, and more.
-    -   Navigation is handled via the push method that adds new view controllers to the navigation stack.
+3. **Promo Section**  
+   A carousel displaying promotional products or offers.  
+   Tapping on any promo will navigate to detailed information about the promotion.
+
+4. **New From Nike Section**  
+   Showcases newly released products or collections from Nike, also provided with a Header for categorization.  
+   Tapping on any item in this section navigates to a detailed view of the product.
+
+5. **Stories For You Section**  
+   Displays Nike-related content such as articles, videos, or stories that are curated for the user.  
+   Tapping on a story will lead to more detailed information.
+
+6. **Thank You Section**  
+   A final section that thanks the user for using the app or participating in a promotion, possibly showcasing a product or offer.
+
+### Key Components
+
+- **ViewModel (`HomeViewModel`)**  
+  Handles the logic for data fetching and state management.  
+  Supports various events like tapping on promotional items, refreshing data, etc.  
+  Updates the UI based on the current state (initial, loading, loaded, error).
+
+- **Table View (`HomeTableView`)**  
+  A custom `UITableView` used to display the various sections dynamically.  
+  Each section is represented by a custom table view cell, such as `WelcomeCell`, `PromoCarouselCell`, etc.
+
+- **Navigation**  
+  Various sections can lead to detailed screens, such as product detail screens, promo detail screens, and more.  
+  Navigation is handled via the `push` method that adds new view controllers to the navigation 
 
 Features:
 
