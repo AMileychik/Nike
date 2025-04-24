@@ -94,29 +94,29 @@ StackView
 ## Extensions
 
 В проекте активно используются расширения (extensions) для повышения читаемости кода, повторного использования логики и удобства при работе с UI-компонентами. Ниже приведены ключевые расширения:
-    -    Date+WelcomeText.swift
+-    Date+WelcomeText.swift
 Генерация приветственного текста в зависимости от времени суток: "Good Morning, Alexander" и т.п.
-    -    UICollectionViewCell + Extension.swift
+-    UICollectionViewCell + Extension.swift
 Добавлен протокол ReusableCollectionViewCell с computed-свойством reuseCVId для удобной регистрации и переиспользования ячеек коллекции.
-    -    UICollectionView + Extension.swift
+-    UICollectionView + Extension.swift
 Упрощена регистрация и извлечение ячеек.
-    -    UITableViewCell + reuseId.swift
+-    UITableViewCell + reuseId.swift
 Протокол Reusable и свойство reuseId для UITableViewCell.
-    -    UITableViewCell + dequeueCell.swift
+-    UITableViewCell + dequeueCell.swift
 Расширение для регистрации и извлечения ячеек таблицы по типу.
-    -    UIColor + Extension.swift
+-    UIColor + Extension.swift
 Метод adjustBrightness(by:) — изменение яркости цвета на заданный процент.
-    -    ScrollToTop + Extension.swift
+-    ScrollToTop + Extension.swift
 Метод scrollToTop(animated:) для быстрого прокручивания таблицы вверх.
-    -    Array + Extension.swift
+-    Array + Extension.swift
 Безопасный доступ к элементам массива с помощью array[safe: index].
-    -    UIResponder.swift
+-    UIResponder.swift
 Метод findParentViewController() для поиска родительского UIViewController.
-    -    UINavigationController.swift
+-    UINavigationController.swift
 Конфигурация navigation bar (шрифт, отступы, цвет) и добавление кнопки лупы (поиск).
-    -    UIView + Extension.swift
-    -    Метод makeSeparator() — создание стандартной линии-разделителя.
-    -    Свойство viewController — возвращает UIViewController, которому принадлежит UIView.
+-    UIView + Extension.swift
+-    Метод makeSeparator() — создание стандартной линии-разделителя.
+-    Свойство viewController — возвращает UIViewController, которому принадлежит UIView.
 
 ## Constants & Design System
 
@@ -263,15 +263,13 @@ StackView
 
 ## Установка
 
-```bash
-git clone https://github.com/yourusername/NikeStore.git
-cd Nike
-
-1. Открой .xcodeproj или .xcworkspace в Xcode.
-2. Установи зависимости (если используешь CocoaPods / SPM).
-3. Установи Mockoon.
-4. Скопируй из проекта (папка Resources) Home.json и Shop.json, создай  http://localhost:3001/shop и http://localhost:3001/home. Скопируй json-файлы.
-5. Запусти проект на симуляторе.
+1.Склонировать репозиторий можно с помощью терминала или Sourcetree по этой ссылке https://github.com/AMileychik/Nike.git
+2. Открой .xcodeproj в Xcode.
+3. Установи зависимости c помощью SPM.
+4. Установи Mockoon (https://mockoon.com/download/).
+5. Скопируй из проекта (папка Resources) файлы Home.json и Shop.json, создай  http://localhost:3001/shop и http://localhost:3001/home.
+6. Запусти сервер на Mockoon (Start server).
+5. Скомпилируй проект на симуляторе.
 
 
 
