@@ -20,8 +20,8 @@
 | Home          | MVVM        |
 | Shop          | MVP         |
 | Detail        | MVC         |
-| Favorite      | MVC        |
-| Cart (Bag)    | MVC        |
+| Favorite      | MVC         |
+| Cart (Bag)    | MVC         |
 
 ## Внедрение зависимостей
 
@@ -35,7 +35,7 @@
 
 - Приветствие пользователя в зависимости от времени суток.
 - Горизонтальная промо-карусель.
-- CtrwbbСекции с категориями товаров.
+- Секции с категориями товаров.
 - Ознакомительные секции с товарами и их описанием.
 
 **Архитектура:** MVVM  
@@ -44,9 +44,9 @@
 ### Home screenshots
 
 <div style="display: flex; gap: 10px;">
-  <img src="Screenshots/home_screen_1.png" alt="Home Screen 1" width="330"/>
-  <img src="Screenshots/home_screen_2.png" alt="Home Screen 2" width="330"/>
-  <img src="Screenshots/home_screen_3.png" alt="Home Screen 3" width="330"/>
+  <img src="Screenshots/home_screen_1.png" alt="Home Screen 1" width="335"/>
+  <img src="Screenshots/home_screen_2.png" alt="Home Screen 2" width="335"/>
+  <img src="Screenshots/home_screen_3.png" alt="Home Screen 3" width="335"/>
 </div>
 
 ---
@@ -55,8 +55,8 @@
 
 - Список категорий: Men, Women, Kids.
 - Каждая категория содержит:
-  - товары с изображениями и описанием;
-  - ознакомительные баннеры или статьи о продукте.
+- товары с изображениями и описанием;
+- ознакомительные баннеры или статьи о продукте.
 
 **Архитектура:** MVP  
 **Интересные моменты:** презентер управляет логикой отображения и бизнес-логикой, экран масштабируется под любую категорию.
@@ -80,7 +80,7 @@
 - Удаление из избранного.
 - Состояние автоматически сохраняется.
 
-**Архитектура:** MVС 
+**Архитектура:** MVC  
 **Интересные моменты:** синхронизация с корзиной и Detail, динамическое обновление UI.
 
 ---
