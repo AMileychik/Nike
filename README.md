@@ -206,7 +206,7 @@ StackView
 
 <div style="display: flex; gap: 10px;">
   <img src="Screenshots/detail_screen_1.png" alt="Detail Screen 1" width="333"/>
-  <img src="Screenshots/detai_screen_2.png" alt="Detailo Screen 2" width="333"/>
+  <img src="Screenshots/detai_screen_2.png" alt="Detail Screen 2" width="333"/>
 </div>
 
 ---
@@ -241,7 +241,6 @@ StackView
 
 <div style="display: flex; gap: 10px;">
   <img src="Screenshots/bag_screen_1.png" alt="Bag Screen 1" width="333"/>
-  <img src="Screenshots/bag_screen_2.png" alt="Bag Screen 2" width="333"/>
 </div>
 
 ---
