@@ -1,6 +1,6 @@
 # Nike
 
-## Home module
+# Home module
 
 Overview:
 
@@ -84,7 +84,7 @@ Setup Instructions:
 
 ScreenShots:
 
-## Shop module
+# Shop module
 
 Overview
 
@@ -113,7 +113,7 @@ Features
     •    Navigation: Tapping on a product navigates to a detailed product view. The app also supports navigation to a list detail screen.
 
 
-## Favorite module
+# Favorite module
 
 Description
 
@@ -135,7 +135,7 @@ Key Features:
     •    Preview: Users can tap on a product to view additional details.
 
 
-## Bag module
+# Bag module
 
 Overview
 
@@ -211,7 +211,7 @@ Dependencies
     •    FavoritesService: A service for managing favorite items.
 
 
-## Detail module
+# Detail module
 
 Overview
 
@@ -261,7 +261,7 @@ Notes
 # ScreenShots
 
 ## Home Screen
-[![Home Screen](Screenshots/home_screen_1.png)](Screenshots/home_screen_1.png)
+![Home Screen](Screenshots/home_screen_1.png)
 
 ## Shop Screen
 ![Shop Screen](Screenshots/shop_screen.png)
