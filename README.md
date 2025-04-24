@@ -21,7 +21,7 @@
 | Shop          | MVP         |
 | Detail        | MVC         |
 | Favorite      | MVC         |
-| Cart (Bag)    | MVC         |
+| Bag           | MVC         |
 
 ## Внедрение зависимостей
 
@@ -96,11 +96,33 @@
 
 ---
 
+## Планы по развитию
+
+- Авторизация и личный профиль
+- Оформление и отправка заказа
+- Темная тема
+
+---
+
+## Контакты
+
+Разработчик: Alexander Mileychik
+GitHub: github.com/AMileychik/Nike
+Email: amileychik@gmail.com
+
+---
+
 ## Установка
 
 ```bash
 git clone https://github.com/yourusername/NikeStore.git
 cd Nike
+
+1. Открой .xcodeproj или .xcworkspace в Xcode.
+2. Установи зависимости (если используешь CocoaPods / SPM).
+3. Установи Mockoon.
+4. Скопируй Home.json и Shop.json.
+5. Запусти проект на симуляторе.
 
 
 
