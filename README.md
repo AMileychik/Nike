@@ -41,6 +41,14 @@
 **Архитектура:** MVVM  
 **Интересные моменты:** динамическое приветствие, вложенные collectionView внутри tableView, reusability секций.
 
+### Home screenshots
+
+<div style="display: flex; gap: 10px;">
+  <img src="Screenshots/home_screen_1.png" alt="Home Screen 1" width="330"/>
+  <img src="Screenshots/home_screen_2.png" alt="Home Screen 2" width="330"/>
+  <img src="Screenshots/home_screen_3.png" alt="Home Screen 3" width="330"/>
+</div>
+
 ---
 
 ### Shop
@@ -94,23 +102,6 @@
 git clone https://github.com/yourusername/NikeStore.git
 cd Nike
 
-# ScreenShots
 
-## Home Screen
-<div style="display: flex; gap: 10px;">
-  <img src="Screenshots/home_screen_1.png" alt="Home Screen 1" width="330"/>
-  <img src="Screenshots/home_screen_2.png" alt="Home Screen 2" width="330"/>
-  <img src="Screenshots/home_screen_3.png" alt="Home Screen 3" width="330"/>
-</div>
 
-## Shop Screen
-![Shop Screen](Screenshots/shop_screen.png)
 
-## Favorite Screen
-![Favorite Screen](Screenshots/favorite_screen.png)
-
-## Bag Screen
-![Bag Screen](Screenshots/bag_screen.png)
-
-## Detail Screen
-![Detail Screen](Screenshots/detail_screen.png)
