@@ -76,20 +76,10 @@ extension HomeViewController {
 //MARK: - Navigation
 extension HomeViewController {
     
-    func toProductDetailSections(model: [Product],
-                                 categories: Categories,
-                                 header: Header,
-                                 category: String,
-                                 subCategory: SubCategoryModel) {
+    func toProductDetailSections(model: [Product], categories: Categories, header: Header, category: String, subCategory: SubCategoryModel) {
         
         let detailVC = dependencyContainer.screenFactory.createDetailScreen()
-        
-        detailVC.updateProductDetailSections(model: model,
-                                             categories: categories,
-                                             header: header,
-                                             category: category,
-                                             subCategory: subCategory)
-        
+        detailVC.updateProductDetailSections(model: model, categories: categories, header: header, category: category, subCategory: subCategory)
         push(detailVC)
     }
     

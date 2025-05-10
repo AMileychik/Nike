@@ -10,16 +10,10 @@ import UIKit
 class HomeViewModel {
     
     enum Event {
-        case homeTopPicksDidTap(model: [Product],
-                                categories: Categories?,
-                                header: Header?,
-                                category: String,
-                                subCategory: SubCategoryModel?)
-        
+        case homeTopPicksDidTap(model: [Product], categories: Categories?, header: Header?, category: String, subCategory: SubCategoryModel?)
         case promoDidTap(_ model: [Product])
         case newFromNikeDidTap(_ model: [NewFromNikeModel])
         case storiesForYouDidTap(_ model: [StoriesForYou])
-        
         case refreshData
         case barButtonDidTap
         case headerButtonDidTap
