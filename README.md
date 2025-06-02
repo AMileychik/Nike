@@ -7,28 +7,38 @@ Users can browse products, choose categories, add items to favorites or the shop
 
 ## Project Highlights
 
-- Utilizes various architectures: **MVVM**, **MVP**, **MVC**.
+- Utilizes various architectures: **MVVM**, **MVP**, **MVC**, **Coordinator**.
+- Modular navigation via AppCoordinator and feature-specific coordinators.
 - **Dependency Injection** implemented via a custom DI container.
-- Adheres to **SOLID** and **Clean Code** principles.
+- Applies to **SOLID**, **Clean Code** and **DRY** principles.
+- Extensively reuses UI via custom factories and Flyweight pattern.
 - Responsive and modern interface.
 - Works with **JSON** and persists state.
 - Business logic is covered by unit tests.
 
 ## Architecture
 
-| Screen        | Architecture |
-|---------------|--------------|
-| Home          | MVVM         |
-| Shop          | MVP          |
-| Detail        | MVC          |
-| Favorite      | MVC          |
-| Bag           | MVC          |
+| Screen        | Architecture       |
+|---------------|--------------------|
+| Home          | MVVM + Coordinator |
+| Shop          | MVP  + Coordinator |
+| Detail        | MVVM               |
+| Favorite      | MVC                |
+| Bag           | MVC                |
 
-## Dependency Injection
+## Coordinators & DI
+
+**AppCoordinator**
+
+- Initializes MainTabBarController with injected dependencies.
+- Each tab (Home, Shop, Favorites, Bag) is wrapped in its own UINavigationController.
+- Each tab is managed by its own coordinator (e.g., HomeCoordinator).
+
+**Dependency Injection**
 
 The project implements DI using `DependencyContainer` and `ScreenFactory`: 
 
-- All dependencies (`URLSession`, `JSONDecoder`, `NetworkService`) are created centrally.
+- All dependencies are created centrally.
 - `ScreenFactory` assembles modules by passing dependencies through initializers.
 - This approach reduces coupling, simplifies testing, and improves scalability.
 
@@ -60,8 +70,9 @@ The project uses several services to manage data and network requests:
 
 Custom `TabBarController`:
 
-- Four screens: Shop, Home, Favorites, Bag.
-- Injected via DI and wrapped in `UINavigationController`.
+- Injected via AppCoordinator.
+- Tabs: Shop, Home, Favorites, Bag.
+- Each tab uses its own coordinator and navigation controller.
 - Re-tapping the active tab triggers scrollToTop().
 - **Home** is selected by default.
 

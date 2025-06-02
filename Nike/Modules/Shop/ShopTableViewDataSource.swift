@@ -7,22 +7,11 @@
 
 import UIKit
 
-enum ShopSection {
-    case buttons(ShopButtonsModel)
-    case newThisWeek(model: [Product], header: Header)
-    case news([Product])
-    case newAndFeatured(model: [Product], header: Header)
-    case rafaelNadal(model: [Product], header: Header)
-    case recentlyViewed(model: [Product], header: Header)
-    case classicsSpotlightCell(model: [Product], header: Header)
-    case nearbyStore(model: [Product], header: Header)
-}
-
 class ShopTableViewDataSource: NSObject, UITableViewDataSource {
     
-    private let presenter: IShopPresenterProtocol
+    private let presenter: ShopPresenterProtocol
         
-    init(presenter: IShopPresenterProtocol) {
+    init(presenter: ShopPresenterProtocol) {
         self.presenter = presenter
     }
     

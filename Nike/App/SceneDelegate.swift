@@ -7,55 +7,22 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
+    private var appCoordinator: AppCoordinator?
+    private let dependencies: AppDependenciesProtocol = AppDependencies()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        setupWindow(windowScene)
-    }
-    
-    private func setupWindow(_ windowScene: UIWindowScene) {
-        window = UIWindow(windowScene: windowScene)
-        setupNavigationBarAppearance()
-        setupTabBarAppearance()
+
+        AppearanceConfigurator.configure()
         
-        let tabBarController = TabBarController()
-        setupTabBarItems(tabBarController)
+        let window = UIWindow(windowScene: windowScene)
+        self.window = window
         
-        window?.rootViewController = tabBarController
-        window?.makeKeyAndVisible()
-    }
-    
-    private func setupNavigationBarAppearance() {
-        let navigationBarAppearance = UINavigationBar.appearance()
-        navigationBarAppearance.barTintColor = .white
-        navigationBarAppearance.shadowImage = UIImage()
-    }
-    
-    private func setupTabBarAppearance() {
-        let tabBarAppearance = UITabBar.appearance()
-        tabBarAppearance.barTintColor = .white
-        tabBarAppearance.shadowImage = UIImage()
-        tabBarAppearance.isTranslucent = false
-        tabBarAppearance.backgroundImage = UIImage()
-        tabBarAppearance.backgroundColor = .white
-        tabBarAppearance.tintColor = .black
-    }
-    
-    private func setupTabBarItems(_ tabBarController: TabBarController) {
-        tabBarController.viewControllers?.forEach { viewController in
-            viewController.tabBarItem.setTitleTextAttributes(
-                [.foregroundColor: UIColor.lightGray],
-                for: .normal
-            )
-            viewController.tabBarItem.setTitleTextAttributes(
-                [.foregroundColor: UIColor.black],
-                for: .selected
-            )
-        }
+        appCoordinator = AppCoordinator(window: window, dependencies: dependencies)
+        appCoordinator?.start()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

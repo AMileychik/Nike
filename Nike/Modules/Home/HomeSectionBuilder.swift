@@ -7,6 +7,15 @@
 
 import Foundation
 
+enum HomeSection {
+    case welcome(String)
+    case becauseYouLike([Product], header: Header)
+    case promo([Product])
+    case newFromNike([NewFromNikeModel], header: Header)
+    case storiesForYou([StoriesForYou])
+    case thankYou([Product])
+}
+
 final class HomeSectionBuilder {
     
     static func createHomeSections(from response: HomeSectionsResponse) -> [HomeSection] {

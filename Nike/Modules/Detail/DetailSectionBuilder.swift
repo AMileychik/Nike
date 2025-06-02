@@ -7,63 +7,89 @@
 
 import Foundation
 
+enum DetailSection {
+    case subCategories([SubCategoryModel])
+    case categories([Product])
+    case description([Product])
+    case productSize([ProductSize], header: Header)
+    case actionButtons(DetailButtonsModel, subCategories: SubCategoryModel)
+    case autoScrollingPageControl([Product])
+    case productDescription([ProductDescription])
+    case completeTheLook([CompleteTheLookModel], header: CompleteTheLookHeader)
+    case productInfoCell([NewFromNikeModel])
+    case storiesForYou([StoriesForYou])
+    case youMightAlsoLike([YouMightAlsoLikeModel], header: YouMightAlsoLikeHeader)
+    case horizontalProductInfo([Product])
+    case shopVCListCellSectiont([ProductInfo])
+    case productInfo([ProductInfo])
+    case verticalProductInfoCell([NewFromNikeModel])
+    case verticalWithProductModel([VerticalProductModel])
+    case descriptionModel([Description])
+}
+
 final class DetailSectionBuilder {
     
-    static func createProductDetailSections( model: [Product], categories: Categories?, header: Header?, category: String, subCategory: SubCategoryModel?) -> [DetailSection] {
+    static func createProductDetailSections(from selection: TopPickSelection) -> [DetailSection] {
         
+        let model = selection.products
+        let category = selection.category
         guard let firstProduct = model.first else { return [] }
-        
         var sections: [DetailSection] = []
         
-        //MARK: - SubCategories
+        // SubCategories
         if let subCategories = firstProduct.categories?.first?.subCategories, !subCategories.isEmpty {
             sections.append(.subCategories(subCategories))
         }
         
-        //MARK: - Categories
+        // Categories
         let categories = model.filter { $0.categoryName == category }
         if !categories.isEmpty {
             sections.append(.categories(categories))
         }
         
-        //MARK: - Description
+        // Description
         if !model.isEmpty {
             sections.append(.description(model))
         }
         
-        //MARK: - Product Size
-        if let productSize = firstProduct.productSize, let shoesSizeHeader = firstProduct.productSizeHeader, !productSize.isEmpty {
+        // Product Size
+        if let productSize = firstProduct.productSize,
+           let shoesSizeHeader = firstProduct.productSizeHeader,
+           !productSize.isEmpty {
             sections.append(.productSize(productSize, header: shoesSizeHeader))
         }
         
-        //MARK: - Action Buttons
-        if let subCategories = firstProduct.categories?.first?.subCategories?.first {
-            if let actionButtons = firstProduct.detailButtonsName {
-                sections.append(.actionButtons(actionButtons, subCategories: subCategories))
-            }
+        // Action Buttons
+        if let subCategories = firstProduct.categories?.first?.subCategories?.first,
+           let actionButtons = firstProduct.detailButtonsName {
+            sections.append(.actionButtons(actionButtons, subCategories: subCategories))
         }
         
-        //MARK: - Auto Scrolling PageControl
+        // Auto Scrolling PageControl
         if let autoScrollingPageControl = firstProduct.promo, !autoScrollingPageControl.isEmpty {
             sections.append(.autoScrollingPageControl(autoScrollingPageControl))
         }
         
-        //MARK: - Product Description
+        // Product Description
         if let productDescription = firstProduct.productDescription, !productDescription.isEmpty {
             sections.append(.productDescription(productDescription))
         }
         
-        //MARK: - Complete The Look
-        if let completeTheLook = firstProduct.completeTheLook, let completeTheLookHeader = firstProduct.completeTheLookHeader, !completeTheLook.isEmpty {
+        // Complete The Look
+        if let completeTheLook = firstProduct.completeTheLook,
+           let completeTheLookHeader = firstProduct.completeTheLookHeader,
+           !completeTheLook.isEmpty {
             sections.append(.completeTheLook(completeTheLook, header: completeTheLookHeader))
         }
         
-        //MARK: - You Might Also Like
-        if let youMightAlsoLike = firstProduct.youMightAlsoLike, let youMightAlsoLikeHeader = firstProduct.youMightAlsoLikeHeader, !youMightAlsoLike.isEmpty {
+        // You Might Also Like
+        if let youMightAlsoLike = firstProduct.youMightAlsoLike,
+           let youMightAlsoLikeHeader = firstProduct.youMightAlsoLikeHeader,
+           !youMightAlsoLike.isEmpty {
             sections.append(.youMightAlsoLike(youMightAlsoLike, header: youMightAlsoLikeHeader))
         }
         
-        //MARK: - Product Info
+        // Product Info
         if let productInfo = firstProduct.productInfo, !productInfo.isEmpty {
             sections.append(.productInfo(productInfo))
         }

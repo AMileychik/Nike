@@ -78,13 +78,13 @@ extension BagViewController: Scrollable {
 extension BagViewController {
     
     private func handlePayButtonTap() {
-        let comingSoonVC = dependencyContainer.screenFactory.createComingSoonScreen()
+        let comingSoonVC = ComingSoonViewController()
         comingSoonVC.modalPresentationStyle = .fullScreen
         present(comingSoonVC, animated: true)
     }
     
     private func handleCheckoutButtonTap() {
-        let comingSoonVC = dependencyContainer.screenFactory.createComingSoonScreen()
+        let comingSoonVC = ComingSoonViewController()
         comingSoonVC.modalPresentationStyle = .fullScreen
         present(comingSoonVC, animated: true)
     }

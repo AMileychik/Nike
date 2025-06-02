@@ -7,50 +7,27 @@
 
 import Foundation
 
-final class DependencyContainer {
+protocol DependencyContainerProtocol {
+    var networkService: NetworkServiceProtocol { get }
+}
+
+final class DependencyContainer: DependencyContainerProtocol {
     
-    let session: URLSession
-    let decoder: JSONDecoder
-    let loader: NetworkService
-    let screenFactory: ScreenFactory
+    // MARK: - Services
+    let networkService: NetworkServiceProtocol
     
-    init() {
-        session = URLSession.shared
-        decoder = JSONDecoder()
-        loader = NetworkService(session: session, decoder: decoder)
-        screenFactory = ScreenFactory()
-        screenFactory.dependencyContainer = self
+    // MARK: - Init
+    init(networkService: NetworkServiceProtocol) {
+        self.networkService = networkService
     }
 }
 
-//MARK: - ScreenFactory
-final class ScreenFactory {
+extension DependencyContainer {
     
-    weak var dependencyContainer: DependencyContainer!
-    
-    func createHomeScreen() -> HomeViewController {
-        let homeViewModel = HomeViewModel(homeLoader: dependencyContainer.loader)
-        return HomeViewController(homeViewModel: homeViewModel)
-    }
-    
-    func createShopScreen() -> ShopViewController  {
-        let presenter = ShopPresenter(shopLoader: dependencyContainer.loader)
-        return ShopViewController (presenter: presenter)
-    }
-    
-    func createFavoriteScreen() -> FavoritesViewController {
-        return FavoritesViewController()
-    }
-    
-    func createBagScreen() -> BagViewController  {
-        return BagViewController()
-    }
-    
-    func createDetailScreen() -> DetailViewController  {
-        return DetailViewController()
-    }
-    
-    func createComingSoonScreen() -> ComingSoonViewController {
-        return ComingSoonViewController()
+    // MARK: - Production Configuration
+    static func makeDefault() -> DependencyContainer {
+        DependencyContainer(
+            networkService: NetworkService()
+        )
     }
 }

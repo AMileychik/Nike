@@ -11,8 +11,11 @@ final class HomeViewController: UIViewController {
     
     private let homeViewModel: HomeViewModel
     private var tableView: HomeTableView
+    
     private var refreshControl = UIRefreshControl()
     private let activityIndicator = UIActivityIndicatorView(style: .large)
+    
+    weak var homeCoordinator: HomeCoordinator?
     
     init(homeViewModel: HomeViewModel) {
         self.homeViewModel = homeViewModel
@@ -45,13 +48,7 @@ final class HomeViewController: UIViewController {
     }
     
     private func stopRefreshing() {
-        DispatchQueue.main.async {
-            self.refreshControl.endRefreshing()
-        }
-    }
-    
-    private func push(_ viewController: UIViewController) {
-        navigationController?.pushViewController(viewController, animated: true)
+        self.refreshControl.endRefreshing()
     }
 }
 
@@ -73,99 +70,44 @@ extension HomeViewController {
         homeViewModel.sendEvent(.refreshData)
     }
 }
-//MARK: - Navigation
-extension HomeViewController {
-    
-    func toProductDetailSections(model: [Product], categories: Categories, header: Header, category: String, subCategory: SubCategoryModel) {
-        
-        let detailVC = dependencyContainer.screenFactory.createDetailScreen()
-        detailVC.updateProductDetailSections(model: model, categories: categories, header: header, category: category, subCategory: subCategory)
-        push(detailVC)
-    }
-    
-    func toPromoDetailSections(model: [Product]) {
-        let detailVC = dependencyContainer.screenFactory.createDetailScreen()
-        detailVC.updatePromoDetailSections(model: model)
-        push(detailVC)
-    }
-    
-    func toNewFromNikeDetailSections(model: [NewFromNikeModel]) {
-        let detailVC = dependencyContainer.screenFactory.createDetailScreen()
-        detailVC.updateNewFromNikeDetailSections(model: model)
-        push(detailVC)
-    }
-    
-    func toNewFromNikeVerticalDetailsections(model: [NewFromNikeModel]) {
-        let detailVC = dependencyContainer.screenFactory.createDetailScreen()
-        detailVC.updateVerticalNewFromNikeDetailSections(model: model)
-        push(detailVC)
-    }
-    
-    func toStoriesForYouDetailSections(model: [StoriesForYou]) {
-        let detailVC = dependencyContainer.screenFactory.createDetailScreen()
-        detailVC.updateStoriesForYouDetailSections(model: model)
-        push(detailVC)
-    }
-    
-    func navigateToComingSoon(from viewController: UIViewController) {
-        let comingSoonVC = dependencyContainer.screenFactory.createComingSoonScreen()
-        comingSoonVC.modalPresentationStyle = .fullScreen
-        viewController.present(comingSoonVC, animated: true)
-    }
-}
 
 extension HomeViewController {
     
     private func bindViewModel() {
-        
         homeViewModel.stateChanged = { [weak self] state in
-            guard let self = self else { return }
             DispatchQueue.main.async {
-                self.updateUI(for: state)
+                self?.updateUI(for: state)
             }
         }
         
-        homeViewModel.navigateFromBecauseYouLike = { [weak self] model, categories, header, category, subcategory in
+        homeViewModel.routeHandler = { [weak self] navigation in
             guard let self = self else { return }
+            guard let homeCoordinator = self.homeCoordinator else { return }
             
-            let safeCategories = categories
-            let safeHeader = header
-            
-            guard let subcategory = subcategory else {
-                print("subCategory is nil")
-                return
+            switch navigation {
+                
+            case .becauseYouLike(let model):
+                homeCoordinator.showProductDetail(model: model)
+                
+            case .promo(let model):
+                homeCoordinator.showPromoDetail(model: model)
+                
+            case .stories(let model):
+                homeCoordinator.showStoriesForYouDetail(model: model)
+                
+            case .newFromNike(let model):
+                homeCoordinator.showNewFromNikeDetail(model: model)
+                
+            case .explore(let model):
+                homeCoordinator.showNewFromNikeVerticalDetail(model: model)
+                
+            case .comingSoon(let fromVC):
+                homeCoordinator.showComingSoon(from: fromVC)
             }
-            
-            self.toProductDetailSections(model: model, categories: safeCategories!, header: safeHeader!, category: category, subCategory: subcategory)
-        }
-        
-        homeViewModel.navigateFromPromo = { [weak self] model in
-            guard let self = self else { return }
-            self.toPromoDetailSections(model: model)
-        }
-        
-        homeViewModel.navigateFromStoriesForYou = { [weak self] model in
-            guard let self = self else { return }
-            self.toStoriesForYouDetailSections(model: model)
-        }
-        
-        homeViewModel.navigateFromNewFromNike = { [weak self] model in
-            guard let self = self else { return }
-            self.toNewFromNikeDetailSections(model: model)
-        }
-        
-        homeViewModel.navigateFromExploreButton = { [weak self] model in
-            guard let self = self else { return }
-            self.toNewFromNikeVerticalDetailsections(model: model)
-        }
-        
-        homeViewModel.navigateToCommingSoonVC = { [weak self] viewController in
-            guard let self = self else { return }
-            self.navigateToComingSoon(from: viewController)
         }
     }
     
-    private func updateUI(for state: HomeViewModel.State) {
+    private func updateUI(for state: HomeViewModelState) {
         switch state {
             
         case .initial:
@@ -227,3 +169,4 @@ extension HomeViewController: UITableViewDelegate {
         }
     }
 }
+

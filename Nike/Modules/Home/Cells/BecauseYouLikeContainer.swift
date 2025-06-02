@@ -8,7 +8,7 @@
 import UIKit
 
 protocol BecauseYouLikeContainerDelegate: AnyObject {
-    func didSelectItem(model: [Product], categories: Categories?, header: Header?, category: String, subCategory: SubCategoryModel?)
+    func didSelectItem(model: TopPickSelection)
 }
 
 enum BecauseYouLikeContainerDataType {
@@ -129,12 +129,15 @@ extension BecauseYouLikeContainer: UICollectionViewDelegate {
         case .product(let model):
             
             let model = model[indexPath.item]
-            let categories = model.categories?.first ?? Categories(id: nil, categoryImage: "", subCategories: [])
-            let header = model.header ?? Header(title: "", subtitleLabel: "", buttonTitle: "")
-            let category = model.categoryName ?? ""
-            let subCategory = model.categories?.first?.subCategories?.first ?? SubCategoryModel(id: nil, subCategoryImage: "", title: "", category: "", count: nil, price: nil, isHeartFilled: nil)
             
-            becauseYouLikeContainerDelegate?.didSelectItem(model: [model], categories: categories, header: header, category: category, subCategory: subCategory)
+            let selection = TopPickSelection(
+                        products: [model],
+                        categories: model.categories?.first ?? Categories(id: nil, categoryImage: "", subCategories: []),
+                        header: model.header ?? Header(title: "", subtitleLabel: "", buttonTitle: ""),
+                        category: model.categoryName ?? "",
+                        subCategory: model.categories?.first?.subCategories?.first ?? SubCategoryModel(id: nil, subCategoryImage: "", title: "", category: "", count: nil, price: nil, isHeartFilled: nil))
+            
+            becauseYouLikeContainerDelegate?.didSelectItem(model: selection)
         }
     }
 }

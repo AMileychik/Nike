@@ -9,9 +9,12 @@ import UIKit
 
 final class DetailTableView: UITableView {
     
-    private lazy var dataSourceManager = DetailTableViewDataSource(tableView: self, bagService: BagService(), favoritesService: FavoritesService())
+    private let detailViewModel: DetailViewModel
+
+    private lazy var dataSourceManager = DetailTableViewDataSource(tableView: self, bagService: BagService(), favoritesService: FavoritesService(), detailViewModel: detailViewModel)
     
-    override init(frame: CGRect, style: UITableView.Style) {
+    init(detailViewModel: DetailViewModel, frame: CGRect = .zero, style: UITableView.Style = .plain) {
+        self.detailViewModel = detailViewModel
         super.init(frame: frame, style: style)
         commonInit()
         registerCells()
@@ -44,7 +47,7 @@ final class DetailTableView: UITableView {
     }
     
     func updateSections(_ sections: [DetailSection]) {
-        dataSourceManager.detailSections = sections
+        detailViewModel.detailSections = sections
         reloadData()
     }
 }

@@ -7,15 +7,6 @@
 
 import UIKit
 
-enum HomeSection {
-    case welcome(String)
-    case becauseYouLike([Product], header: Header)
-    case promo([Product])
-    case newFromNike([NewFromNikeModel], header: Header)
-    case storiesForYou([StoriesForYou])
-    case thankYou([Product])
-}
-
 class HomeTableViewDataSource: NSObject, UITableViewDataSource {
     
     private let homeViewModel: HomeViewModel
@@ -33,31 +24,26 @@ class HomeTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let sectionData = homeViewModel.section(at: indexPath.section) else { return UITableViewCell() }
         switch sectionData {
             
         case .welcome(let text):
-            
             let cell = tableView.dequeueCell(indexPath) as WelcomeCell
             cell.update(text)
             return cell
             
         case .becauseYouLike(let model, let header):
-            
             let cell = tableView.dequeueCell(indexPath) as BecauseYouLikeContainer
             cell.becauseYouLikeContainerDelegate = self
             cell.updateHeader(header)
             cell.update(dataType: .product(model))
             cell.setupHeaderButtonAction()
-            
             cell.onHeaderButtonTapped = { [weak homeViewModel] in
                 homeViewModel?.sendEvent(.headerButtonDidTap, from: tableView.viewController)
             }
             return cell
             
         case .promo(let model):
-            
             let cell = tableView.dequeueCell(indexPath) as PromoCarouselCell
             let promoCellHeight: CGFloat = 150
             cell.promoCarouselCellDelegate = self
@@ -66,7 +52,6 @@ class HomeTableViewDataSource: NSObject, UITableViewDataSource {
             return cell
             
         case .newFromNike(let model, let header):
-            
             let cell = tableView.dequeueCell(indexPath) as NewFromNikeCell
             cell.newFromNikeCellDelegate = self
             cell.updateHeader(header)
@@ -78,18 +63,15 @@ class HomeTableViewDataSource: NSObject, UITableViewDataSource {
             cell.onHeaderButtonTapped = { [weak homeViewModel] in
                 homeViewModel?.sendEvent(.exploreButtonDidTap(model))
             }
-            
             cell.onExploreButtonTapped = { [weak homeViewModel] in
                 homeViewModel?.sendEvent(.exploreButtonDidTap(model))
             }
-            
             cell.onButtomTappedTapped = { [weak homeViewModel] in
                 homeViewModel?.sendEvent(.exploreButtonDidTap(model))
             }
             return cell
             
         case .storiesForYou(let model):
-            
             let cell = tableView.dequeueCell(indexPath) as StoriesForYouCell
             let model = model[indexPath.row]
             cell.update(model)
@@ -100,19 +82,15 @@ class HomeTableViewDataSource: NSObject, UITableViewDataSource {
             cell.onLargeImageTapped = { [weak homeViewModel] in
                 homeViewModel?.sendEvent(.storiesForYouDidTap([model]), from: tableView.viewController)
             }
-            
             cell.onSmallImage1Tapped = { [weak homeViewModel] in
                 homeViewModel?.sendEvent(.headerButtonDidTap, from: tableView.viewController)
             }
-            
             cell.onSmallImage2Tapped = { [weak homeViewModel] in
                 homeViewModel?.sendEvent(.headerButtonDidTap, from: tableView.viewController)
             }
-            
             cell.onBottomButtonTapped = { [weak homeViewModel] in
                 homeViewModel?.sendEvent(.storiesForYouDidTap([model]), from: tableView.viewController)
             }
-            
             cell.setupHeaderButtonAction()
             cell.setupBottomButtonAction()
             cell.setupLargeImageTappedAction()
@@ -121,7 +99,6 @@ class HomeTableViewDataSource: NSObject, UITableViewDataSource {
             return cell
             
         case .thankYou(let model):
-            
             let cell = tableView.dequeueCell(indexPath) as ThankYouCell
             let model = model[indexPath.row]
             cell.update(model)
@@ -132,16 +109,13 @@ class HomeTableViewDataSource: NSObject, UITableViewDataSource {
 
 //MARK: - BecauseYouLikeContainerDelegate
 extension HomeTableViewDataSource: BecauseYouLikeContainerDelegate {
-    
-    func didSelectItem(model: [Product], categories: Categories?, header: Header?, category: String, subCategory: SubCategoryModel?) {
-        
-        homeViewModel.sendEvent(.homeTopPicksDidTap(model: model, categories: categories, header: header, category: category, subCategory: subCategory))
+    func didSelectItem(model: TopPickSelection) {
+        homeViewModel.sendEvent(.homeTopPicksDidTap(model))
     }
 }
 
 //MARK: - PromoCarouselCellDelegate
 extension HomeTableViewDataSource: PromoCarouselCellDelegate {
-    
     func didSelectItem(model: [Product]) {
         homeViewModel.sendEvent(.promoDidTap(model))
     }
@@ -149,7 +123,6 @@ extension HomeTableViewDataSource: PromoCarouselCellDelegate {
 
 //MARK: - NewFromNikeCellDelegate
 extension HomeTableViewDataSource: NewFromNikeCellDelegate {
-    
     func didSelectItem(model: [NewFromNikeModel]) {
         homeViewModel.sendEvent(.newFromNikeDidTap(model))
     }

@@ -7,8 +7,7 @@
 
 import UIKit
 
-struct Images {
-    
+enum Images {
     static let house = "house"
     static let magnifyingglass = "magnifyingglass"
     static let heart = "heart"

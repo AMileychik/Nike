@@ -7,42 +7,23 @@
 
 import UIKit
 
-enum DetailSection {
-    case subCategories([SubCategoryModel])
-    case categories([Product])
-    case description([Product])
-    case productSize([ProductSize], header: Header)
-    case actionButtons(DetailButtonsModel, subCategories: SubCategoryModel)
-    case autoScrollingPageControl([Product])
-    case productDescription([ProductDescription])
-    case completeTheLook([CompleteTheLookModel], header: CompleteTheLookHeader)
-    case productInfoCell([NewFromNikeModel])
-    case storiesForYou([StoriesForYou])
-    case youMightAlsoLike([YouMightAlsoLikeModel], header: YouMightAlsoLikeHeader)
-    case horizontalProductInfo([Product])
-    case shopVCListCellSectiont([ProductInfo])
-    case productInfo([ProductInfo])
-    case verticalProductInfoCell([NewFromNikeModel])
-    case verticalWithProductModel([VerticalProductModel])
-    case descriptionModel([Description])
-}
-
 final class DetailTableViewDataSource: NSObject, UITableViewDataSource {
     
-    weak var tableView: UITableView?
+    private let detailViewModel: DetailViewModel
     private var bagService: BagServiceProtocol
     private var favoritesService: FavoritesServiceProtocol
     private var selectedSubCategory: SubCategoryModel?
-    var detailSections: [DetailSection] = []
+    weak var tableView: UITableView?
     
-    init(tableView: UITableView, bagService: BagServiceProtocol, favoritesService: FavoritesServiceProtocol) {
+    init(tableView: UITableView, bagService: BagServiceProtocol, favoritesService: FavoritesServiceProtocol, detailViewModel: DetailViewModel) {
         self.tableView = tableView
         self.bagService = bagService
         self.favoritesService = favoritesService
+        self.detailViewModel = detailViewModel
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return detailSections.count
+        return detailViewModel.numberOfSections()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,7 +31,9 @@ final class DetailTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let detailSectionsData = detailSections[indexPath.section]
+        
+        guard let detailSectionsData = detailViewModel.section(at: indexPath.section) else { return UITableViewCell() }
+        
         switch detailSectionsData {
             
         case .subCategories(let model):
@@ -206,7 +189,7 @@ final class DetailTableViewDataSource: NSObject, UITableViewDataSource {
 extension DetailTableViewDataSource: CategoriesContainerDelegate {
     
     func didSelectSubCategory(with model: [SubCategoryModel], subCategory: String) {
-        detailSections[0] = .subCategories(model)
+        detailViewModel.detailSections[0] = .subCategories(model)
         tableView?.reloadData()
     }
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol IShopController: AnyObject {
+protocol ShopViewControllerProtocol: AnyObject {
     func updateView()
     func startLoading()
     func navigateToShopDetailSections(with product: Product)
@@ -16,11 +16,13 @@ protocol IShopController: AnyObject {
 
 final class ShopViewController: UIViewController {
     
-    private let presenter: IShopPresenterProtocol
+    private let presenter: ShopPresenterProtocol
     private var tableView: ShopTableView
     private let activityIndicator = UIActivityIndicatorView(style: .large)
     
-    init(presenter: IShopPresenterProtocol) {
+    weak var shopCoordinator: ShopCoordinator?
+
+    init(presenter: ShopPresenterProtocol) {
         self.presenter = presenter
         self.tableView = ShopTableView(presenter: presenter)
         super.init(nibName: nil, bundle: nil)
@@ -50,15 +52,13 @@ final class ShopViewController: UIViewController {
 extension ShopViewController {
     
     func navigateToShopDetailSections(with product: Product) {
-        let detailVC = dependencyContainer.screenFactory.createDetailScreen()
-        detailVC.updasteShopDetailSections(model: [product])
-        navigationController?.pushViewController(detailVC, animated: true)
+        guard let shopCoordinator = self.shopCoordinator else { return }
+        shopCoordinator.navigateToShopDetailSections(with: product)
     }
     
     func navigateToShopListDetailSections(with product: Product) {
-        let detailVC = dependencyContainer.screenFactory.createDetailScreen()
-        detailVC.updateShopListDetailSections(model: [product])
-        navigationController?.pushViewController(detailVC, animated: true)
+        guard let shopCoordinator = self.shopCoordinator else { return }
+        shopCoordinator.navigateToShopListDetailSections(with: product)
     }
 }
 
@@ -70,7 +70,7 @@ extension ShopViewController: Scrollable {
 }
 
 //MARK: - IShopController
-extension ShopViewController: IShopController {
+extension ShopViewController: ShopViewControllerProtocol {
     
     func updateView() {
         DispatchQueue.main.async {
@@ -111,9 +111,4 @@ extension ShopViewController  {
         ])
     }
 }
-
-
-
-
-
 

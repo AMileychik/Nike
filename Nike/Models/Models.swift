@@ -240,7 +240,13 @@ struct Description: Codable {
     let type: String
 }
 
-
+struct TopPickSelection {
+    let products: [Product]
+    let categories: Categories?
+    let header: Header?
+    let category: String
+    let subCategory: SubCategoryModel?
+}
 
 
 

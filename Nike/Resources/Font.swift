@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Font {
+enum Font {
     static let proRoundedBold15 = UIFont(name: "SFProRounded-Bold", size: 15)
     static let proRoundedBold22 = UIFont(name: "SFProRounded-Bold", size: 22)
     static let proRoundedRegular15 = UIFont(name: "SFProRounded-Regular", size: 15)

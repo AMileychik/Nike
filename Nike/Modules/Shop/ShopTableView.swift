@@ -9,10 +9,10 @@ import UIKit
 
 class ShopTableView: UITableView {
     
-    private let presenter: IShopPresenterProtocol
+    private let presenter: ShopPresenterProtocol
     private let dataSourceManager: ShopTableViewDataSource
     
-    init(presenter: IShopPresenterProtocol) {
+    init(presenter: ShopPresenterProtocol) {
         self.presenter = presenter
         self.dataSourceManager = ShopTableViewDataSource(presenter: presenter)
         super.init(frame: .zero, style: .plain)

@@ -9,9 +9,14 @@ import UIKit
 
 final class DetailViewController: UIViewController {
     
-    private let tableView = DetailTableView()
+    private let viewModel: DetailViewModel
+    private let tableView: DetailTableView
     
-    init() { super.init(nibName: nil, bundle: nil) }
+    init(viewModel: DetailViewModel) {
+        self.viewModel = viewModel
+        self.tableView = DetailTableView(detailViewModel: viewModel)
+        super.init(nibName: nil, bundle: nil)
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -22,56 +27,61 @@ final class DetailViewController: UIViewController {
         setupStyle()
         setupViews()
         setupConstraints()
+        bindViewModel()
     }
     
     private func setupStyle() {
         navigationItem.largeTitleDisplayMode = .never
     }
-}
-
-// MARK: - Data Loading
-extension DetailViewController {
     
-    //MARK: - ProductDetailSections
-    func updateProductDetailSections(model: [Product], categories: Categories, header: Header, category: String, subCategory: SubCategoryModel
-    ) {
-        title = model.first?.type
-        
-        tableView.updateSections(DetailSectionBuilder.createProductDetailSections(model: model, categories: categories, header: header, category: category, subCategory: subCategory))
+    private func bindViewModel() {
+        viewModel.stateChanged = { [weak self] state in
+            DispatchQueue.main.async {
+                switch state {
+                case .initial:
+                    break
+                case .loading:
+                    break
+                case .loaded:
+                    self?.tableView.updateSections(self?.viewModel.detailSections ?? [])
+                case .error(let message):
+                    print("Error: \(message)")
+                }
+            }
+        }
     }
     
-    //MARK: - PromoDetailSections
+    func updateProductDetailSections(model: TopPickSelection) {
+        title = model.products.first?.type
+        viewModel.loadProductDetails(model: model)
+    }
+    
     func updatePromoDetailSections(model: [Product]) {
         title = model.first?.type
-        tableView.updateSections(DetailSectionBuilder.createPromoDetailSections(model: model))
+        viewModel.loadPromoDetails(model: model)
     }
     
-    //MARK: - NewFromNikeDetailSections
-    func updateNewFromNikeDetailSections(model: [NewFromNikeModel]){
+    func updateNewFromNikeDetailSections(model: [NewFromNikeModel]) {
         title = model.first?.title
-        tableView.updateSections(DetailSectionBuilder.createNewFromNikeDetailSections(model: model))
+        viewModel.loadNewFromNikeDetails(model: model)
     }
     
-    //MARK: - NewFromNikeVerticalDetailSections
     func updateVerticalNewFromNikeDetailSections(model: [NewFromNikeModel]) {
         title = model.first?.title
-        tableView.updateSections(DetailSectionBuilder.createVerticalNewFromNikeDetailSections(model: model))
+        viewModel.loadVerticalNewFromNikeDetails(model: model)
     }
     
-    //MARK: - StoriesForYouDetailSections
     func updateStoriesForYouDetailSections(model: [StoriesForYou]) {
         title = model.first?.largeImageLabel1
-        tableView.updateSections(DetailSectionBuilder.createStoriesForYouDetailSections(model: model))
+        viewModel.loadStoriesForYouDetails(model: model)
     }
     
-    //MARK: - ShopDetailSections
     func updasteShopDetailSections(model: [Product]) {
-        tableView.updateSections(DetailSectionBuilder.createShopDetailSections(model: model))
+        viewModel.loadShopDetails(model: model)
     }
     
-    //MARK: - ShopListDetailSections
     func updateShopListDetailSections(model: [Product]) {
-        tableView.updateSections(DetailSectionBuilder.createShopListDetailSections(model: model))
+        viewModel.loadShopListDetails(model: model)
     }
 }
 
@@ -91,4 +101,3 @@ extension DetailViewController {
         ])
     }
 }
-

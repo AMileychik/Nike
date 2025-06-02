@@ -9,11 +9,11 @@ import XCTest
 @testable import Nike
 import Foundation
 
-class ShopControllerSpy: IShopController {
+class ShopControllerSpy: ShopViewControllerProtocol {
 
-    var presenter: IShopPresenterProtocol
+    var presenter: ShopPresenterProtocol
 
-    required init(presenter: IShopPresenterProtocol) {
+    required init(presenter: ShopPresenterProtocol) {
         self.presenter = presenter
     }
 
@@ -28,9 +28,9 @@ class ShopControllerSpy: IShopController {
     func navigateToShopListDetailSections(with product: Product) {}
 }
 
-class ShopPresenterSpy: IShopPresenterProtocol {
+class ShopPresenterSpy: ShopPresenterProtocol {
 
-    var view: IShopController?
+    var view: ShopViewControllerProtocol?
 
     var viewDidLoadCalled = false
     var buttonsDidTapCalled = false
@@ -91,7 +91,7 @@ final class ShopTests: XCTestCase {
 
         // Given
         let shopPresenterSpy = ShopPresenterSpy()
-        let shopVC = ShopViewController .init(presenter: shopPresenterSpy)
+        let shopVC = ShopViewController.init(presenter: shopPresenterSpy)
         shopPresenterSpy.view = shopVC
 
         // When

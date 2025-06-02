@@ -13,9 +13,9 @@ enum ButtonDataType {
     case kids
 }
 
-protocol IShopPresenterProtocol: AnyObject {
+protocol ShopPresenterProtocol: AnyObject {
     
-    var view: IShopController? { get set }
+    var view: ShopViewControllerProtocol? { get set }
     
     func viewDidLoad()
     func handleButtonTap(_ index: Int)
@@ -27,13 +27,13 @@ protocol IShopPresenterProtocol: AnyObject {
     func didSelectListCellProduct(_ product: Product)
 }
 
-class ShopPresenter: IShopPresenterProtocol {
+class ShopPresenter: ShopPresenterProtocol {
     
     private let shopLoader: NetworkServiceProtocol
     private var selectedButtonIndex: Int = 0
     private(set) var shopDataModels: [ShopSection] = []
     private let sectionBuilder: SectionBuilderProtocol = ShopSectionBuilder()
-    weak var view: IShopController?
+    weak var view: ShopViewControllerProtocol?
     
     var indicesForRecentlyViewed: [ButtonDataType: Int] = [
         .men: 4,
@@ -100,11 +100,8 @@ class ShopPresenter: IShopPresenterProtocol {
     }
     
     func addRecentlyViewedSection(with products: ShopSectionsResponse, for buttonType: ButtonDataType) {
-        
         guard recentlyViewedRemovedFor[buttonType] == false else { return }
-        
         guard buttonType != .kids else { return }
-        
         guard !shopDataModels.contains(where: {
             if case .recentlyViewed = $0 { return true }
             return false
@@ -133,7 +130,6 @@ class ShopPresenter: IShopPresenterProtocol {
         if let index = indicesForRecentlyViewed[buttonType] {
             let validIndex = max(0, min(index, shopDataModels.count))
             shopDataModels.insert(addedSection, at: validIndex)
-            view?.updateView()
         }
     }
     
