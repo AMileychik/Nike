@@ -7,11 +7,21 @@
 
 import UIKit
 
+// MARK: - Generic Base View Controller
+///
+/// Provides a reusable foundation for screens built with composition.
+/// Contains one main ContentView and sets up its layout and lifecycle automatically.
+/// Minimize duplication and provide a predictable UI.
+
 open class BaseViewController<
     ContentView: UIView
 >: UIViewController {
     
+    // MARK: - Properties
+    
     public let contentView: ContentView
+        
+    // MARK: - Initialization
     
     public init(
         contentView: ContentView
@@ -20,13 +30,17 @@ open class BaseViewController<
         super.init(nibName: nil, bundle: nil)
     }
     
+    /// Not supported from storyboard/XIB
     @available(*, unavailable)
     public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycle
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         setupViews()
         setupConstraints()
     }
@@ -34,12 +48,15 @@ open class BaseViewController<
 
 // MARK: - Layout
 
-private extension BaseViewController {
-    func setupViews() {
+extension BaseViewController {
+    
+    /// Adds the content view to the hierarchy
+    open func setupViews() {
         view.addSubview(contentView)
     }
 
-    func setupConstraints() {
+    /// Pins the content view to the edges of the safe area
+    open func setupConstraints() {
         contentView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -50,6 +67,3 @@ private extension BaseViewController {
         ])
     }
 }
-
-
-

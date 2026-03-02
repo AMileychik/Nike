@@ -64,25 +64,25 @@ extension HomeViewModel {
         switch action {
             
         case .homeTopPicksDidTap(let model):
-            setEffect(.becauseYouLike(model))
+            sendEffect(.becauseYouLike(model))
             
         case .promoDidTap(let model):
-            setEffect(.promo(model))
+            sendEffect(.promo(model))
             
         case .newFromNikeDidTap(let model):
-            setEffect(.newFromNike(model))
+            sendEffect(.newFromNike(model))
             
         case .storiesForYouDidTap(let model):
-            setEffect(.stories(model))
+            sendEffect(.stories(model))
             
         case .refreshData:
             loadProducts()
             
         case .barButtonDidTap, .headerButtonDidTap:
-            setEffect(.comingSoon)
+            sendEffect(.comingSoon)
             
         case .exploreButtonDidTap(let model):
-            setEffect(.explore(model))
+            sendEffect(.explore(model))
         }
     }
 }

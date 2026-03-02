@@ -12,10 +12,7 @@ import DesignSystem
 
 public protocol HomeUIComponentsFactoryProtocol {
     func makeRefreshControl() -> UIRefreshControl
-    
-    func makeTableViewContainer(controller: BaseTableControllerProtocol) -> HomeTableViewContainer
-    
     func makeActivityIndicator(style: UIActivityIndicatorView.Style, color: UIColor) -> UIActivityIndicatorView
-    
     func makeHeaderButton() -> HeaderButtonProtocol
+    func makeAlertPresenter() -> AlertPresenting
 }

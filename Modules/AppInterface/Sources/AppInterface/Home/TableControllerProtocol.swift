@@ -7,9 +7,9 @@
 
 import UIKit
 
-protocol TableControllerProtocol {
-    var dataSource: UITableViewDataSource { get }
-    var delegate: UITableViewDelegate? { get }
-    func registerCells(in tableView: UITableView)
-    func configure(tableView: UITableView)
-}
+//protocol TableControllerProtocol {
+//    var dataSource: UITableViewDataSource { get }
+//    var delegate: UITableViewDelegate? { get }
+//    func registerCells(in tableView: UITableView)
+//    func configure(tableView: UITableView)
+//}

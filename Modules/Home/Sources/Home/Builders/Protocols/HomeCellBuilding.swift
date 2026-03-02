@@ -6,10 +6,11 @@
 //
 
 import UIKit
+
 import AppInterface
 import AppDomain
 
-protocol HomeCellBuilding {
+public protocol HomeCellBuilding {
     func buildCell(
         in tableView: UITableView,
         indexPath: IndexPath,

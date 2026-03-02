@@ -31,8 +31,8 @@ public final class HomeViewModel: HomeViewModelProtocol {
     @Published private(set) var state: HomeViewModelState = .initial
     
     /// One-time effects to trigger actions like navigation.
-    @Published private(set) var effect: HomeEffect?
-    
+    private let effectSubject = PassthroughSubject<HomeEffect, Never>()
+
     // MARK: - Combine Publishers
     
     public var statePublisher: AnyPublisher<HomeViewModelState, Never> {
@@ -40,10 +40,7 @@ public final class HomeViewModel: HomeViewModelProtocol {
     }
     
     public var effectPublisher: AnyPublisher<HomeEffect, Never> {
-        $effect
-            .compactMap { $0 }
-            .handleEvents(receiveOutput: { [weak self] _ in self?.effect = nil })
-            .eraseToAnyPublisher()
+        effectSubject.eraseToAnyPublisher()
     }
     
     // MARK: - Dependencies
@@ -75,8 +72,8 @@ public final class HomeViewModel: HomeViewModelProtocol {
     }
     
     /// Sends a one-time effect to the coordinator.
-    func setEffect(_ newEffect: HomeEffect) {
-        effect = newEffect
+    func sendEffect(_ effect: HomeEffect) {
+        effectSubject.send(effect)
     }
     
     /// Handles a successful products response.

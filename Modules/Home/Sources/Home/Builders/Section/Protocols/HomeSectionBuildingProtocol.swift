@@ -5,4 +5,10 @@
 //  Created by Александр Милейчик on 1/6/26.
 //
 
-import Foundation
+import AppDomain
+
+// MARK: - HomeSectionBuildingProtocol
+
+public protocol HomeSectionBuildingProtocol {
+    func buildSections(from response: HomeSectionsResponse) -> [HomeSectionModel]
+}

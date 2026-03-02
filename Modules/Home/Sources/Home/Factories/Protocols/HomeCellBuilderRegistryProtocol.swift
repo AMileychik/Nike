@@ -8,7 +8,5 @@
 import AppDomain
 
 protocol HomeCellBuilderRegistryProtocol {
-    func builder(
-        for section: HomeSections
-    ) -> HomeCellBuilding
+    func builder(for section: HomeSections) -> HomeCellBuilding
 }

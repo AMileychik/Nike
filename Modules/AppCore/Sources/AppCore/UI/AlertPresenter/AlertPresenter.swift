@@ -5,26 +5,27 @@
 //  Created by Александр Милейчик on 1/3/26.
 //
 
-import Foundation
+import UIKit
 
-final class AlertPresenter: AlertPresenting {
-
+public final class AlertPresenter: AlertPresenting {
     weak var viewController: UIViewController?
 
-    init(viewController: UIViewController) {
+    public init() {}
+    
+    public func attach(to viewController: UIViewController) {
         self.viewController = viewController
     }
 
-    func showAlert(title: String, message: String) {
+    public func show(title: String, message: String) {
         guard let vc = viewController,
               vc.presentedViewController == nil else { return }
 
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         vc.present(alert, animated: true)
+    }
+    
+    public func showError(message: String) {
+        show(title: "Error", message: message)
     }
 }

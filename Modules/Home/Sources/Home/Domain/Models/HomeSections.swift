@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+public enum HomeSections {
+    case welcome
+    case becauseYouLike
+    case promo
+    case newFromNike
+    case storiesForYou
+    case thankYou
+}

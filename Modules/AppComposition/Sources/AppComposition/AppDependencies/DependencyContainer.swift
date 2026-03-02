@@ -10,13 +10,13 @@ import AppInterface
 public final class DependencyContainer: DependencyContainerProtocol {    
     
     // use useCases fo all others services
-    public let networkService: NetvorkServiceUseCaseProtocol
+    public let networkService: NetworkServiceUseCaseProtocol
     public let bagService: BagServiceProtocol
     public let favoriteService: FavoritesServiceProtocol
     public let featureToggleService: FeatureToggleServiceProtocol
     
     public init(
-        networkService: NetvorkServiceUseCaseProtocol,
+        networkService: NetworkServiceUseCaseProtocol,
         bagService: BagServiceProtocol,
         favoriteService: FavoritesServiceProtocol,
         featureToggleService: FeatureToggleServiceProtocol)

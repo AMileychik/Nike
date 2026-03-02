@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+public protocol HomeErrorMapping {
+    func map(_ error: Error) -> HomeError
+}

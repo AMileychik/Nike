@@ -10,86 +10,171 @@ import UIKit
 import AppDomain
 import AppInterface
 
-public final class IndicatorView: UIView {
+protocol IndicatorViewProtocol: UIView {
+    func configure(pagesCount: Int)
+    func setProgress(_ fractionalPage: CGFloat)
+}
 
-    private var indicators: [UIView] = []
-    private var blackLayers: [UIView] = []
-
-    private let indicatorWidth: CGFloat = 15
-    private let indicatorHeight: CGFloat = 2
-    private let spacing: CGFloat = 4
-
-    private var pagesCount: Int = 0
-
+public final class IndicatorView: UIView, IndicatorViewProtocol {
+    
+    // MARK: - Views
+    
+    private let containerView = UIView()
+    
+    private var tracks: [UIView] = []
+    private var fills: [UIView] = []
+    
+    // MARK: - State
+    
+    private var state: IndicatorState?
+    private var needsInitialRender = false
+    
+    // MARK: - Public
+    
     public func configure(pagesCount: Int) {
-        self.pagesCount = pagesCount
-        indicators.forEach { $0.removeFromSuperview() }
-        indicators.removeAll()
-        blackLayers.removeAll()
-
+        reset()
         guard pagesCount > 0 else { return }
-
-        for i in 0..<pagesCount {
-            let track = UIView()
-            track.translatesAutoresizingMaskIntoConstraints = false
-            track.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
-            addSubview(track)
-
-            let black = UIView()
-            black.translatesAutoresizingMaskIntoConstraints = false
-            black.backgroundColor = .clear
-            track.addSubview(black)
-
-            indicators.append(track)
-            blackLayers.append(black)
-
+        
+        setupContainerIfNeeded()
+        
+        let state = IndicatorState(pagesCount: pagesCount, fractionalPage: 0)
+        self.state = state
+        
+        buildIndicators(pagesCount: pagesCount)
+        needsInitialRender = true
+        setNeedsLayout()
+    }
+    
+    public func setProgress(_ fractionalPage: CGFloat) {
+        guard let state else { return }
+        render(
+            IndicatorState(
+                pagesCount: state.pagesCount,
+                fractionalPage: fractionalPage
+            )
+        )
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        guard let state else { return }
+        
+        containerView.layoutIfNeeded()
+        tracks.forEach { $0.layoutIfNeeded() }
+        
+        render(state)
+    }
+    
+    // MARK: - Private Setup
+    
+    private func setupContainerIfNeeded() {
+        guard containerView.superview == nil else { return }
+        
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(containerView)
+        
+        NSLayoutConstraint.activate([
+            containerView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            containerView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
+    }
+    
+    private func reset() {
+        tracks.forEach { $0.removeFromSuperview() }
+        tracks.removeAll()
+        fills.removeAll()
+    }
+    
+    private func buildIndicators(pagesCount: Int) {
+        for index in 0..<pagesCount {
+            let track = makeTrack()
+            let fill = makeFill()
+            
+            track.addSubview(fill)
+            containerView.addSubview(track)
+            
+            tracks.append(track)
+            fills.append(fill)
+            
             NSLayoutConstraint.activate([
-                track.widthAnchor.constraint(equalToConstant: indicatorWidth),
-                track.heightAnchor.constraint(equalToConstant: indicatorHeight),
-                track.centerYAnchor.constraint(equalTo: centerYAnchor),
-                track.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                               constant: CGFloat(i) * (indicatorWidth + spacing))
+                track.widthAnchor.constraint(equalToConstant: IndicatorLayout.indicatorWidth),
+                track.heightAnchor.constraint(equalToConstant: IndicatorLayout.indicatorHeight),
+                track.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
+                track.leadingAnchor.constraint(
+                    equalTo: containerView.leadingAnchor,
+                    constant: CGFloat(index) * (IndicatorLayout.indicatorWidth + IndicatorLayout.spacing)
+                )
             ])
-
-            if i == 0 {
-                black.backgroundColor = .black
-                black.frame = CGRect(x: 0, y: 0,
-                                     width: indicatorWidth,
-                                     height: indicatorHeight)
-            } else {
-                black.frame = CGRect(x: 0, y: 0,
-                                     width: 0,
-                                     height: indicatorHeight)
+        }
+        
+        let totalWidth =
+        CGFloat(pagesCount) * IndicatorLayout.indicatorWidth +
+        CGFloat(pagesCount - 1) * IndicatorLayout.spacing
+        
+        containerView.widthAnchor
+            .constraint(equalToConstant: totalWidth)
+            .isActive = true
+    }
+    
+    // MARK: - Rendering
+    
+    private func render(_ state: IndicatorState) {
+        
+        guard state.pagesCount > 0 else { return }
+        guard !tracks.isEmpty else { return }
+        
+        let currentIndex = Int(state.fractionalPage)
+        
+        for index in 0..<state.pagesCount {
+            let track = tracks[index]
+            let fill = fills[index]
+            
+            let width = track.bounds.width
+            
+            switch index {
+            case currentIndex:
+                let progress = state.fractionalPage - CGFloat(index)
+                fill.frame = CGRect(
+                    x: width * progress,
+                    y: 0,
+                    width: width * (1 - progress),
+                    height: IndicatorLayout.indicatorHeight
+                )
+                fill.backgroundColor = .black
+                
+            case currentIndex + 1:
+                let progress = state.fractionalPage - CGFloat(index) + 1
+                fill.frame = CGRect(
+                    x: 0,
+                    y: 0,
+                    width: width * progress,
+                    height: IndicatorLayout.indicatorHeight
+                )
+                fill.backgroundColor = .black
+                
+            default:
+                fill.frame.size.width = 0
+                fill.backgroundColor = .clear
             }
         }
     }
-
-    public func setProgress(_ fractionalPage: CGFloat) {
-        guard pagesCount > 1 else { return }
-
-        for index in 0..<pagesCount {
-            let track = indicators[index]
-            let black = blackLayers[index]
-
-            let fullWidth = track.bounds.width
-            let currentIndex = Int(fractionalPage)
-
-            if index == currentIndex {
-                let progress = fractionalPage - CGFloat(index)
-                black.frame.origin.x = fullWidth * progress
-                black.frame.size.width = fullWidth * (1 - progress)
-                black.backgroundColor = .black
-
-            } else if index == currentIndex + 1 {
-                let progress = fractionalPage - CGFloat(index) + 1
-                black.frame.origin.x = 0
-                black.frame.size.width = fullWidth * progress
-                black.backgroundColor = .black
-
-            } else {
-                black.frame.size.width = 0
-                black.backgroundColor = .clear
-            }
-        }
+    
+    // MARK: - Factory Methods
+    
+    private func makeTrack() -> UIView {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
+        return view
+    }
+    
+    private func makeFill() -> UIView {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .clear
+        return view
     }
 }
+
+

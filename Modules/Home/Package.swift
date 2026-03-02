@@ -1,7 +1,18 @@
 // swift-tools-version: 5.10
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
+
+// MARK: - Local Modules
+
+enum Module {
+    static let appDomain = "AppDomain"
+    static let designSystem = "DesignSystem"
+    static let appInterface = "AppInterface"
+    static let appComposition = "AppComposition"
+    static let detail = "Detail"
+    static let bag = "Bag"
+    static let appCore = "AppCore"
+}
 
 let package = Package(
     name: "Home",
@@ -11,30 +22,35 @@ let package = Package(
     products: [
         .library(
             name: "Home",
-            targets: ["Home"]),
+            targets: ["Home"]
+        ),
     ],
     dependencies: [
-        .package(path: "../AppDomain"),
-        .package(path: "../DesignSystem"),
-        .package(path: "../AppInterface"),
-        .package(path: "../AppComposition"),
-        .package(path: "../Detail"),
-        .package(path: "../Bag"),
+        // Local feature modules
+        .package(path: "../\(Module.appDomain)"),
+        .package(path: "../\(Module.designSystem)"),
+        .package(path: "../\(Module.appInterface)"),
+        .package(path: "../\(Module.appComposition)"),
+        .package(path: "../\(Module.detail)"),
+        .package(path: "../\(Module.bag)"),
+        .package(path: "../\(Module.appCore)")
     ],
     targets: [
         .target(
             name: "Home",
             dependencies: [
-                .product(name: "AppDomain", package: "AppDomain"),
-                .product(name: "DesignSystem", package: "DesignSystem"),
-                .product(name: "AppInterface", package: "AppInterface"),
-                .product(name: "AppComposition", package: "AppComposition"),
-                .product(name: "Detail", package: "Detail"),
-                .product(name: "Bag", package: "Bag"),
+                .product(name: Module.appDomain, package: Module.appDomain),
+                .product(name: Module.designSystem, package: Module.designSystem),
+                .product(name: Module.appInterface, package: Module.appInterface),
+                .product(name: Module.appComposition, package: Module.appComposition),
+                .product(name: Module.detail, package: Module.detail),
+                .product(name: Module.bag, package: Module.bag),
+                .product(name: Module.appCore, package: Module.appCore)
             ]
         ),
         .testTarget(
             name: "HomeTests",
-            dependencies: ["Home"]),
+            dependencies: ["Home"]
+        )
     ]
 )

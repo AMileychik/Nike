@@ -10,20 +10,15 @@ import UIKit
 import AppDomain
 import DesignSystem
 
-// MARK: - HomeCellBuilderRegistryError
-
-/// Errors that can occur when working with `HomeCellBuilderRegistry`.
 enum HomeCellBuilderRegistryError: Error {
-    /// Triggered when no builder is registered for a given section.
     case builderNotFound(section: HomeSections)
 }
 
 // MARK: - HomeCellBuilderRegistry
-///
+
 /// Registry for Home screen cell builders.
-/// - Holds a mapping of `HomeSections` to corresponding cell builders.
-/// - Provides a builder for a given section or triggers an assertion if none is found.
-/// - Centralizes cell builder management to simplify adding new sections.
+///
+/// - Centralizes management of cell builders for each `HomeSections` case.
 final class HomeCellBuilderRegistry: HomeCellBuilderRegistryProtocol {
 
     // MARK: - Properties
@@ -34,10 +29,9 @@ final class HomeCellBuilderRegistry: HomeCellBuilderRegistryProtocol {
     // MARK: - Initialization
     
     /// Initializes the registry with a mapping of sections to builders.
-    /// - Parameter builders: Dictionary of section -> cell builder.
-    init(
-        builders: [HomeSections: HomeCellBuilding]
-    ) {
+    ///
+    /// - Parameter builders: Dictionary mapping each `HomeSections` case to its `HomeCellBuilding` instance.
+    init(builders: [HomeSections: HomeCellBuilding]) {
         self.builders = builders
     }
 

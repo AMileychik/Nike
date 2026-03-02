@@ -489,6 +489,12 @@
             "type": "Get Ready to Win",
             "description": "Use code WINNING for an extra 25% off select styles.",
             "fullDescription": "Use promo code WINNING to get an extra 25% off select styles. It’s a great opportunity to refresh your wardrobe at a discount. The code applies to a limited selection of items. \n\nJust enter the code at checkout and the discount will be applied automatically. Don’t miss your chance to save with Nike!"
+        },
+        {
+            "image": "JORDAN_GRAPHIC",
+            "title": "Jordan Skills",
+            "type": "Jordan Skills",
+            "description": "Limited edition!\nOutdoor basketball for serious ballers.",            "fullDescription": "This wild-style ball is made to go hard outdoors. The durable exterior holds up as you ball out on the pavement and a textured pebble surface gives you maximum control."
         }
     ],
     "newFromNikeHeader": {
@@ -1028,6 +1034,10 @@
             ],
         }
     ],
+    "storiesForYouHeader": {
+        "title": "Stories For You",
+        "buttonTitle": "View All"
+    },
     "storiesForYou": [
         {
             "largeImage": "jordan-brand-zion-4-1",
@@ -1099,11 +1109,9 @@
             ],
         },
     ],
-    "thankYou": [
-        {
-            "image": "ThankYou"
-        }
-    ]
+    "thankYou": {
+        "image": "ThankYou"
+    }
 }
 
 

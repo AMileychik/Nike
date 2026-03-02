@@ -130,8 +130,29 @@ private extension DetailCellFactory {
 
     func makeAutoScrollingPageControlCell(model: [Product], tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(indexPath) as PromoCarouselCell
-        cell.update(model, sectionHeight: 150)
-        cell.isAutoScrollingEnabled = true
+     //   cell.update(model, height: 150)
+        
+        // Do editional layer for mapping like HomeFeatureSectionBuilder or use dataViewModel here instead og Product model
+        
+        let viewData = PromoCarouselViewData(pages: model.map { $0.toPromoPageViewData() })
+            
+        cell.configure(with: viewData, itemHeight: 150)
+       
+        // replace PromoCarouselViewModel to AppDomain and use for different features (common logic) i would call it BaseViewModel with scrolling and etc
+        
+//        cell.onStartAutoScrollRequested = {
+//            section.viewModel.onPageChange = { index in
+//                DispatchQueue.main.async {
+//                    cell.scrollToPage(index)
+//                }
+//            }
+//            section.viewModel.startAutoScroll()
+//        }
+//        
+//        cell.onStopAutoScrollRequested = {
+//            section.viewModel.stopAutoScroll()
+//        }
+//        cell.isAutoScrollingEnabled = true
         return cell
     }
 

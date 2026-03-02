@@ -8,7 +8,5 @@
 import Foundation
 
 public protocol HomeTableModuleFactoryProtocol: AnyObject {
-    func makeTableContainer(
-        for viewModel: HomeViewModelProtocol
-    ) -> HomeTableViewContainer
+    func makeTableContainer(for viewModel: HomeViewModelProtocol) -> HomeTableViewContainer
 }

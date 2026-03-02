@@ -25,9 +25,7 @@ final class WelcomeCell: UITableViewCell {
         configureLayout()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     // MARK: - Lifecycle
     
@@ -41,6 +39,7 @@ final class WelcomeCell: UITableViewCell {
 
 extension WelcomeCell {
     
+    /// Updates the cell with welcome text
     func configure(with model: WelcomeViewData) {
         welcomeLabel.text = model.text
         welcomeLabel.accessibilityLabel = Constants.accessibilityLabel
@@ -90,75 +89,3 @@ private enum Constants {
     // Accessibility
     static let accessibilityLabel = "Welcome text"
 }
-
-
-
-
-//import UIKit
-//
-//import DesignSystem
-//
-//final class WelcomeCell: UITableViewCell {
-//    
-//    private let welcomeLabel = Label(type: .screenTitle)
-//    
-//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        setupViews()
-//        setupConstraints()
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//    
-//    override func prepareForReuse() {
-//        super.prepareForReuse()
-//        welcomeLabel.text = nil
-//    }
-//}
-//
-//// MARK: - Public
-//
-//extension WelcomeCell {
-//    func configure(_ model: WelcomeViewData) {
-//        welcomeLabel.text = model.text
-//        welcomeLabel.accessibilityLabel = "Welcome text"
-//        welcomeLabel.isAccessibilityElement = true
-//    }
-//}
-//
-////MARK: - Layout
-//
-//private enum WelcomeCellConstants {
-//    static let top: CGFloat = 20
-//    static let leading: CGFloat = 24
-//    static let trailing: CGFloat = 24
-//    static let bottom: CGFloat = 0
-//}
-//
-//extension WelcomeCell {
-//    
-//    func setupViews() {
-//        contentView.addSubview(welcomeLabel)
-//    }
-//    
-//    func setupConstraints() {
-//        contentView.directionalLayoutMargins = NSDirectionalEdgeInsets(
-//            top: WelcomeCellConstants.top,
-//            leading: WelcomeCellConstants.leading,
-//            bottom: WelcomeCellConstants.bottom,
-//            trailing: WelcomeCellConstants.trailing
-//        )
-//        
-//        NSLayoutConstraint.activate([
-//            welcomeLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-//            welcomeLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
-//            welcomeLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-//            welcomeLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor)
-//        ])
-//    }
-//}
-
-
-

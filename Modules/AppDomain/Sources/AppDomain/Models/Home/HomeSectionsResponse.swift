@@ -15,10 +15,11 @@ public struct HomeSectionsResponse: Codable {
     public let newFromNike: [NewFromNikeModel]
     public let nikeTrainingHeader: Header
     public let nikeTraining: [Product]
+    public let storiesForYouHeader: Header
     public let storiesForYou: [StoriesForYou]
     public let nikeSwiftAndStrideHeader: Header
     public let nikeSwiftAndStride: [Product]
-    public let thankYou: [Product]
+    public let thankYou: ThankYouSectionModel
     
     public init(
         topPicksHeader: Header,
@@ -28,10 +29,11 @@ public struct HomeSectionsResponse: Codable {
         newFromNike: [NewFromNikeModel],
         nikeTrainingHeader: Header,
         nikeTraining: [Product],
+        storiesForYouHeader: Header,
         storiesForYou: [StoriesForYou],
         nikeSwiftAndStrideHeader: Header,
         nikeSwiftAndStride: [Product],
-        thankYou: [Product]
+        thankYou: ThankYouSectionModel
     ) {
         self.topPicksHeader = topPicksHeader
         self.topPicks = topPicks
@@ -40,6 +42,7 @@ public struct HomeSectionsResponse: Codable {
         self.newFromNike = newFromNike
         self.nikeTrainingHeader = nikeTrainingHeader
         self.nikeTraining = nikeTraining
+        self.storiesForYouHeader = storiesForYouHeader
         self.storiesForYou = storiesForYou
         self.nikeSwiftAndStrideHeader = nikeSwiftAndStrideHeader
         self.nikeSwiftAndStride = nikeSwiftAndStride

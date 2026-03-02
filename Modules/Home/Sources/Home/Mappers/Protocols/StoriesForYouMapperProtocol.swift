@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+import AppDomain
+
+public protocol StoriesForYouMapperProtocol {
+    func map(_ model: StoriesForYou) -> StoriesForYouProps
+}

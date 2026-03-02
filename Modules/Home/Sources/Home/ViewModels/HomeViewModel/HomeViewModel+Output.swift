@@ -21,7 +21,9 @@ extension HomeViewModel {
     
     /// Returns the section model at the specified index.
     public func section(at index: Int) -> HomeSectionModel? {
-        guard index >= 0 && index < homeSections.count else { return nil }
+       // guard index >= 0 && index < homeSections.count else { return nil }
+        guard homeSections.indices.contains(index) else { return nil}
+
         return homeSections[index]
     }
 }

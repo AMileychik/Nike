@@ -7,10 +7,9 @@
 
 import Foundation
 
-//public struct PromoCarouselViewData {
-//    public let pages: [PromoPageViewData]
-//    
-//    public init(pages: [PromoPageViewData]) {
-//        self.pages = pages
-//    }
-//}
+import AppDomain
+
+public struct PromoSectionViewData {
+    let viewData: PromoCarouselViewData
+    let viewModel: PromoCarouselViewModelProtocol
+}

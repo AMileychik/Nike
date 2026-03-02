@@ -5,4 +5,12 @@
 //  Created by Александр Милейчик on 12/21/25.
 //
 
-import Foundation
+import UIKit
+
+public protocol BaseTableControllerProtocol: AnyObject {
+    var dataSource: UITableViewDataSource { get }
+    var delegate: UITableViewDelegate { get }
+    
+    func registerCells(in tableView: UITableView)
+    func configure(tableView: UITableView)
+}

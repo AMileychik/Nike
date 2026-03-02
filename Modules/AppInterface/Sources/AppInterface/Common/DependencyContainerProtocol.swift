@@ -8,9 +8,7 @@
 import Foundation
 
 public protocol HasNetworkService {
-//    var networkService: NetworkServiceProtocol { get }
-//    var networkService: HomeUseCaseProtocol { get }
-    var networkService: NetvorkServiceUseCaseProtocol {get}
+    var networkService: NetworkServiceUseCaseProtocol {get}
 }
 
 public protocol HasBagService {
@@ -24,7 +22,6 @@ public protocol HasFavoriteService {
 public protocol HasFeatureToggleService {
     var featureToggleService: FeatureToggleServiceProtocol { get }
 }
-
 
 public typealias DependencyContainerProtocol = HasNetworkService & HasBagService & HasFavoriteService & HasFeatureToggleService
 

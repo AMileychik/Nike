@@ -6,11 +6,16 @@
 //
 
 import Foundation
+
 import AppDomain
 import AppInterface
 
-// Describe the purpose of HomeTableModuleFactory
- 
+// MARK: - HomeTableModuleFactory
+///
+/// Central factory for building all table-related components in the Home feature.
+/// Provides a single point for creating table containers, controllers, adapters, and cell factories.
+/// Ensures dependencies are injected consistently and reduces duplication.
+///
 public final class HomeTableModuleFactory: HomeTableModuleFactoryProtocol {
     
     // MARK: - Dependencies
@@ -19,7 +24,7 @@ public final class HomeTableModuleFactory: HomeTableModuleFactoryProtocol {
     private let mapperFactory: HomeMapperFactoryProtocol
     private let viewModelFactory: HomeViewModelFactory
     
-    // MARK: - Init
+    // MARK: - Initialization
     
     public init(
         uiComponentsFactory: HomeUIComponentsFactoryProtocol,
@@ -31,12 +36,14 @@ public final class HomeTableModuleFactory: HomeTableModuleFactoryProtocol {
         self.viewModelFactory = viewModelFactory
     }
     
-    // MARK: - Public
+    // MARK: - Public Factory Methods
     
-    /// Creates a HomeTableViewContainer with all necessary controllers and adapters for the Home screen.
+    /// Creates a fully configured HomeTableViewContainer
+    /// - Parameter viewModel: HomeViewModel that provides data and handles actions
+    /// - Returns: A table container ready to be used in HomeViewController
     public func makeTableContainer(for viewModel: HomeViewModelProtocol) -> HomeTableViewContainer {
         let controller = makeController(for: viewModel)
-        return uiComponentsFactory.makeTableViewContainer(controller: controller)
+        return HomeTableViewContainer(controller: controller)
     }
     
     // MARK: - Private Helpers
@@ -48,16 +55,21 @@ public final class HomeTableModuleFactory: HomeTableModuleFactoryProtocol {
         return HomeTableController(adapter: adapter, manager: manager)
     }
    
-    /// Creates the adapter for HomeTableView with action handler and cell factory
+    /// Creates the adapter for the HomeTableView
+    /// - Sets up cell factories, section builders, and action handlers
     private func makeAdapter(for viewModel: HomeViewModelProtocol) -> HomeTableViewAdapter {
        
-        // Create action handler for cell user interactions
-        let actionHandler = HomeCellActionHandler(viewModel: viewModel, mapper: mapperFactory.makeProductToBecauseYouLikeMapper())
+        // Handles user interactions in table cells
+        let actionHandler = HomeCellActionHandler(
+            viewModel: viewModel,
+            mapper: mapperFactory.makeProductToBecauseYouLikeMapper()
+        )
         
-        // Create cell factory with all registered builders
+        // Builds cells for each section
         let cellFactory = HomeCellFactory(
             registry: makeCellBuilderRegistry(),
-            featureSectionBuilder: makeFeatureSectionBuilder())
+            featureSectionBuilder: makeFeatureSectionBuilder()
+        )
         
         return HomeTableViewAdapter(
             viewModel: viewModel,
@@ -79,6 +91,7 @@ public final class HomeTableModuleFactory: HomeTableModuleFactoryProtocol {
         return HomeCellBuilderRegistry(builders: builders)
     }
     
+    /// Creates a builder for special feature sections
     private func makeFeatureSectionBuilder() -> HomeFeatureSectionBuildingProtocol {
         HomeFeatureSectionBuilder(
             homeMapperFactoryProtocol: mapperFactory,

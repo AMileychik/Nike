@@ -5,27 +5,48 @@
 //  Created by Александр Милейчик on 12/26/25.
 //
 
-import Foundation
+import UIKit
 
-protocol NavigationConfiguring {
-    func configure(for navigationController: UINavigationController)
-}
+// MARK: - HomeNavigationConfigurator
 
-struct HomeNavigationConfigurator: NavigationConfiguring {
+/// Configures the `UINavigationController` for the Home module.
+///
+/// Responsibilities include:
+/// - Setting the root view controller.
+/// - Adding a search button to the navigation bar and connecting its action to the `ViewBinder`.
+public struct HomeNavigationConfigurator: HomeNavigationConfiguratorProtocol {
+    
+    // MARK: - Initialization
+    
+    public init() {}
+    
+    // MARK: - Public API
+    
+    /// Configures the navigation controller with the root view controller and optional view binder.
+    public func configure(
+        navigationController: UINavigationController,
+        rootViewController: UIViewController,
+        viewBinder: ViewBinderProtocol?
+    ) {
+        // Set the root view controller without animation
+        navigationController.setViewControllers([rootViewController], animated: false)
 
-    func configure(for navigationController: UINavigationController) {
-        let navigationItem = navigationController.navigationBar.topItem
-        navigationController.navigationBar.prefersLargeTitles = true
-        navigationItem?.title = "Home"
-        navigationItem?.rightBarButtonItem = makeBagButton()
+        // Configure the search button in the navigation bar
+        configureSearchButton(navigationController: navigationController, binder: viewBinder)
     }
 
-    private func makeBagButton() -> UIBarButtonItem {
-        UIBarButtonItem(
-            image: UIImage(systemName: "bag"),
-            style: .plain,
-            target: nil,
-            action: nil
+    // MARK: - Private Methods
+    
+    /// Adds a magnifying glass button to the navigation bar if a binder is provided.
+    private func configureSearchButton(
+        navigationController: UINavigationController,
+        binder: ViewBinderProtocol?
+    ) {
+        guard let binder else { return }
+        
+        navigationController.addMagnifyButton(
+            target: binder,
+            action: #selector(ViewBinder.onSearchButtonTapped)
         )
     }
 }

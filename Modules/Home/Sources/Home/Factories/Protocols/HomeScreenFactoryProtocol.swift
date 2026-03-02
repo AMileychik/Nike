@@ -10,9 +10,7 @@ import UIKit
 import SharedUI
 
 public protocol HomeScreenFactoryProtocol: AnyObject {
-    func createHomeScreen(
-        viewModel: HomeViewModelProtocol
-    ) -> UIViewController & HomeViewDisplayingProtocol
+    func createHomeScreen(viewModel: HomeViewModelProtocol) -> UIViewController & HomeViewDisplayingProtocol
     
     func createComingSoonScreen() -> ComingSoonViewController
 }

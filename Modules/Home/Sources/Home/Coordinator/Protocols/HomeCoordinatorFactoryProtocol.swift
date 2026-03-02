@@ -6,9 +6,13 @@
 //
 
 import UIKit
+
 import AppInterface
 import Detail
 
 public protocol HomeCoordinatorFactoryProtocol: AnyObject {
-    func makeHomeCoordinator(navigationController: UINavigationController) -> HomeCoordinator
+    func makeHomeCoordinator(
+        navigationController: UINavigationController,
+        sectionBuilder: HomeSectionBuildingProtocol
+    ) -> HomeCoordinatorProtocol
 }

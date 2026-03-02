@@ -6,225 +6,168 @@
 //
 
 import Foundation
+
 import AppDomain
-import AppInterface
-import Combine
 
-// MARK: - NetworkError
-public enum NetworkError: Error {
-    case statusCode
-    case decodingError(Error)
-}
+// MARK: - NetworkService
 
-public protocol NetworkServiceProtocol {
-    func loadHomeData() async throws -> HomeSectionsResponse
-    func loadShopData() async throws -> ShopSectionsResponse
-}
-
+/// Concrete implementation of `NetworkServiceProtocol`.
+///
+/// Handles network requests using `URLSession` and decodes JSON responses.
+/// Converts transport, server, and decoding errors into `NetworkError`.
 public final class NetworkService: NetworkServiceProtocol {
+    
+    // MARK: - Dependencies
     
     private let session: URLSession
     private let decoder: JSONDecoder
     
-    public init(session: URLSession = .shared, decoder: JSONDecoder = JSONDecoder()) {
-        self.session = session
+    // MARK: - Initialization
+    
+    /// Initializes a network service with optional timeout and decoder.
+    ///
+    /// - Parameters:
+    ///   - timeout: Timeout interval for requests (default 30s).
+    ///   - decoder: JSON decoder to use (default `JSONDecoder`).
+    public init(
+        timeout: TimeInterval = 30,
+        decoder: JSONDecoder = JSONDecoder()
+    ) {
+        let config = URLSessionConfiguration.default
+        config.timeoutIntervalForRequest = timeout
+        config.timeoutIntervalForResource = timeout
+        self.session = URLSession(configuration: config)
         self.decoder = decoder
     }
     
-    public func loadHomeData() async throws -> HomeSectionsResponse {
-        guard let url = URL(string: "http://localhost:3001/home") else {
-            throw NetworkError.statusCode
-        }
-        let (data, response) = try await session.data(from: url)
-        
-        guard let httpResponse = response as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {
-            throw NetworkError.statusCode
-        }
-        
-        do {
-            let decoded = try decoder.decode(HomeSectionsResponse.self, from: data)
-            return decoded
-        } catch {
-            throw NetworkError.decodingError(error)
-        }
-    }
+    // MARK: - Execution
     
-    public func loadShopData() async throws -> ShopSectionsResponse {
-        guard let url = URL(string: "http://localhost:3001/shop") else {
-            throw NetworkError.statusCode
-        }
-        let (data, response) = try await session.data(from: url)
-        
-        guard let httpResponse = response as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {
-            throw NetworkError.statusCode
-        }
-        
+    /// Executes a URLRequest and decodes the response into a Decodable type.
+    ///
+    /// - Parameter request: The request to execute.
+    /// - Throws: `NetworkError` if transport fails, server returns error, or decoding fails.
+    /// - Returns: A decoded object of type `T`.
+    public func execute<T: Decodable>(_ request: URLRequest) async throws -> T {
         do {
-            let decoded = try decoder.decode(ShopSectionsResponse.self, from: data)
-            return decoded
+            // Perform the network request
+            let (data, response) = try await session.data(for: request)
+            
+            // Ensure we received an HTTPURLResponse
+            guard let httpResponse = response as? HTTPURLResponse else {
+                throw NetworkError.server(statusCode: -1, payload: data)
+            }
+            
+            // Validate HTTP status code
+            guard (200..<300).contains(httpResponse.statusCode) else {
+                throw NetworkError.server(statusCode: httpResponse.statusCode, payload: data)
+            }
+            
+            // Decode the response
+            do {
+                return try decoder.decode(T.self, from: data)
+            } catch {
+                throw NetworkError.decoding(error)
+            }
+            
         } catch {
-            throw NetworkError.decodingError(error)
+            // Wrap transport errors
+            throw NetworkError.transport(error)
         }
     }
 }
 
-
-
-
-
-//public enum NetworkError: Error {
-//    case statusCode
-//    case decodingError(Error)
-//}
-//
-//public final class NetworkService: NetworkServiceProtocol {
-//    
-////    private let session: URLSession
-////    private let decoder: JSONDecoder
-////    
-////    public init(session: URLSession = .shared, decoder: JSONDecoder = JSONDecoder()) {
-////        self.session = session
-////        self.decoder = decoder
-////    }
-//    
-//    private let session = URLSession.shared
-//    private let decoder = JSONDecoder()
-//    
-//    public init() {}
-//    
-//    // MARK: - HomeSectionsResponse
-//    public func loadHomeData(completion: @escaping (Result<HomeSectionsResponse, Error>) -> ()) {
-//        guard let url = URL(string: "http://localhost:3001/home") else { return }
-//        let request = URLRequest(url: url)
-//        
-//        session.dataTask(with: request) { data, response, error in
-//            if error != nil {
-//                completion(.failure(NetworkError.statusCode))
-//            }
-//            
-//            guard let data else { return }
-//            
-//            do {
-//                let decodedData = try self.decoder.decode(HomeSectionsResponse.self, from: data)
-//                DispatchQueue.main.async {
-//                    completion(.success(decodedData))
-//                }
-//            } catch {
-//                DispatchQueue.main.async {
-//                    completion(.failure(NetworkError.decodingError(error)))
-//                }
-//            }
-//        }.resume()
-//    }
-//    
-//    // MARK: - ShopSectionsResponse
-//    public func loadShopData(completion: @escaping (Result<ShopSectionsResponse, Error>) -> ()) {
-//        guard let url = URL(string: "http://localhost:3001/shop") else { return }
-//        let request = URLRequest(url: url)
-//        
-//        session.dataTask(with: request) { data, response, error in
-//            if error != nil {
-//                completion(.failure(NetworkError.statusCode))
-//            }
-//            
-//            guard let data else { return }
-//            
-//            do {
-//                let decodedData = try self.decoder.decode(ShopSectionsResponse.self, from: data)
-//                DispatchQueue.main.async {
-//                    completion(.success(decodedData))
-//                }
-//            } catch {
-//                DispatchQueue.main.async {
-//                    completion(.failure(NetworkError.decodingError(error)))
-//                }
-//            }
-//        }.resume()
-//    }
-//}
-
-
-
-
-
-
-
-
-
 //import Foundation
+//
 //import AppDomain
-//import AppInterface
 //
 //public enum NetworkError: Error {
 //    case invalidURL
-//    case noData
-//    case statusCode
+//    case transport(Error)
+//    case server(statusCode: Int, payload: Data?)
 //    case decoding(Error)
 //}
 //
-//public final class NetworkService: NetworkServiceProtocol {
+//// MARK: - Endpoint
 //
-//    private let session: URLSession()
-//    private let decoder: JSONDecoder()
+//public enum Endpoint {
+//    case home
+//    case shop
+//}
 //
-////    public init(
-////        session: URLSession = .shared,
-////        decoder: JSONDecoder = JSONDecoder()
-////    ) {
-////        self.session = session
-////        self.decoder = decoder
-////    }
+//public enum HTTPMethod: String {
+//    case get = "GET"
+//}
+//
+//public extension Endpoint {
 //    
-//    public init() {}
-//
-//    // MARK: - Generic Request Loader
-//    private func load<T: Decodable>(
-//        _ type: T.Type,
-//        from urlString: String,
-//        completion: @escaping (Result<T, Error>) -> Void
-//    ) {
-//        guard let url = URL(string: urlString) else {
-//            return completion(.failure(NetworkError.invalidURL))
+//    var path: String {
+//        switch self {
+//        case .home:
+//            return "/home"
+//        case .shop:
+//            return "/shop"
 //        }
+//    }
+//    
+//    var method: HTTPMethod {
+//        .get
+//    }
+//}
 //
-//        let request = URLRequest(url: url)
+//public enum AppEnvironment {
+//    case local
+//    
+//    public var baseURL: URL {
+//        switch self {
+//        case .local:
+//            return URL(string: "http://localhost:3001")!
+//        }
+//    }
+//}
 //
-//        session.dataTask(with: request) { [weak self] data, response, error in
-//            guard let self else { return }
+//public protocol NetworkServiceProtocol {
+//    func execute<T: Decodable>(_ request: URLRequest) async throws -> T
+//}
 //
-//            if error != nil {
-//                return completion(.failure(NetworkError.statusCode))
+//public final class NetworkService: NetworkServiceProtocol {
+//    
+//    private let session: URLSession
+//    private let decoder: JSONDecoder
+//    
+//    public init(
+//        timeout: TimeInterval = 30,
+//        decoder: JSONDecoder = JSONDecoder()
+//    ) {
+//        let config = URLSessionConfiguration.default
+//        config.timeoutIntervalForRequest = timeout
+//        config.timeoutIntervalForResource = timeout
+//        self.session = URLSession(configuration: config)
+//        self.decoder = decoder
+//    }
+//    
+//    public func execute<T: Decodable>(_ request: URLRequest) async throws -> T {
+//        do {
+//            let (data, response) = try await session.data(for: request)
+//            
+//            guard let httpResponse = response as? HTTPURLResponse else {
+//                throw NetworkError.server(statusCode: -1, payload: data)
 //            }
-//
-//            guard let data else {
-//                return completion(.failure(NetworkError.noData))
+//            
+//            guard (200..<300).contains(httpResponse.statusCode) else {
+//                throw NetworkError.server(
+//                    statusCode: httpResponse.statusCode,
+//                    payload: data
+//                )
 //            }
-//
+//            
 //            do {
-//                let decoded = try self.decoder.decode(T.self, from: data)
-//                DispatchQueue.main.async {
-//                    completion(.success(decoded))
-//                }
+//                return try decoder.decode(T.self, from: data)
 //            } catch {
-//                DispatchQueue.main.async {
-//                    completion(.failure(NetworkError.decoding(error)))
-//                }
+//                throw NetworkError.decoding(error)
 //            }
-//
-//        }.resume()
-//    }
-//
-//    // MARK: - Home
-//    public func loadHomeData(
-//        completion: @escaping (Result<HomeSectionsResponse, Error>) -> ()
-//    ) {
-//        load(HomeSectionsResponse.self, from: "http://localhost:3001/home", completion: completion)
-//    }
-//
-//    // MARK: - Shop
-//    public func loadShopData(
-//        completion: @escaping (Result<ShopSectionsResponse, Error>) -> ()
-//    ) {
-//        load(ShopSectionsResponse.self, from: "http://localhost:3001/shop", completion: completion)
+//            
+//        } catch {
+//            throw NetworkError.transport(error)
+//        }
 //    }
 //}

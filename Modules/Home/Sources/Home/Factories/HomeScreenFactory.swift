@@ -6,8 +6,15 @@
 //
 
 import UIKit
+
 import AppInterface
 import SharedUI
+
+// MARK: - HomeScreenFactory
+///
+/// Central factory for building Home screens and related UI.
+/// Provides a single point for creating HomeViewController with all dependencies wired up,
+/// including table content, refresh control, activity indicator, and alert handling.
 
 public final class HomeScreenFactory: HomeScreenFactoryProtocol, ScreenFactoryProtocol {
 
@@ -16,7 +23,7 @@ public final class HomeScreenFactory: HomeScreenFactoryProtocol, ScreenFactoryPr
     private let uiComponentsFactory: HomeUIComponentsFactoryProtocol
     private let tableModuleFactory: HomeTableModuleFactoryProtocol
 
-    // MARK: - Init
+    // MARK: - Initialization
     
     public init(
         uiComponentsFactory: HomeUIComponentsFactoryProtocol,
@@ -26,20 +33,27 @@ public final class HomeScreenFactory: HomeScreenFactoryProtocol, ScreenFactoryPr
         self.tableModuleFactory = tableModuleFactory
     }
 
-    // MARK: - HomeScreenFactoryProtocol
+    // MARK: - Public Factory Methods
     
-    /// Creates the Home screen with table content, refresh control, and activity indicator.
-    public func createHomeScreen(
-        viewModel: HomeViewModelProtocol
-    ) -> UIViewController & HomeViewDisplayingProtocol {
+    /// Creates a fully configured Home screen.
+    public func createHomeScreen(viewModel: HomeViewModelProtocol) -> UIViewController & HomeViewDisplayingProtocol {
 
+        // Create the table content for Home
         let contentView = tableModuleFactory.makeTableContainer(for: viewModel)
-
+        
+        // Create AlertPresenter first (without attaching to VC yet)
+        let alertPresenter = uiComponentsFactory.makeAlertPresenter()
+        
+        // Create HomeViewController with injected dependencies
         let homeVC = HomeViewController(
             contentView: contentView,
             refreshControl: uiComponentsFactory.makeRefreshControl(),
-            activityIndicator: uiComponentsFactory.makeActivityIndicator(style: .large, color: .black)
+            activityIndicator: uiComponentsFactory.makeActivityIndicator(style: .large, color: .black),
+            alertPresenter: alertPresenter
         )
+        
+        // Attach the VC to the AlertPresenter to allow presenting alerts
+        alertPresenter.attach(to: homeVC)
         
         return homeVC
     }

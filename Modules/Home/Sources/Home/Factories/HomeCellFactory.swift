@@ -10,16 +10,24 @@ import UIKit
 import AppDomain
 import DesignSystem
 
-/// Factory responsible for creating Home table view cells using registered builders.
+// MARK: - HomeCellFactory
+///
+/// Responsible for creating table view cells for the Home screen.
+/// Uses a registry of section-specific builders and a feature section builder to configure each cell.
+/// This allows decoupling cell creation from the table view and centralizes all cell configuration logic.
+
 public final class HomeCellFactory: HomeCellFactoryProtocol {
     
     // MARK: - Properties
     
+    /// Registry containing builders for each Home section type.
     private let registry: HomeCellBuilderRegistryProtocol
+    
+    /// Builder that transforms a section model into a feature-ready section for cells.
     private let featureSectionBuilder: HomeFeatureSectionBuildingProtocol
     
-    /// Initializes the factory with a cell builder registry.
-    /// - Parameter registry: Registry containing builders for each section type.
+    // MARK: - Initialization
+    
     init(
         registry: HomeCellBuilderRegistryProtocol,
         featureSectionBuilder: HomeFeatureSectionBuildingProtocol
@@ -28,13 +36,9 @@ public final class HomeCellFactory: HomeCellFactoryProtocol {
         self.featureSectionBuilder = featureSectionBuilder
     }
     
-    /// Creates a UITableViewCell for a given section.
-    /// - Parameters:
-    ///   - tableView: The UITableView to dequeue the cell in.
-    ///   - indexPath: The IndexPath for the cell.
-    ///   - section: The HomeSectionModel containing data and type.
-    ///   - actionHandler: Handler for cell actions.
-    /// - Returns: A configured UITableViewCell.
+    // MARK: - Public API
+    
+    /// Creates a UITableViewCell for a given section and indexPath.
     public func makeCell(
         tableView: UITableView,
         indexPath: IndexPath,
@@ -42,8 +46,10 @@ public final class HomeCellFactory: HomeCellFactoryProtocol {
         actionHandler: HomeCellActionHandlerProtocol
     ) -> UITableViewCell {
         
+        // Transform the section model into a feature-ready section for cell builders
         let featureSection = featureSectionBuilder.build(from: section)
         
+        // Use the appropriate builder from the registry to create the cell
         return registry.builder(for: section.type)
             .buildCell(
                 in: tableView,
@@ -53,22 +59,3 @@ public final class HomeCellFactory: HomeCellFactoryProtocol {
             )
     }
 }
-
-//✅ Правильный баланс (как в больших командах)
-//
-//Вводим правило:
-//    •    Сложные / переиспользуемые секции → SectionBuilder
-//    •    Простые / одноразовые секции → inline
-//
-//switch section {
-//case .promo:
-//    return promoBuilder.build(...)
-//    
-//case .becauseYouLike:
-//    return becauseYouLikeBuilder.build(...)
-//    
-//case .emptyState:
-//    return EmptyStateCell(model: section.model)
-//}
-//
-//but i have a dictionary

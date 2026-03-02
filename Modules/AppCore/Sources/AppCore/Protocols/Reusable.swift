@@ -25,3 +25,12 @@ public extension Reusable {
 
 extension UITableViewCell: Reusable {}
 
+
+
+//public protocol ReusableCell {
+//    static var reuseId: String { get }
+//}
+//
+//extension UITableViewCell: ReusableCell {
+//    public static var reuseId: String { String(describing: self) }
+//}

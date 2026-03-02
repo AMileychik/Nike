@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+import AppDomain
+
+public protocol WelcomeSectionMapperProtocol {
+    func map(_ model: WelcomeSectionModel) -> WelcomeViewData
+}

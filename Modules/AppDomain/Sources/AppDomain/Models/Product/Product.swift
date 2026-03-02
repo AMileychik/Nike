@@ -79,3 +79,59 @@ public struct Product: Codable {
         self.descriptionModel = descriptionModel
     }
 }
+
+public extension Product {
+    func toPromoPageViewData() -> PromoPageViewData {
+        PromoPageViewData(
+            image: self.image,
+            title: nil,                  // можно добавить, если есть
+            subtitle: self.description,  // например используем описание
+            fullDescription: self.fullDescription,
+            type: self.type,
+            description: self.description
+        )
+    }
+}
+
+
+
+
+
+//
+//
+//
+////import Domain
+////
+////public final class ButtonViewDataMapper: ButtonViewDataMapperProtocol {
+////    
+////    public init() {}
+////    
+////    public func map(from model: ColorModel) -> ButtonViewDataModel {
+////        return ButtonViewDataModel(backgroundColor: model.color)
+////    }
+////}
+//
+//
+//extension Product: BecauseYouLikeItem {
+//    
+//
+////    public var id: String {
+////        return String(self.id ?? UUID().hashValue)
+////    }
+//    
+//    public var title: String {
+//        return self.type ?? ""
+//    }
+//    
+//    public var subtitle: String? {
+//        return self.description ?? ""
+//    }
+//    
+//    public var imageURL: String? {
+//        return self.image ?? self.image2 ?? ""
+//    }
+//    
+//    public var priceLabel: Int? {
+//        return self.price 
+//    }
+//}

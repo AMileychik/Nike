@@ -7,11 +7,14 @@
 
 import Foundation
 
-import AppDomain
-
 public struct NewFromNikeSectionModel {
-    let header: Header
-    let products: [NewFromNikeModel]
+    public let header: Header
+    public let products: [NewFromNikeModel]
+    
+    public init(header: Header, products: [NewFromNikeModel]) {
+        self.header = header
+        self.products = products
+    }
 
     var rowHeights: [CGFloat] {
         products.map {

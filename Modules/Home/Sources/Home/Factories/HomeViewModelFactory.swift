@@ -5,49 +5,36 @@
 //  Created by Александр Милейчик on 10/15/25.
 //
 
-import Foundation
-
 import AppInterface
 import DesignSystem
 import AppDomain
 
-//public final class HomeViewModelFactory: HomeViewModelFactoryProtocol, ViewModelFactoryProtocol {
-//
-//    public let container: DependencyContainerProtocol
-//
-//    public init(container: DependencyContainerProtocol) {
-//        self.container = container
-//    }
-//
-//    @MainActor
-//    public func makeHomeViewModel(
-//        sectionBuilder: HomeSectionBuildingProtocol,
-//        errorMapper:HomeErrorMapping
-//    ) -> HomeViewModelProtocol {
-//
-//        return HomeViewModel(
-//            useCase: container.networkService,
-//            sectionBuilder: sectionBuilder,
-//            errorMapper: errorMapper
-//        )
-//    }
-//}
+// MARK: - HomeViewModelFactory
+///
+/// Central point for creating all ViewModels for the Home feature.
+/// Ensures consistent dependency injection and separation of concerns.
+/// Improves testability by providing ready-to-use ViewModels with required dependencies.
 
 public final class HomeViewModelFactory: HomeViewModelFactoryProtocol, ViewModelFactoryProtocol {
     
     // MARK: - Dependencies
     
+    /// Container that provides access to shared services, like networking or data stores
     private let container: DependencyContainerProtocol
     
-    // MARK: - Init
+    // MARK: - Initialization
     
     public init(container: DependencyContainerProtocol) {
         self.container = container
     }
     
-    // MARK: - Public
+    // MARK: - Public Factory Methods
     
-    /// Creates a HomeViewModel with the provided section builder and error mapper
+    /// Creates a HomeViewModel
+    /// - Parameters:
+    ///   - sectionBuilder: Responsible for building sections of the Home screen
+    ///   - errorMapper: Maps domain errors to UI-friendly messages
+    /// - Returns: A fully configured HomeViewModel
     @MainActor
     public func makeHomeViewModel(
         sectionBuilder: HomeSectionBuildingProtocol,
@@ -60,12 +47,12 @@ public final class HomeViewModelFactory: HomeViewModelFactoryProtocol, ViewModel
         )
     }
     
-    
-    // MARK: - PromoCarouselViewModel
+    /// Creates a PromoCarouselViewModel
+    /// - Parameter pages: Data for carousel pages
+    /// - Returns: A configured PromoCarouselViewModel
     public func makePromoCarouselViewModel(
         for pages: [PromoPageViewData]
     ) -> PromoCarouselViewModelProtocol {
         PromoCarouselViewModel(pages: pages)
     }
-    
 }

@@ -5,7 +5,7 @@
 //  Created by Александр Милейчик on 12/29/25.
 //
 
-import CoreGraphics
+import UIKit
 
 struct IndicatorState {
     let pagesCount: Int

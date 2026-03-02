@@ -13,14 +13,13 @@ let package = Package(
             targets: ["AppCore"]),
     ],
     dependencies: [
+        .package(path: "../AppInterface")
     ],
     targets: [
         .target(
             name: "AppCore",
-            path: "Sources/AppCore",
-            resources: [],
-            swiftSettings: [
-                .define("SWIFT_PACKAGE")
+            dependencies: [
+                .product(name: "AppInterface", package: "AppInterface")
             ]
         ),
         .testTarget(

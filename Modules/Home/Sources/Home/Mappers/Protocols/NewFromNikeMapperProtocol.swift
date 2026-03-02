@@ -9,6 +9,6 @@ import Foundation
 
 import AppDomain
 
-public protocol ProductToPromoPageMapperProtocol {
-    func map(_ product: Product) -> PromoPageViewData
+public protocol NewFromNikeMapperProtocol {
+    func map(_ model: NewFromNikeSectionModel) -> NewFromNikeSectionViewData
 }

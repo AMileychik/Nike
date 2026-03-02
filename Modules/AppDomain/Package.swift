@@ -11,13 +11,13 @@ let package = Package(
                  targets: ["AppDomain"]),
     ],
     dependencies: [
-//        .package(path: "../Services")
+   //     .package(path: "../AppCore")
     ],
     targets: [
         .target(
             name: "AppDomain",
             dependencies: [
- //               .product(name: "Services", package: "Services")
+     //           .product(name: "AppCore", package: "AppCore")
             ]
         ),
         .testTarget(

@@ -6,12 +6,11 @@
 //
 
 import UIKit
-
 import DesignSystem
 
 // MARK: - Public
 
-/// UITableViewCell displaying a full-width thank you image.
+/// UITableViewCell displaying a full-width "Thank You" image.
 final class ThankYouCell: UITableViewCell {
     
     // MARK: - UI Components
@@ -26,15 +25,11 @@ final class ThankYouCell: UITableViewCell {
         configureLayout()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-// MARK: - Public Methods
-
-extension ThankYouCell {
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
+    // MARK: - Public Methods
+    
+    /// Updates the cell with the provided view data
     func configure(with model: ThankYouViewData) {
         photoImageView.image = model.image
     }
@@ -62,9 +57,7 @@ private extension ThankYouCell {
             photoImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             photoImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
-            contentView.heightAnchor.constraint(
-                equalToConstant: Constants.cellHeight
-            )
+            contentView.heightAnchor.constraint(equalToConstant: Constants.cellHeight)
         ])
     }
 }
@@ -74,57 +67,3 @@ private extension ThankYouCell {
 private enum Constants {
     static let cellHeight: CGFloat = 250
 }
-
-
-
-
-//import UIKit
-//
-//import DesignSystem
-//
-//class ThankYouCell: UITableViewCell {
-//    
-//    private let photoImageView = ImageView(type: .thankYou)
-//    
-//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        setupViews()
-//        setupConstraints()
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//}
-//
-////MARK: - Public
-//extension ThankYouCell {
-//    func configure(_ model: ThankYouViewData) {
-//        photoImageView.image = model.image
-//    }
-//}
-//
-//
-//// MARK: - Layout
-//extension ThankYouCell {
-//    
-//    private func setupViews() {
-//        contentView.addSubview(photoImageView)
-//    }
-//    
-//    private func setupConstraints() {
-//        photoImageView.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        NSLayoutConstraint.activate([
-//            photoImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-//            photoImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-//            photoImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-//            photoImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-//            
-//            // 250 magic number
-//            contentView.heightAnchor.constraint(equalToConstant: 250)
-//        ])
-//    }
-//}
-
-

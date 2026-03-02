@@ -35,6 +35,7 @@ public class DetailCoordinator: DetailCoordinatorProtocol {
  //       self.detailViewModel = detailViewModel
         
         let viewBinder = ViewBinder(input: detailViewModel)
+        /// as! ///
         let stateHandler = StateHandler(output: detailViewModel, detailScreen: detailVC)
         let effectHandler = EffectHandler(output: detailViewModel, router: self)
 
@@ -62,5 +63,6 @@ public class DetailCoordinator: DetailCoordinatorProtocol {
         rootViewController?.present(vc, animated: true)
     }
 }
+
 
 
