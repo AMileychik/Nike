@@ -36,6 +36,7 @@ final class HomeViewController<
     // MARK: - UI Dependencies
     
     private let activityIndicator: UIActivityIndicatorView
+    
     let refreshControl: UIRefreshControl
     
     // MARK: - UI Service
