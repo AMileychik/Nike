@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B40984142EC57B640091CE87 /* AppearanceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40984132EC57B640091CE87 /* AppearanceConfigurator.swift */; };
 		B40A9F372DB1C99A000EFDFC /* Get_Comfortable_with_Winning.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B40A9F362DB1C99A000EFDFC /* Get_Comfortable_with_Winning.mp4 */; };
+		B41EF5892FA2994500E182D5 /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41EF5882FA2994500E182D5 /* New.swift */; };
 		B43D5DD12EB5B4A300E26701 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = B43D5DD02EB5B4A300E26701 /* ProgressHUD */; };
 		B43D5DD32EB5B7F800E26701 /* Detail in Frameworks */ = {isa = PBXBuildFile; productRef = B43D5DD22EB5B7F800E26701 /* Detail */; };
 		B468D82B2EA0A6D80062559D /* FeatureAssembly in Frameworks */ = {isa = PBXBuildFile; productRef = B468D82A2EA0A6D80062559D /* FeatureAssembly */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		B40984132EC57B640091CE87 /* AppearanceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceConfigurator.swift; sourceTree = "<group>"; };
 		B40A9F362DB1C99A000EFDFC /* Get_Comfortable_with_Winning.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Get_Comfortable_with_Winning.mp4; path = NikePictures/Video/Get_Comfortable_with_Winning.mp4; sourceTree = SOURCE_ROOT; };
+		B41EF5882FA2994500E182D5 /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
 		B468D82C2EA0A7CC0062559D /* FlowCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinatorFactory.swift; sourceTree = "<group>"; };
 		B468D8342EA0DAAE0062559D /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		B468D8362EA0DAB50062559D /* TabBarRootFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRootFactory.swift; sourceTree = "<group>"; };
@@ -135,6 +137,14 @@
 			path = Flow;
 			sourceTree = "<group>";
 		};
+		B41EF5872FA2925900E182D5 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				B41EF5882FA2994500E182D5 /* New.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		B4A9E9A22CA7331D00BE7966 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +184,7 @@
 		B4A9E9C42CA733B500BE7966 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B41EF5872FA2925900E182D5 /* New Group */,
 				B4A9E9B72CA7332000BE7966 /* Assets.xcassets */,
 				B4A9E9B92CA7332000BE7966 /* LaunchScreen.storyboard */,
 				B4A9E9B42CA7331D00BE7966 /* Main.storyboard */,
@@ -316,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B41EF5892FA2994500E182D5 /* New.swift in Sources */,
 				B46F611C2E9DD33D00C41762 /* AppDependenciesProtocol.swift in Sources */,
 				B468D8392EA0DAB90062559D /* MainTabBarController.swift in Sources */,
 				B46F611E2E9DD35B00C41762 /* AppDependencies.swift in Sources */,
